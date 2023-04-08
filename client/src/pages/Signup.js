@@ -5,8 +5,7 @@ import { useMutation } from '@apollo/client';
 // Still need to create mutations
 // import {  } from '../utils/mutations'
 
-// Still need to create the util functions
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
@@ -36,7 +35,7 @@ const Signup = () => {
                 variables: { ...formState },
             });
 
-            // Auth.login(data.addUser.token);
+            Auth.login(data.addUser.token);
         } catch (err) {
             console.error(err)
         }
@@ -45,13 +44,19 @@ const Signup = () => {
     return (
         <>
         <main>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 {/* Username */}
-                <input></input>
+                <input
+                    onChange={handleChange}
+                />
                 {/* Email */}
-                <input></input>
+                <input
+                    onChange={handleChange}
+                />
                 {/* Password */}
-                <input></input>
+                <input
+                    onChange={handleChange}
+                />
             </form>
         </main>
         </>
