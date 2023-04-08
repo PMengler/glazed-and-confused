@@ -19,6 +19,15 @@ const Signup = () => {
         // Need to create mutation for adding a user
     );
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
