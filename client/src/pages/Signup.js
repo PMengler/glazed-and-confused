@@ -19,10 +19,31 @@ const Signup = () => {
         // Need to create mutation for adding a user
     );
 
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const { data } = await addUser({
+                variables: { ...formState },
+            });
+
+            // Auth.login(data.addUser.token);
+        } catch (err) {
+            console.error(err)
+        }
+    };
+
     return (
         <>
         <main>
-            
+            <form>
+                {/* Username */}
+                <input></input>
+                {/* Email */}
+                <input></input>
+                {/* Password */}
+                <input></input>
+            </form>
         </main>
         </>
     );
