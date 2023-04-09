@@ -2,7 +2,9 @@ const { Schema, model } = require('mongoose');
 
 const smallBoxSchema = new Schema({
     quantity: 4,
-    price: 'some price',
+    price: 
+    // Int placeholder
+    3,
     donuts: {
         type: [{
             type: Schema.Types.ObjectId,

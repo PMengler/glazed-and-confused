@@ -2,9 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const orderSchema = new Schema(
     {
-        totalPrice: {
-            // Use of aggretates?
-        },
         boxes: {
             type: Schema.Types.ObjectId,
             ref: 'Boxes'
@@ -12,6 +9,9 @@ const orderSchema = new Schema(
     },
     {
         toJSON: {
+            virtuals: true,
+        },
+        toObject: {
             virtuals: true,
         },
         id: false,
@@ -24,7 +24,7 @@ orderSchema
     .get(function() {
         return this.boxes.totalPrice;
     });
-    
+
 const Order = model('Order', orderSchema);
 
 module.exports = Order;

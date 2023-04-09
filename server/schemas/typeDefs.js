@@ -6,12 +6,52 @@ const typeDefs = gql`
         username: String!
         email: String!
         password: String!
-        donuts: [Donut]!
+        orders: [Order]
     }
 
     type Donut {
         _id: ID
-        // Need to iron out what a donut has
+        name: String!
+        description: String!
+        image: String!
+        containItems: [ContainItem]
+    }
+
+    type ContainItem {
+        _id: ID
+        name: String!
+    }
+
+    type SmallBox {
+        _id: ID
+        quantity: Int
+        price: Int
+        donuts: [Donut]
+    }
+
+    type MediumBox {
+        _id: ID
+        quantity: Int
+        price: Int
+        donuts: [Donut]
+    }
+
+    type LargeBox {
+        _id: ID
+        quantity: Int
+        price: Int
+        donuts: [Donut]
+    }
+
+    // Not sure about this type definition
+    type Boxes {
+        _id: ID
+        allBoxes: [SmallBox, MediumBox, LargeBox]
+    }
+
+    type Order {
+        _id: ID
+        boxes: [Boxes]
     }
 
     type Auth {

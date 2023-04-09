@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const boxSchema = new Schema(
     {
-        boxes: [
+        allBoxes: [
             // List of all sm, md, lg boxes
             {
                 type: Schema.Types.ObjectId,
@@ -30,7 +30,7 @@ const boxSchema = new Schema(
 boxSchema
     .virtual('totalPrice')
     .get(function() {
-        // Mapping function over all this.boxes price for total price
+        // Mapping function over all this.allBoxes price for total price
     });
     
 const Boxes = model('Boxes', boxSchema);
