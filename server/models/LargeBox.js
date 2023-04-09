@@ -1,9 +1,22 @@
 const { Schema, model } = require('mongoose');
 
 const largeBoxSchema = new Schema({
-
+    quantity: 12,
+    price: 'some price',
+    donuts: {
+        type: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Donut',
+        }],
+        validate: [amount, 'Must have 12 donuts in this box.']
+    }   
 });
 
-const LaregeBox = model('LaregeBox', largeBoxSchema);
+// Need to confirm 
+function amount(donut) {
+    return donut.length = 12
+};
 
-module.exports = LaregeBox;
+const LargeBox = model('LargeBox', largeBoxSchema);
+
+module.exports = LargeBox;
