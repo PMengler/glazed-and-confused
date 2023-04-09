@@ -21,7 +21,7 @@ const userSchema = new Schema({
     },
     orders: {
         type: Schema.Types.ObjectId,
-        ref: 'Boxes',
+        ref: 'Order',
     },
 });
 

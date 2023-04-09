@@ -14,7 +14,7 @@ const boxSchema = new Schema(
             },
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Large Box',
+                ref: 'LargeBox',
             },
         ],
     },
