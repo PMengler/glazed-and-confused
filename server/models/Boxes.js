@@ -2,9 +2,21 @@ const { Schema, model } = require('mongoose');
 
 const boxSchema = new Schema(
     {
-        boxes: [{
+        boxes: [
             // List of all sm, md, lg boxes
-        }],
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'SmallBox',
+            },
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'MediumBox',
+            },
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Large Box',
+            },
+        ],
     },
     {
         toJSON: {
@@ -21,6 +33,6 @@ boxSchema
         // Mapping function over all this.boxes price for total price
     });
     
-const Box = model('Box', boxSchema);
+const Boxes = model('Boxes', boxSchema);
 
-module.exports = Box;
+module.exports = Boxes;
