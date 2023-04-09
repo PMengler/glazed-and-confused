@@ -17,10 +17,12 @@ const donutSchema = new Schema({
         required: true,
         trim: true,
     },
-    contains: {
-        type: String,
-        required: true,
-    },
+    containItems: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'ContainItem',
+        }
+    ],
 });
 
 const Donut = model('Donut', donutSchema);
