@@ -19,10 +19,10 @@ const userSchema = new Schema({
         required: true,
         minlength: 5,
     },
-    donuts: [
+    orders: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Donut',
+            ref: 'Order',
         },
     ],
 });
