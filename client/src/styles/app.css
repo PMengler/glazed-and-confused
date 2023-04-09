@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'visby-bo';
+    src: url('../assets/VisbyRoundCF-BoldOblique.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /*  links decoration - get rid of the undereline for links ---*/
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+
+}

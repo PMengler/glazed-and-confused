@@ -1,0 +1,38 @@
+
+/*  links decoration - get rid of the undereline for links ---*/
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+
+}
+
+/* ----nav list to the right side of page */
+.header nav {
+    text-align: center;   
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: white;
+    line-height: 21.6px;
+    font-family: 'visby-bo';
+}
+
+ .header a:hover {
+    color: rgb(178, 177, 179);
+}
+
+/* ---- navigation list ---- */
+.header ul li {
+    display: inline-block;  
+    margin-left: 25px;
+}
+
+li {
+    font-size: 18px; 
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
