@@ -2,7 +2,7 @@ const db = require('../config/connection');
 const {
   //   ContainItem,
   Donut,
-  //   SmallBox,
+    // SmallBox,
   //   MediumBox,
   //   LargeBox,
   Order,
@@ -23,7 +23,7 @@ db.once('open', async () => {
   //   await SmallBox.deleteMany({});
   //   await MediumBox.deleteMany({});
   //   await LargeBox.deleteMany({});
-  await Order.deleteMany({});
+  // await Order.deleteMany({});
   //   await ContainItem.deleteMany({});
 
   const users = await User.insertMany(userData);
@@ -31,7 +31,7 @@ db.once('open', async () => {
   //   const smallBoxes = await SmallBox.insertMany(smallBoxData);
   //   const mediumBoxes = await MediumBox.insertMany(mediumBoxData);
   //   const largeBoxes = await LargeBox.insertMany(largeBoxData);
-  const orders = await Order.insertMany(orderData);
+  // const orders = await Order.insertMany(orderData);
   //   const containItems = await ContainItem.insertMany(containItemData);
 
   console.log('Donut Shop has been restocked!');
