@@ -27,6 +27,7 @@ const typeDefs = gql`
     name: String!
   }
 
+<<<<<<< HEAD
   type SmallBox {
     _id: ID
     quantity: Int
@@ -54,6 +55,14 @@ const typeDefs = gql`
     price: Int
     donuts: [Donut]
   }
+=======
+    type Box {
+        _id: ID
+        quantity: Int
+        price: Int
+        donuts: [Donut]
+    }
+>>>>>>> main
 
   input DonutInput {
     _id: ID
@@ -63,29 +72,36 @@ const typeDefs = gql`
     containItems: [ContainItemInput]
   }
 
-  type Order {
-    _id: ID
-    boxes: [SmallBox]
-  }
+    type Order {
+        _id: ID
+        boxes: [Box]
+    }
+
+    type Checkout {
+        session: ID
+    }
 
   type Auth {
     token: ID
     user: User
   }
 
-  type Query {
-    users: [User]
-    user(username: String!): User
-    donuts: [Donut]
-    donut(name: String!): Donut
-    me: User
-  }
+    type Query {
+        users: [User]
+        user(username: String!): User
+        me: User
+        donuts: [Donut]
+        order(_id: ID!): Order
+        checkout(boxes: [ID]!): Checkout
 
-  type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-    addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
-    addOrder(boxes: [ID]!): Order
-  }
+    }
+
+    type Mutation {
+        addUser(username: String!, email: String!, password: String!): Auth
+        updateUser(username: String, email: String, password: String): User
+        login(email: String!, password: String!): Auth
+        addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
+        addOrder(boxes: [ID]!): Order
+    }
 `;
 module.exports = typeDefs;
