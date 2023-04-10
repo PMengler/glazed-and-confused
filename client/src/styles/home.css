@@ -50,7 +50,12 @@
     font-family: 'visby-regular';
     font-size: 32px;
     margin-top: 45px;
+}
 
+.hero-label button:hover {
+    cursor: pointer;
+    background-color: var(--brand-blue);
+    color: white;
 }
 
 /* --- Flavor of the week section --- */
@@ -100,9 +105,14 @@
     color: white;
     text-align: left;
     margin-bottom: 68px;
-    
+    line-height: 26px;
 }
 
+.new-flavor button:hover {
+    cursor: pointer;
+    background-color: var(--brand-blue);
+    color: white;
+}
 /* ---- Our story section ---- */
 
 .our-story {
@@ -139,6 +149,7 @@
      text-align: left;
      margin-bottom: 58px;
      margin-top: 58px;
+     line-height: 32px;
  }
 
 
