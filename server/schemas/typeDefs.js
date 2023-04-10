@@ -22,6 +22,11 @@ const typeDefs = gql`
         name: String!
     }
 
+    input ContainItemInput {
+        _id: ID
+        name: String!
+    }
+
     type SmallBox {
         _id: ID
         quantity: Int
@@ -43,15 +48,24 @@ const typeDefs = gql`
         donuts: [Donut]
     }
 
-    // Not sure about this type definition
-    type Boxes {
+    type Box {
         _id: ID
-        allBoxes: [SmallBox, MediumBox, LargeBox]
+        quantity: Int
+        price: Int
+        donuts: [Donut]
+    }
+
+    input DonutInput {
+        _id: ID
+        name: String!
+        description: String
+        image: String
+        containItems: [ContainItemInput]
     }
 
     type Order {
         _id: ID
-        boxes: [Boxes]
+        boxes: [SmallBox]
     }
 
     type Auth {
@@ -68,6 +82,8 @@ const typeDefs = gql`
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
+        addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
+        addOrder(boxes: [ID]!): Order
     }
 `
 module.exports = typeDefs;
