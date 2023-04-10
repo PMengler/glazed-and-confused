@@ -1,81 +1,116 @@
 @font-face {
-    font-family: 'visby-regular';
-    src: url('../assets/VisbyRoundCF-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'visby-demi';
-    src: url('../assets/VisbyRoundCF-DemiBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'visby-demi-ob';
-    src: url('../assets/VisbyRoundCF-DemiBoldOblique.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-@font-face {
-    font-family: 'visby-heavy';
-    src: url('../assets/VisbyRoundCF-Heavy.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'visby-extrabold';
-    src: url('../assets/VisbyRoundCF-ExtraBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-* {
-    color: black;
-    padding: 0px;
-    margin: 0px;
-    line-height: 1.5;
+  font-family: 'visby-regular';
+  src: url('../assets/VisbyRoundCF-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-  /*  links decoration - get rid of the undereline for links ---*/
+@font-face {
+  font-family: 'visby-demi';
+  src: url('../assets/VisbyRoundCF-DemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby-demi-ob';
+  src: url('../assets/VisbyRoundCF-DemiBoldOblique.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby-heavy';
+  src: url('../assets/VisbyRoundCF-Heavy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby-heavy-ob';
+  src: url('../assets/VisbyRoundCF-HeavyOblique.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby-extrabold';
+  src: url('../assets/VisbyRoundCF-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: black;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+  border: 1px solid rgba(255, 0, 0, 0.123);
+}
+
+
+html {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: 'visby-demi';
+  text-align: center;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: 'visby-demi';
+  text-align: center;
+}
+
+/*  links decoration - get rid of the undereline for links ---*/
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+div {
+  box-sizing: border-box;
 }
 
 /* ---variables---*/
 :root {
-    --bg-size: cover;
-    --brand-blue: #14cdf7;
-    --bg-offblack: #272727;
-    --bg-darkblack: #161616;
-    --cornerten: 10px;
-    --cornertwnty: 20px; 
+  --bg-size: cover;
+  --brand-blue: #14cdf7;
+  --bg-offblack: #272727;
+  --bg-darkblack: #161616;
+  --cornerten: 10px;
+  --cornertwnty: 20px;
 }
 
 .btn-lrg {
-    font-family: 'visby-heavy';
-    font-size: 22px;
-    border-radius: var(--cornertwnty);
-    line-height: 60px;
-    padding-left: 44px;
-    padding-right: 44px;
-    border: none;
+  font-family: 'visby-heavy';
+  font-size: 22px;
+  border-radius: var(--cornertwnty);
+  line-height: 60px;
+  padding-left: 44px;
+  padding-right: 44px;
+  border: none;
+  min-width: 310px;
 }
 
 .btn-white {
-    background-color: white;
-    color: var(--bg-darkblack);
+  background-color: white;
+  color: var(--bg-darkblack);
 }
 
 .btn-black {
-    background-color: var(--bg-darkblack);
-    color: white;
+  background-color: var(--bg-darkblack);
+  color: white;
 }
 
 .btn-blue {
-    background-color: var(--brand-blue);
-    color: white;
+  background-color: var(--brand-blue);
+  color: white;
 }
