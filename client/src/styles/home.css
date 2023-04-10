@@ -1,0 +1,94 @@
+/* --- Flavor of the week section --- */
+
+.new-flavor {
+    background-image: url(../assets/swirl-dark-bk.svg);
+    background-color: var(--bg-darkblack);
+    background-size: cover 80%;
+    background-position: center center;
+    background-repeat:no-repeat;
+}
+
+.new-flavor h1 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.new-flavor-pic {
+    max-width: 672px;
+    border-radius: var(--cornerten);
+}
+
+.new-flavor-box {
+    display: flex;
+    max-width: 1240px;
+    margin: auto;
+    margin-bottom: 154px;
+}
+
+.new-flavor div {
+    padding-left: 60px;
+}
+
+.new-flavor-box h2 {
+    text-align: left;
+    color: white;
+    font-family: 'visby-demi';
+    margin-bottom: 16px;
+    font-size: 72px;
+    line-height: 76px;
+}
+
+.new-flavor-p {
+    font-size: 18px;
+    font-family: 'visby-regular';
+    color: white;
+    text-align: left;
+    margin-bottom: 68px;
+    
+}
+
+/* ---- Our story section ---- */
+
+.our-story {
+    background-image: url(../assets/about-bk.jpg);
+    background-size:cover;
+ }
+ 
+ .story-block {
+     background-color: white;
+     max-width: 1000px;
+     margin: auto;
+     margin-top: 120px;
+     margin-bottom: 220px;
+     padding-top: 64px;
+     padding-bottom: 74px;
+     padding-left: 118px;
+     padding-right: 118px;
+     border-radius: var(--cornertwnty);
+ }
+ 
+ .story-swirl {
+     max-width: 56px;
+     margin: auto;
+ }
+ 
+ span {
+     font-family: 'visby-heavy-ob';
+     color: var(--brand-blue);
+ }
+ 
+ .story-p {
+     font-family: 'visby-regular';
+     font-size: 22px;
+     text-align: left;
+     margin-bottom: 58px;
+     margin-top: 58px;
+ }
+
+
+
+
+
+
+
