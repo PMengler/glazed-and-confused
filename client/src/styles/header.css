@@ -17,11 +17,15 @@ body {
     padding-bottom: 25px;
     background-color: white;
     line-height: 21.6px;
-    font-family: 'visby-bo';
+    font-family: 'visby-extrabold';
+}
+
+.header a {
+    color: black;    
 }
 
  .header a:hover {
-    color: rgb(178, 177, 179);
+    color: #14cdf6;
 }
 
 /* ---- navigation list ---- */
@@ -36,3 +40,4 @@ li {
     padding-left: 30px;
     padding-right: 30px;
   }
+

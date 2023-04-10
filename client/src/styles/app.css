@@ -1,16 +1,81 @@
 @font-face {
-    font-family: 'visby-bo';
-    src: url('../assets/VisbyRoundCF-BoldOblique.woff2') format('woff');
+    font-family: 'visby-regular';
+    src: url('../assets/VisbyRoundCF-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'visby-demi';
+    src: url('../assets/VisbyRoundCF-DemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'visby-demi-ob';
+    src: url('../assets/VisbyRoundCF-DemiBoldOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'visby-heavy';
+    src: url('../assets/VisbyRoundCF-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'visby-extrabold';
+    src: url('../assets/VisbyRoundCF-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+* {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.5;
+}
 
   /*  links decoration - get rid of the undereline for links ---*/
 a {
     text-decoration: none;
 }
 
-body {
-    background-color: rgb(235, 235, 235);
+/* ---variables---*/
+:root {
+    --bg-size: cover;
+    --brand-blue: #14cdf7;
+    --bg-offblack: #272727;
+    --bg-darkblack: #161616;
+    --cornerten: 10px;
+    --cornertwnty: 20px; 
+}
 
+.btn-lrg {
+    font-family: 'visby-heavy';
+    font-size: 22px;
+    border-radius: var(--cornertwnty);
+    line-height: 60px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border: none;
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--bg-darkblack);
+}
+
+.btn-black {
+    background-color: var(--bg-darkblack);
+    color: white;
+}
+
+.btn-blue {
+    background-color: var(--brand-blue);
+    color: white;
 }
