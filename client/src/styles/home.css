@@ -3,7 +3,7 @@
 .heropic {
     display: flex;
     background-color: white;
-  
+
 }
 
 .hero-left {
@@ -11,7 +11,7 @@
     background-image: url(../assets/sprinkles.png);
     background-size: contain;
     background-position: left 0px top -10px;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .hero-right {
@@ -26,7 +26,7 @@
     background-size: 30% 105%;
     background-position: left center;
     height: 100%;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .hero-label {
@@ -35,16 +35,16 @@
     z-index: 5;
     position: relative;
     padding-bottom: 130px;
-    
+
 }
 
 .hero-label h1 {
-    font-size: calc(4rem + 1.5vw)!important;
+    font-size: calc(4rem + 1.5vw) !important;
     font-family: 'visby-heavy';
-    margin-top: 16vh; 
+    margin-top: 16vh;
     line-height: 76px;
     text-align: left;
-    
+
 }
 
 .hero-label p {
@@ -66,7 +66,7 @@
     background-color: var(--bg-darkblack);
     background-size: cover 80%;
     background-position: center center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .new-flavor h1 {
@@ -114,48 +114,99 @@
     background-color: var(--brand-blue);
     color: white;
 }
+
 /* ---- Our story section ---- */
 
 .our-story {
     background-image: url(../assets/about-bk.jpg);
-    background-size:cover;
+    background-size: cover;
     padding-top: 120px;
     padding-bottom: 220px;
+}
+
+.story-block {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 64px;
+    padding-bottom: 74px;
+    padding-left: 118px;
+    padding-right: 118px;
+    border-radius: var(--cornertwnty);
+}
+
+.story-swirl {
+    max-width: 56px;
+    margin: auto;
+}
+
+span {
+    font-family: 'visby-heavy-ob';
+    color: var(--brand-blue);
+}
+
+.story-p {
+    font-family: 'visby-regular';
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 58px;
+    margin-top: 58px;
+    line-height: 32px;
+}
+
+/* --- Contact Us --- */
+
+
+.map {
+    background-image: url(../assets/portlandmap.jpg);
+    margin: auto;
+    background-size: cover;
+}
+
+.contact-us {
+    background-color: var(--bg-darkblack);
+    background-size: cover;
+    background-position: center;
+    padding-top: 96px;
+    padding-bottom: 150px;
+}
+
+.contact-box {
+    background-color: #231f20f6;
+    max-width: 800px;
+    margin-left: 10%;
+    padding: 120px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    padding-top: 20px;
+    color: white;
+}
+
+.contact-input input,textarea {
+    width: 100%;
+    background-color: #231f2000;
+    border: none;
+    border-bottom: 4px solid var(--brand-blue);
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'visby-regular' ;
+    color: white;
+    margin-bottom: 20px;
  }
- 
- .story-block {
-     background-color: white;
-     max-width: 1000px;
-     margin: auto;
-     padding-top: 64px;
-     padding-bottom: 74px;
-     padding-left: 118px;
-     padding-right: 118px;
-     border-radius: var(--cornertwnty);
- }
- 
- .story-swirl {
-     max-width: 56px;
-     margin: auto;
- }
- 
- span {
-     font-family: 'visby-heavy-ob';
-     color: var(--brand-blue);
- }
- 
- .story-p {
-     font-family: 'visby-regular';
-     font-size: 22px;
-     text-align: left;
-     margin-bottom: 58px;
-     margin-top: 58px;
-     line-height: 32px;
- }
 
-
-
-
-
-
-
+.contact-btn {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    
+}
+.contact-box p {
+    font-family: 'visby-demi';
+    color: white;
+    font-size: 26px;
+    
+}

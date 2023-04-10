@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="stylesheet" href="../styles/header.css" media="screen" />
     <link rel="stylesheet" href="../styles/app.css" media="screen" />
     <link rel="stylesheet" href="../styles/normalize.css" media="screen" />
     <link rel="stylesheet" href="../styles/footer.css" media="screen" />
     <link rel="stylesheet" href="../styles/home.css" media="screen" />
     <link rel="stylesheet" href="../styles/flavors.css" media="screen" />
+    <link rel="stylesheet" href="../styles/cart.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
@@ -104,12 +105,19 @@
                     <div class="story-swirl"><img src="../assets/swirl-blue.svg" alt="icon"></div>
                 </div>
             </section>
-            <section class="Contact Us">
-                <div><img src="" alt="map"></div>
-                <div><img src="" alt="form"></div>
-                <h2>Contact Us</h2>
-                <button class="sendBtn">SEND</button>
-                <h5>Call us at 1-800-555-GLAZED</h5>
+            <section class="contact-us">
+                <div class="map">
+                    <div class="contact-box">
+                        <h2>Contact Us</h2>
+                        <div class="contact-input">
+                            <input placeholder="Your Name"><br>
+                            <input placeholder="Email Address"><br>
+                            <textarea placeholder="Message"></textarea><br>
+                            <button class="contact-btn btn-blue btn-lrg">SEND</button>
+                            <p>Call us at 1-800-555-GLAZED</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
