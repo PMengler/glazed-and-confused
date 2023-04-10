@@ -1,6 +1,12 @@
 import React from 'react';
 import { Router as Router, Routes, Route } from 'react-router-dom';
-// import '../src/styles/header';
+import '../src/styles/app.css';
+import '../src/styles/cart.css';
+import '../src/styles/flavors.css';
+import '../src/styles/footer.css';
+import '../src/styles/header.css';
+import '../src/styles/home.css';
+import '../src/styles/normalize.css';
 
 import { setContext } from '@apollo/client/link/context';
 import { 
