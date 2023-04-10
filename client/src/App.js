@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router as Router, Routes, Route } from 'react-router-dom';
-import '../src/styles/';
+// import '../src/styles/header';
 
 import { setContext } from '@apollo/client/link/context';
 import { 
@@ -34,10 +34,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <Header />
-
-      </Router>
+     
+          <Header />
+        
     </ApolloProvider>
   );
 }
