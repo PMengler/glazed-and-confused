@@ -27,27 +27,6 @@ const typeDefs = gql`
         name: String!
     }
 
-    type SmallBox {
-        _id: ID
-        quantity: Int
-        price: Int
-        donuts: [Donut]
-    }
-
-    type MediumBox {
-        _id: ID
-        quantity: Int
-        price: Int
-        donuts: [Donut]
-    }
-
-    type LargeBox {
-        _id: ID
-        quantity: Int
-        price: Int
-        donuts: [Donut]
-    }
-
     type Box {
         _id: ID
         quantity: Int
@@ -65,7 +44,11 @@ const typeDefs = gql`
 
     type Order {
         _id: ID
-        boxes: [SmallBox]
+        boxes: [Box]
+    }
+
+    type Checkout {
+        session: ID
     }
 
     type Auth {
@@ -77,10 +60,15 @@ const typeDefs = gql`
         users: [User]
         user(username: String!): User
         me: User
+        donuts: [Donut]
+        order(_id: ID!): Order
+        checkout(boxes: [ID]!): Checkout
+
     }
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
+        updateUser(username: String, email: String, password: String): User
         login(email: String!, password: String!): Auth
         addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
         addOrder(boxes: [ID]!): Order
