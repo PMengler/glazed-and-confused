@@ -175,25 +175,34 @@ span {
     background-color: #231f20f6;
     max-width: 800px;
     margin-left: 10%;
-    padding: 120px;
+    padding-top: 62px;
     text-align: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 64px;
 }
 
 .contact-box h2 {
-    padding-top: 20px;
     color: white;
+    margin: 0px;
+}
+.contact-line {
+    width: 100%;
+    border-bottom: 4px solid #454545;
+    padding-bottom: 38px;
 }
 
 .contact-input input,textarea {
     width: 100%;
+    color: white;
     background-color: #231f2000;
     border: none;
     border-bottom: 4px solid var(--brand-blue);
     padding: 10px;
-    font-size: 18px;
+    padding-top: 35px;
+    font-size: 28px;
     font-family: 'visby-regular' ;
-    color: white;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
  }
 
 .contact-btn {
@@ -202,11 +211,11 @@ span {
     padding-right: 20px;
     cursor: pointer;
     margin-left: 0px;
-    
+    margin-bottom: 76px;
+  
 }
 .contact-box p {
     font-family: 'visby-demi';
     color: white;
     font-size: 26px;
-    
 }
