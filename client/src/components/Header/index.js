@@ -6,54 +6,6 @@ import logoPic from '../../assets/gc-logo.png';
 import logoMobile from '../../assets/gc-logo-mobile.png';
 
 const Header = () => {
-    // const styles = {
-    //     a: {
-    //         textDecoration: 'none',
-    //     },
-    //     body: {
-    //         backgroundColor: 'rgb(235, 235, 235)',
-    //     },
-    //     nav: {
-    //         display: 'flex',
-    //         justifyContent: 'center',
-    //         height: '75px',
-    //         backgroundColor: 'white',
-    //         filter: 'drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.25))',
-    //     },
-    //     navUl: {
-    //         textAlign: 'center',
-    //         margin: 'auto',
-    //         height: '75px',
-    //     },
-    //     navDiv: {
-    //         position: 'absolute',
-    //         right: '0px',
-    //         height: '75px',
-    //         display: 'flex',
-    //         alighItems: 'center',
-    //     },
-    //     headerLogo: {
-    //         maxWidth: '136px',
-    //         marginBottom: '-20px',
-    //         marginTop: '60px',
-    //     },
-    //     mobileLogo: {
-    //         display: 'none',
-    //     },
-    //     headerNav: {
-    //         textAlign: 'center',
-    //         fontSize: '18px',
-    //         fontFamily: 'visby-extrabold',
-    //     },
-    //     headerUl: {
-    //         display: 'flex',
-    //         alignItems: 'center',
-    //         margin: '0 auto',
-    //         width: '880px',
-    //         justifyContent: 'space-between',
-    //     },
-        
-    // }
     // Functions that will be used in the header
 
     return (
