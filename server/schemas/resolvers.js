@@ -13,9 +13,9 @@ const resolvers = {
     donuts: async () => {
       return Donut.find({});
     },
-    donut: async (parent, { donutId }) => {
-      return Donut.findOne({ _id: donutId });
-    },
+    // donut: async (parent, { donutId }) => {
+    //   return Donut.findOne({ _id: donutId });
+    // },
   },
   Mutation: {
     addUser: async (parent, args) => {
