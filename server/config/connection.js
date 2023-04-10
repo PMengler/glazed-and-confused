@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/glazed',
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/glazed-and-confused',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
