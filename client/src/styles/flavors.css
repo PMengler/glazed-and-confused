@@ -1,0 +1,53 @@
+.flavors-title  span{
+    display: flex;
+    justify-content: center;
+}
+
+.donut-flavor {
+  padding: 2rem;
+}
+
+.donut-flavor img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.donut-flavor > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.donut-flavor > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+/* .donut-flavor li {
+    max-height: 300px;
+} */
+
+/* .donut-flavor > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+} */
+
+.donut-flavor > ul > li > figure > img {
+  width: 100%;
+}
+
+.donut-flavor > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+.donut-flavor > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+} 
