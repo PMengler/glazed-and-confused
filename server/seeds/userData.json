@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Patrick",
+        "email": "patrick@email.com",
+        "password": "password1234",
+        "orders": []
+    },
+    {
+        "username": "Savannah",
+        "email": "savannah@email.com",
+        "password": "password1234",
+        "orders": []
+    },
+    {
+        "username": "Morris",
+        "email": "morris@email.com",
+        "password": "password1234",
+        "orders": []
+    },
+    {
+        "username": "BJ",
+        "email": "bj@email.com",
+        "password": "password1234",
+        "orders": []
+    },
+    {
+        "username": "Jenn",
+        "email": "jenn@email.com",
+        "password": "password1234",
+        "orders": []
+    }
+]
