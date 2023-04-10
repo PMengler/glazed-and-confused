@@ -55,9 +55,14 @@ nav div {
     justify-content: space-between;
 }
 
+.navlink:visited {
+    color: black;
+}
+
 .navlink:hover {
     color: var(--brand-blue);
 }
+
 
 .loginlink {
     color: var(--brand-blue);
@@ -104,7 +109,6 @@ li {
     background-color: var(--bg-darkblack);
 }
 
-
 /*--- Mobile queries ---*/
 @media screen and (max-width: 1230px) {
 
@@ -135,3 +139,5 @@ li {
     }
 
 }
+
+/* --- mobile nav --- */
