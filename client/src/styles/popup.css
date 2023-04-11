@@ -101,6 +101,12 @@
     border-radius: var(--cornertwnty);
 }
 
+.popup-btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
 .popup-footer {
     display: flex;
     width: 100%;
