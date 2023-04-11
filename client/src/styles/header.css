@@ -1,6 +1,7 @@
 /*  links decoration - get rid of the undereline for links ---*/
 a {
     text-decoration: none;
+    color: black;
 }
 
 body {
