@@ -61,6 +61,9 @@ const typeDefs = gql`
     user(username: String!): User
     me: User
     donuts: [Donut]
+    donut(_id: ID!): Donut
+    boxes: [Box]
+    orders: [Order]
     order(_id: ID!): Order
     checkout(boxes: [ID]!): Checkout
   }
