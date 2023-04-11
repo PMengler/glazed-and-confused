@@ -34,9 +34,9 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
+   function toggleCart() {
+     dispatch({ type: TOGGLE_CART });
+   }
 
   function calculateTotal() {
     let sum = 0;
@@ -47,16 +47,16 @@ const Cart = () => {
   }
 
   function submitCheckout() {
-    const productIds = [];
+    const boxIds = [];
 
-    state.cart.forEach((item) => {
-      for (let i = 0; i < item.purchaseQuantity; i++) {
-        productIds.push(item._id);
-      }
-    });
+    // state.cart.forEach((item) => {
+    //   for (let i = 0; i < item.purchaseQuantity; i++) {
+    //     boxIds.push(item._id);
+    //   }
+    // });
 
     getCheckout({
-      variables: { products: productIds },
+      variables: { boxes: boxIds },
     });
   }
 
@@ -83,22 +83,23 @@ const Cart = () => {
           ))}
 
           <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+            <strong>Total: $10</strong>
 
-            {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
-            ) : (
-              <span>(log in to check out)</span>
-            )}
+
           </div>
         </div>
       ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
-          You haven't added anything to your cart yet!
-        </h3>
+        <div>
+          {/* {state.cart.map((item) => (
+            <CartItem key={item._id} item={item} /> //TODO??
+          ))} */}
+
+          <div className="flex-row space-between">
+            <strong>Total: $10</strong>
+            <button onClick={submitCheckout}>Checkout</button>
+          </div>
+        </div>
       )}
     </div>
   );
