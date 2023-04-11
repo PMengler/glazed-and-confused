@@ -109,6 +109,18 @@ const resolvers = {
       );
       return box;
     },
+    newOrder: async (parent, { boxes }, context) => {
+      if (context.user) {
+        const order = await Order.create({ boxes });
+        return order;
+      }
+    },
+    addBoxToOrder: async (parent, { orderId, boxId }) => {
+      const Order = await Order.findByIdAndUpdate(orderId, {
+        $push: { boxes: boxId },
+      });
+      return Order;
+    },
   },
 };
 

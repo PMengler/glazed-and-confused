@@ -78,6 +78,7 @@ const typeDefs = gql`
       image: String
       containItems: [ContainItemInput]
     ): Donut
+    newOrder(boxes: [ID]!): Order
     addBoxToOrder(boxes: [ID]!): Order
   }
 `;
