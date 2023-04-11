@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 // const { AuthService } = require('../../client/src/utils/auth');
-const { User, Donut } = require('../models');
+const { User, Donut, Box, Order } = require('../models');
 
 const resolvers = {
   Query: {
@@ -10,12 +10,27 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
+      }
+    },
     donuts: async () => {
       return Donut.find({});
     },
-    // donut: async (parent, { donutId }) => {
-    //   return Donut.findOne({ _id: donutId });
-    // },
+    donut: async (parent, { donutId }) => {
+      return Donut.findOne({ _id: donutId });
+    },
+    boxes: async () => {
+      return Box.find({});
+    },
+    orders: async () => {
+      return Order.find({});
+    },
+    order: async (parent, { orderId }) => {
+      return Order.findOne({ _id: orderId });
+    },
+    checkout: async (parent, args, context) => {},
   },
   Mutation: {
     addUser: async (parent, args) => {
