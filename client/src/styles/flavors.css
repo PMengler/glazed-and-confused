@@ -24,9 +24,9 @@
   border-radius: .5rem;
 }
 
-/* .donut-flavor li {
-    max-height: 300px;
-} */
+.donut-flavor li {
+    max-height: 500px;
+}
 
 /* .donut-flavor > ul > li > figure {
   max-height: 220px;
@@ -38,6 +38,8 @@
 
 .donut-flavor > ul > li > figure > img {
   width: 100%;
+  min-height: 335px;
+  max-height: 335px;
 }
 
 .donut-flavor > ul > li > p {
