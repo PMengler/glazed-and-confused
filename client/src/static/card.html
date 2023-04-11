@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="stylesheet" href="../styles/header.css" media="screen" />
+    <link rel="stylesheet" href="../styles/app.css" media="screen" />
+    <link rel="stylesheet" href="../styles/normalize.css" media="screen" />
+    <link rel="stylesheet" href="../styles/footer.css" media="screen" />
+    <link rel="stylesheet" href="../styles/home.css" media="screen" />
+    <link rel="stylesheet" href="../styles/flavors.css" media="screen" />
+    <link rel="stylesheet" href="../styles/cart.css" media="screen" />
+    <link rel="stylesheet" href="../styles/popup.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <!-- <link rel="apple-touch-icon" href="" /> -->
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- <title>Glazed & Confused</title>
+</head> -->
+    <!-- <div class="container">
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div> -->
+<div class="popup-window">
+    <section class="popup-container">
+            <div class="popup-swirl"><img src="../assets/swirl-blue.svg" alt="swirl" width="100%"></div>
+            <a class="close" href="#home">CLOSE</a>
+        <div class="popup-section">
+            <div class="donut-pic"><img  src="../assets/gc-butterscotch-b.jpg"></div>
+            <div class="popup-info">
+                <h2>Butterscotch
+                    Banaza</h2>
+                <p class="popup-p">Get ready for a butterscotch bonanza in your mouth! This donut is like a sweet and buttery explosion, with a perfectly fluffy and golden dough that melts in your mouth.<br><br> It's so delicious, you'll feel like you're having a party in your taste buds - and everyone's invited! So grab a Butterscotch Bonanza and let the good times roll.</p>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="ingredients">Contains:<span class='allergies'>Milk, Wheat, Egg</span></div>
+            <div class="popup-addtocart-box">
+                <span class="popup-addtocart">ADD TO CART</span>
+                <button class="popup-btn">cart</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 
+
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a class="navlink" href="#theflavors">THE FLAVORS</a></li>
+                <li><a class="navlink" href="#contactus">CONTACT US</a></li>
+                <li class="header-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+                <li><a class="navlink" href="#ourstory">OUR STORY</a></li>
+                <li><button class="nav-btn">ORDER NOW!</button></li>
+            </ul>
+            <div>
+                <a class="loginlink" href="#login">LOGIN</a>
+                <button class="nav-cart">cart</button>
+            </div>
+            <div class="mobile-logo"><img src="../assets/gc-logo-mobile.png" alt="logoPic"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="heropic">
+            <div class="hero-left">
+                <div class="hero-label">
+                    <h1>Donut Panic!<br>
+                        There’s plenty for everyone.</h1>
+                    <p>Let's find that perfect flavor.
+                    <p>
+                        <button class="btn-lrg btn-black">START YOUR ORDER</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-shape"></div>
+            </div>
+        </section>
+        <section class="new-flavor">
+            <h1><span>New!</span> Flavor of the Week!</h1>
+            <div class="new-flavor-box">
+                <img class="new-flavor-pic" src="../assets/new-ras.jpg">
+                <div class="new-flavor-info">
+                    <h2>Rasberry
+                        Rush</h2>
+                    <p class="new-flavor-p">Get your taste buds in a frenzy with our new <br>
+                        Raspberry Rush donut -
+                        it's like a party in your <br>
+                        mouth, and everyone's invited!</p>
+                    <button class="btn-lrg btn-white">SEE MORE</button>
+                </div>
+            </div>
+        </section>
+        <section class="our-story">
+            <div class="story-block">
+                <h1><span>Our</span> Donut Story</h1>
+                <p class="story-p">Once upon a time, there were five developer students who were tired of
+                    writing code all day long and decided to take on a new challenge: starting
+                    their own donut company. They thought, "Why not mix technology with sugar and create the
+                    ultimate
+                    donut experience?" <br>
+                    <br>
+                    After countless hours of research, trial, and error (and, of course, consuming lots of
+                    donuts), the
+                    team finally
+                    came up with their perfect recipe. They created a delicious line up of amazingly unique
+                    donuts, and
+                    even developed
+                    a donut-shaped drone for deliveries. The team even joked that their office was now filled
+                    with more
+                    sugar than lines of code!
+                </p>
+                <div class="story-swirl"><img src="../assets/swirl-blue.svg" alt="icon"></div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="map">
+                <div class="contact-box">
+                    <h2>Contact Us</h2>
+                    <div class="contact-line"></div>
+                    <div class="contact-input">
+                        <input placeholder="Your Name"><br>
+                        <input placeholder="Email Address"><br>
+                        <textarea placeholder="Message"></textarea><br>
+                        <button class="contact-btn btn-blue btn-lrg">SEND</button>
+                        <p>Call us at 1-800-555-GLAZED</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a class="footer-link" href="#theflavors">THE FLAVORS</a></li>
+                <li><a class="footer-link" href="#contactus">CONTACT US</a></li>
+                <li class="footer-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+                <li><a class="footer-link" href="#ourstory">OUR STORY</a></li>
+                <li><button class="footer-btn">ORDER NOW!</button></li>
+            </ul>
+        </div>
+        <div class="copyright">© COPYRIGHT GLAZED & CONFUSED BAKERY INC. 2023 | DONUT WORRY BE HUNGRY</div>
+    </footer> -->
+
+
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+   
+    </body>
+</div>
+
+</html>
