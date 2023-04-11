@@ -13,6 +13,7 @@ const typeDefs = gql`
     _id: ID
     name: String!
     description: String!
+    price: Float!
     image: String!
     containItems: [ContainItem]
   }
@@ -29,8 +30,6 @@ const typeDefs = gql`
 
   type Box {
     _id: ID
-    quantity: Int
-    price: Int
     donuts: [Donut]
   }
 
@@ -73,7 +72,13 @@ const typeDefs = gql`
     updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
-    addOrder(boxes: [ID]!): Order
+    addDonutToBox(
+      name: String!
+      description: String
+      image: String
+      containItems: [ContainItemInput]
+    ): Donut
+    addBoxToOrder(boxes: [ID]!): Order
   }
 `;
 module.exports = typeDefs;

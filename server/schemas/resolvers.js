@@ -42,7 +42,7 @@ const resolvers = {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${url}/images/${products[i].image}`]
+          images: [`${url}/images/${products[i].image}`],
         });
 
         const price = await stripe.prices.create({
@@ -53,7 +53,7 @@ const resolvers = {
 
         line_items.push({
           price: price.id,
-          quantity: 1
+          quantity: 1,
         });
       }
 
@@ -62,7 +62,7 @@ const resolvers = {
         line_items,
         mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`
+        cancel_url: `${url}/`,
       });
 
       return { session: session.id };
@@ -73,6 +73,16 @@ const resolvers = {
       const user = await User.create(args);
       const token = signToken(user);
       return { token, user };
+    },
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $set: args },
+          { new: true }
+        );
+        return user;
+      }
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
@@ -85,6 +95,19 @@ const resolvers = {
       }
       const token = AuthService(user);
       return { token, user };
+    },
+    addBox: async (parent, args, context) => {
+      const box = await Box.create(args);
+      return box;
+    },
+    addDonutToBox: async (parent, { donutId, boxId }) => {
+      const donut = await Donut.findById(donutId);
+      const box = await Box.findByIdAndUpdate(
+        { _id: boxId },
+        { $push: { donuts: donut._id } },
+        { new: true }
+      );
+      return box;
     },
   },
 };
