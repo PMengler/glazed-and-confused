@@ -32,7 +32,7 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-      const token = AuthService(user);
+      const token = signToken(user);
       return { token, user };
     },
   },
