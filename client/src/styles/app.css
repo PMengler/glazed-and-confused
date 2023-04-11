@@ -40,14 +40,6 @@
   font-style: normal;
 }
 
-* {
-  color: black;
-  padding: 0px;
-  margin: 0px;
-  line-height: 1.5;
-  border: 1px solid rgba(255, 0, 0, 0.123);
-}
-
 
 html {
   height: 100%;

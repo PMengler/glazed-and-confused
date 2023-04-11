@@ -2,16 +2,29 @@ const { Schema, model } = require('mongoose');
 
 const orderSchema = new Schema(
     {
-        boxes: {
-            type: Schema.Types.ObjectId,
-            ref: 'Boxes'
-        },
+        // boxes: {
+        //     type: Schema.Types.ObjectId,
+        //     ref: 'Boxes'
+        // },
+
+        boxes: [
+            // List of all sm, md, lg boxes
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'SmallBox',
+            },
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'MediumBox',
+            },
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'LargeBox',
+            },
+        ],
     },
     {
         toJSON: {
-            virtuals: true,
-        },
-        toObject: {
             virtuals: true,
         },
         id: false,
@@ -21,8 +34,9 @@ const orderSchema = new Schema(
 
 orderSchema
     .virtual('orderTotal')
-    .get(function() {
-        return this.boxes.totalPrice;
+    .get(function () {
+        // Still need to loop over all items in boxes array
+        return this.boxes.price;
     });
 
 const Order = model('Order', orderSchema);
