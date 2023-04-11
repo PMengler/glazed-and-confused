@@ -37,7 +37,7 @@
 }
 
 .hero-label h1 {
-    font-size: calc(4rem + 1.5vw) !important;
+    font-size: 83px;
     font-family: 'visby-heavy';
     margin-top: 16vh;
     line-height: 76px;
@@ -166,7 +166,7 @@ span {
     background-size: cover;
     background-position: center;
     padding-top: 96px;
-    padding-bottom: 150px;
+    padding-bottom: 118px;
 }
 
 .contact-box {
