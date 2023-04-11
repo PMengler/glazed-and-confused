@@ -107,6 +107,7 @@ li {
 
 .nav-cart:hover {
     background-color: var(--bg-darkblack);
+    cursor: pointer;
 }
 
 /*--- Mobile queries ---*/

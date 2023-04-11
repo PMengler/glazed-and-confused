@@ -3,7 +3,6 @@
 .heropic {
     display: flex;
     background-color: white;
-
 }
 
 .hero-left {
@@ -35,7 +34,6 @@
     z-index: 5;
     position: relative;
     padding-bottom: 130px;
-
 }
 
 .hero-label h1 {
@@ -206,14 +204,17 @@ span {
  }
 
 .contact-btn {
-    font-size: 18px;
     padding-left: 20px;
     padding-right: 20px;
-    cursor: pointer;
-    margin-left: 0px;
+    cursor: pointer; margin-left: 0px;
     margin-bottom: 76px;
-  
 }
+
+.contact-btn:hover {
+    background-color: white;
+    color: black;
+}
+
 .contact-box p {
     font-family: 'visby-demi';
     color: white;
