@@ -35,6 +35,7 @@ nav div {
     max-width: 136px;
     margin-bottom: -20px;
     margin-top: 60px;
+    cursor: pointer;
 }
 
 .mobile-logo {
