@@ -1,55 +1,217 @@
-.flavors-title  span{
-    display: flex;
-    justify-content: center;
+.flavors-main {
+  background-color: var(--bg-offblack);
+  display: flex;
+  padding-top: 100px;
+  justify-content: space-between;
 }
 
-.donut-flavor {
-  padding: 2rem;
+.flavors-container {
+  padding-bottom: 73px;
+  width: 85%;
+
 }
 
-.donut-flavor img{
-    max-height: 100%;
-    max-width: 100%;
+.flavors-title {
+  text-align: center;
 }
 
+.flavors-title h1 {
+  color: white;
+  font-family: 'visby-heavy';
+  padding-bottom: 14px;
+  line-height: 54px;
+  margin-left: 17%;
+}
 
-.donut-flavor > ul {
+.flavors-span {
+  font-family: 'visby-demi';
+  font-size: 28px;
+  color: var(--brand-blue);
+  margin-left: 17%;
+}
+
+.donut-flavor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 40px;
 }
 
-.donut-flavor > ul > li {
-  border: 1px solid #E2E2E2;
-  border-radius: .5rem;
+.flavors-card img {
+  border-radius: 20px 20px 0px 0px;
+  cursor: pointer;
 }
 
-.donut-flavor li {
-    max-height: 500px;
+.flavors-info {
+  display: flex;
+  background-color: var(--bg-darkblack);
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+  font-family: 'visby-regular';
+  font-size: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-/* .donut-flavor > ul > li > figure {
-  max-height: 220px;
-  overflow: hidden;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-  position: relative;
-} */
+.flavors-cart {
+  padding: 16px;
+  background-color: var(--brand-blue);
+  color: white;
+  border-radius: var(--cornertwnty);
+  
+}
 
-.donut-flavor > ul > li > figure > img {
+.flavors-cart:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ---- Cart section ---- */
+
+.cart-sidebar {
+  max-width: 260px;
+}
+
+.cart-container {
+  background-color: var(--bg-darkblack);
+  border-radius: var(--cornertwnty);
+  border-radius: 20px 0px 0px 0px;
+  margin-top: 20px;
+}
+
+.cart-title {
+  padding: 30px;
+}
+
+.cart-yourcart {
+  color: white;
+  font-family: 'visby-heavy';
+  font-size: 24px;
+  text-align: center;
+}
+
+.cart-line {
   width: 100%;
-  min-height: 335px;
-  max-height: 335px;
+  border-bottom: 3px solid var(--brand-blue);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/*  -----empty cart----- */
+.cart-product-empty {
+  background-color: #2a2a2a;
+  min-height: 100px;
+  border-radius: var(--cornerten);
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
-.donut-flavor > ul > li > p {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 1rem .75rem;
-  color: #666666;
+.cart-product-empty img {
+  width: 30px;
 }
 
-.donut-flavor > ul > li > a {
-  padding: .5rem 1rem;
-  margin: .5rem;
-} 
+.cart-checkout {
+  display: flex;
+  background-color: white;
+  border-radius: 0px 0px 0px 20px;
+  padding: 20px;
+
+}
+
+.cart-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+/* ---- product card ----*/
+.card-container {
+  background-color: white;
+  border-radius: var(--cornertwnty);
+  padding: 20px;
+  margin-bottom: 20px;
+ 
+}
+
+.cart-img {
+  max-width: 100px;
+  margin: auto;
+}
+
+.product-name {
+  font-family: 'visby-demi';
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.quantity-delete-box {
+  display: flex;
+ justify-content: space-between;
+ 
+}
+
+.quantity {
+  background-color: var(--brand-blue);
+  font-family: 'visby-demi';
+  font-size: 20px;
+  color: white;
+  border-radius: var(--cornerten);
+  padding: 10px;
+  padding-left: 15px;
+  margin-right: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-image: url(../assets/cart-drop-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+select:focus {
+  outline: none;
+}
+
+.quantity:hover .qty-drop-box {
+  display: block;
+}
+
+.cart-drop-arrow {
+  max-width: 20px;
+  display: inline-block;
+}
+.qty-drop-box {
+  position: absolute;
+  background-color: white;
+  color: var(--bg-offblack);
+  width: 100%;
+  padding: 10px;
+  padding-left: 10px;
+  border-radius: var(--cornerten);
+  top: 50px;
+  left: 0px;
+  display: none;
+  z-index: 10;
+
+}  
+
+.cart-delete-btn {
+  background-color: #EEEBEB;
+  color: black;
+  border-radius:var(--cornerten);
+  border: none;
+  font-family: 'visby-heavy';
+  padding: 10px;
+ 
+
+}
+.cart-delete-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
