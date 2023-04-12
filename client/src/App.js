@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router as Router, Routes, Route } from 'react-router-dom';
+import { Router as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import '../src/styles/app.css';
 import '../src/styles/cart.css';
 import '../src/styles/flavors.css';
@@ -18,6 +18,7 @@ import {
 import Header from './components/Header';
 import Hero from './components/Hero/index';
 import WeeklyFlavor from './components/WeeklyFlavor';
+import DonutStory from './components/DonutStory';
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -41,12 +42,15 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Header />
-      <Hero />
-      <WeeklyFlavor />
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <Header />
+        <Hero />
+        <WeeklyFlavor />
+        <DonutStory />
 
-    </ApolloProvider>
+      </ApolloProvider>
+    </BrowserRouter>
   );
 }
 
