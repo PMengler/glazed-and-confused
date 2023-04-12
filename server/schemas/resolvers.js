@@ -96,8 +96,8 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addBox: async (parent, args, context) => {
-      const box = await Box.create(args);
+    addBox: async (parent, { donuts }) => {
+      const box = await Box.create({ donuts });
       return box;
     },
     addDonutToBox: async (parent, { donutId, boxId }) => {

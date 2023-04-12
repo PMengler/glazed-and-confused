@@ -71,7 +71,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addBox(quantity: Int!, price: Int!, donuts: [DonutInput]): Box
+    addBox(donuts: [ID]): Box
     addDonutToBox(
       name: String!
       description: String
