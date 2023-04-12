@@ -2,6 +2,7 @@
   background-color: var(--bg-offblack);
   display: flex;
   padding-top: 100px;
+  justify-content: space-between;
 }
 
 .flavors-container {
@@ -38,6 +39,7 @@
 
 .flavors-card img {
   border-radius: 20px 20px 0px 0px;
+  cursor: pointer;
 }
 
 .flavors-info {
@@ -58,6 +60,7 @@
   background-color: var(--brand-blue);
   color: white;
   border-radius: var(--cornertwnty);
+  
 }
 
 .flavors-cart:hover {
@@ -68,21 +71,21 @@
 /* ---- Cart section ---- */
 
 .cart-sidebar {
-  width: 15%;
+  max-width: 260px;
 }
 
 .cart-container {
   background-color: var(--bg-darkblack);
   border-radius: var(--cornertwnty);
-
   border-radius: 20px 0px 0px 0px;
+  margin-top: 20px;
 }
 
 .cart-title {
   padding: 30px;
 }
 
-.cart-btitle {
+.cart-yourcart {
   color: white;
   font-family: 'visby-heavy';
   font-size: 24px;
@@ -95,9 +98,9 @@
   margin-bottom: 20px;
   margin-top: 20px;
 }
-
+/*  -----empty cart----- */
 .cart-product-empty {
-  background-color: #3c3b3b;
+  background-color: #2a2a2a;
   min-height: 100px;
   border-radius: var(--cornerten);
   display: flex;
@@ -109,14 +112,106 @@
   width: 30px;
 }
 
-.cart-info {
+.cart-checkout {
   display: flex;
   background-color: white;
   border-radius: 0px 0px 0px 20px;
   padding: 20px;
+
 }
 
 .cart-btn:hover {
   background-color: black;
+  cursor: pointer;
+}
 
+/* ---- product card ----*/
+.card-container {
+  background-color: white;
+  border-radius: var(--cornertwnty);
+  padding: 20px;
+  margin-bottom: 20px;
+ 
+}
+
+.cart-img {
+  max-width: 100px;
+  margin: auto;
+}
+
+.product-name {
+  font-family: 'visby-demi';
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.quantity-delete-box {
+  display: flex;
+ justify-content: space-between;
+ 
+}
+
+.quantity {
+  background-color: var(--brand-blue);
+  font-family: 'visby-demi';
+  font-size: 20px;
+  color: white;
+  border-radius: var(--cornerten);
+  padding: 10px;
+  padding-left: 15px;
+  margin-right: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-image: url(../assets/cart-drop-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+select:focus {
+  outline: none;
+}
+
+.quantity:hover .qty-drop-box {
+  display: block;
+}
+
+.cart-drop-arrow {
+  max-width: 20px;
+  display: inline-block;
+}
+.qty-drop-box {
+  position: absolute;
+  background-color: white;
+  color: var(--bg-offblack);
+  width: 100%;
+  padding: 10px;
+  padding-left: 10px;
+  border-radius: var(--cornerten);
+  top: 50px;
+  left: 0px;
+  display: none;
+  z-index: 10;
+
+}  
+
+.cart-delete-btn {
+  background-color: #EEEBEB;
+  color: black;
+  border-radius:var(--cornerten);
+  border: none;
+  font-family: 'visby-heavy';
+  padding: 10px;
+ 
+
+}
+.cart-delete-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

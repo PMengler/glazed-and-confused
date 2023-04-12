@@ -31,16 +31,17 @@
     <title>Glazed & Confused</title>
 </head>
 <div class="container">
+
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
 
 
-                         <!-------header -------->
+        <!-------header -------->
         <header class="header">
             <nav>
                 <ul>
-                    <li><a class="navlink" href="#theflavors">THE FLAVORS</a></li>
+                    <li><a class="navlink" href="flavors.html">THE FLAVORS</a></li>
                     <li><a class="navlink" href="#contactus">CONTACT US</a></li>
                     <li class="header-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
                     <li><a class="navlink" href="#ourstory">OUR STORY</a></li>
@@ -198,11 +199,36 @@
             <div class="cart-sidebar">
                 <div class="cart-container">
                     <div class="cart-title">
-                        <div class="cart-btitle">Your Cart</h2>
+                        <div class="cart-yourcart">Your Cart</h2>
                             <div class="cart-line"></div>
                         </div>
+
+                        <!-- product card  -->
+                        <section class="card-container">
+                            <div class="product-name">Sweetheart Donut</div>
+                            <div class="cart-img"><img src="../assets/gc-sweetheart.jpg" width="100%"></div>
+                            <div class="quantity-delete-box">
+                                <select class="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                  </select>
+                                <button class="cart-delete-btn"> icon </button>
+                        
+                            </div>
+                        </section>
+
+                        <!-- Cart product card  -->
                         <div class="cart-product-card">
-                            
                         </div>
                         <div class="cart-product-empty">
                             <img src="../assets/cart-plus.svg" width="100%">
@@ -213,15 +239,17 @@
                         <div class="cart-product-empty">
                             <img src="../assets/cart-plus.svg" width="100%">
                         </div>
+                        
                     </div>
                 </div>
-                <div class="cart-info">
+
+                <div class="cart-checkout">
                     <button class="cart-btn btn-blue btn-small">CHECKOUT</button>
                 </div>
             </div>
         </section>
 
-<!-- footer -->
+        <!-- footer -->
         <footer>
             <div class="footer-nav">
                 <ul>
@@ -246,4 +274,5 @@
     -->
     </body>
 </div>
+
 </html>
