@@ -57,7 +57,7 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(username: String!): User
+    user(_id: ID!): User
     me: User
     donuts: [Donut]
     donut(_id: ID!): Donut
@@ -72,12 +72,7 @@ const typeDefs = gql`
     updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     addBox(donuts: [ID]): Box
-    addDonutToBox(
-      name: String!
-      description: String
-      image: String
-      containItems: [ContainItemInput]
-    ): Donut
+    addDonutToBox(donut: ID!, box: ID!): Box
     newOrder(boxes: [ID]!): Order
     addBoxToOrder(boxes: [ID]!): Order
   }

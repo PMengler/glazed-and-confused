@@ -8,8 +8,8 @@ const resolvers = {
     users: async () => {
       return User.find({});
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username });
+    user: async (parent, { ID }) => {
+      return User.findOne({ ID });
     },
     me: async (parent, args, context) => {
       if (context.user) {
@@ -20,7 +20,7 @@ const resolvers = {
       return Donut.find({});
     },
     donut: async (parent, { donutId }) => {
-      return Donut.findOne({ _id: donutId });
+      return Donut.findOne({ donutId });
     },
     boxes: async () => {
       return Box.find({});
@@ -96,15 +96,15 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addBox: async (parent, { donuts }) => {
-      const box = await Box.create({ donuts });
+    addBox: async (parent, args) => {
+      const box = await Box.create(args);
       return box;
     },
-    addDonutToBox: async (parent, { donutId, boxId }) => {
-      const donut = await Donut.findById(donutId);
+    addDonutToBox: async (parent, args) => {
+      const donut = await Donut.findById(args.donut);
       const box = await Box.findByIdAndUpdate(
-        { _id: boxId },
-        { $push: { donuts: donut._id } },
+        { _id: args.box },
+        { $addToSet: { donuts: donut } },
         { new: true }
       );
       return box;
