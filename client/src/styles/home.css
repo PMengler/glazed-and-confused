@@ -154,7 +154,6 @@ span {
 
 /* --- Contact Us --- */
 
-
 .map {
     background-image: url(../assets/portlandmap.jpg);
     margin: auto;
@@ -198,9 +197,9 @@ span {
     border-bottom: 4px solid var(--brand-blue);
     padding: 10px;
     padding-top: 35px;
-    font-size: 28px;
-    font-family: 'visby-regular' ;
-    margin-bottom: 32px;
+    font-size: 28px !important;
+    font-family: 'visby-regular' !important;
+    margin-bottom: 32px !important;
  }
 
 .contact-btn {
