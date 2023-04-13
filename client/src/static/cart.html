@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="stylesheet" href="../styles/header.css" media="screen" />
+    <link rel="stylesheet" href="../styles/app.css" media="screen" />
+    <link rel="stylesheet" href="../styles/normalize.css" media="screen" />
+    <link rel="stylesheet" href="../styles/footer.css" media="screen" />
+    <link rel="stylesheet" href="../styles/home.css" media="screen" />
+    <link rel="stylesheet" href="../styles/flavors.css" media="screen" />
+    <link rel="stylesheet" href="../styles/cart.css" media="screen" />
+    <link rel="stylesheet" href="../styles/popup.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <!-- <link rel="apple-touch-icon" href="" /> -->
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Glazed & Confused</title>
+</head>
+<div class="container">
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+
+
+        <!-------header -------->
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a class="navlink" href="flavors.html">THE FLAVORS</a></li>
+                    <li><a class="navlink" href="#contactus">CONTACT US</a></li>
+                    <li class="header-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+                    <li><a class="navlink" href="#ourstory">OUR STORY</a></li>
+                    <li><button class="nav-btn">ORDER NOW!</button></li>
+                </ul>
+                <div>
+                    <a class="loginlink" href="#login">LOGIN</a>
+                    <button class="nav-cart">icon</button>
+                </div>
+                <div class="mobile-logo"><img src="../assets/gc-logo-mobile.png" alt="logoPic"></div>
+            </nav>
+        </header>
+
+
+        <!-- cart section  -->
+        <section class="cart-main">
+            <div class="cart-page-container">
+                <div class="cart-order-title">Your Order</div>
+                <div class="cart-page-columns">
+                    <div class="cart-items">
+                        <div class="cart-product-list-item">
+                            <div class="cart-product-list-item-right">
+                                <div class="cart-donutpic"><img src="../assets/gc-butterscotch-b.jpg"
+                                        alt="butterscotch pic" width="100%"></div>
+                                <div class="cart-selected-qty">
+                                    <div class="cart-item-qty-text">QTY</div>
+                                    <input size="2" class="cart-item-qty-amount"></input>
+                                </div>
+                                <div class="cart-product-name">Butterscotch <br>
+                                    Banaza</div>
+                            </div>
+                            <button class="cart-final-delete-btn"> icon </button>
+                        </div>
+                        <div class="cart-product-list-item">
+                            <div class="cart-product-list-item-right">
+                                <div class="cart-donutpic"><img src="../assets/gc-black-white.jpg"
+                                        alt="black and white pic" width="100%"></div>
+                                <div class="cart-selected-qty">
+                                    <div class="cart-item-qty-text">QTY</div>
+                                    <input size="2" class="cart-item-qty-amount"></input>
+                                </div>
+                                <div class="cart-product-name">Black and White <br>
+                                    Banaza</div>
+                            </div>
+                            <button class="cart-final-delete-btn"> icon </button>
+                        </div>
+                        <div class="cart-product-list-item">
+                            <div class="cart-product-list-item-right">
+                                <div class="cart-donutpic"><img src="../assets/gc-blackberry-b.jpg"
+                                        alt="butterscotch pic" width="100%"></div>
+                                <div class="cart-selected-qty">
+                                    <div class="cart-item-qty-text">QTY</div>
+                                    <input size="2" class="cart-item-qty-amount"></input>
+                                </div>
+                                <div class="cart-product-name">Blackberry Bliss Donut</div>
+                            </div>
+                            <button class="cart-final-delete-btn"> icon </button>
+                        </div>
+                        
+
+
+                    </div>
+
+                    
+                    
+                    <!-- Summary section  -->
+                    <section class="cart-page-sidebar">
+                        <div class="cart-summary-box">
+                            <div class="cart-summary-name">Summary</div>
+                            <div class="cart-summary-line"></div>
+                            <div class="cart-total">
+                                <div>Price a Piece</div> <span class="summary-total">$2.99</span>
+                            </div>
+                            <div class="cart-total">
+                                <div>Total ( <span id="cart-total-qty">18</span> )</div> <span class="summary-total">$53.82</span>
+                            </div>
+                            <button class="cart-summary-btn btn-blue btn-small"> CHECKOUT </button>
+                        </div>
+                        <div class="cart-summary-cc"><img src="../assets/ccards.png" alt="butterscotch pic"
+                                width="100%"></div>
+                    </section>
+
+                </div>
+
+            </div>
+</div>
+</section>
+
+<!-- footer -->
+<footer>
+    <div class="footer-nav">
+        <ul>
+            <li><a class="footer-link" href="#theflavors">THE FLAVORS</a></li>
+            <li><a class="footer-link" href="#contactus">CONTACT US</a></li>
+            <li class="footer-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+            <li><a class="footer-link" href="#ourstory">OUR STORY</a></li>
+            <li><button class="footer-btn">ORDER NOW!</button></li>
+        </ul>
+    </div>
+    <div class="copyright">© COPYRIGHT GLAZED & CONFUSED BAKERY INC. 2023 | DONUT WORRY BE HUNGRY</div>
+</footer>
+<!--
+This HTML file is a template.
+If you open it directly in the browser, you will see an empty page.
+
+You can add webfonts, meta tags, or analytics to this file.
+The build step will place the bundled scripts into the <body> tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->
+</body>
+</div>
+
+</html>
