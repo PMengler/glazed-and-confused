@@ -1,0 +1,43 @@
+.thankyou-main {
+    background-color: var(--bg-offblack); 
+}
+
+.thankyou-container {
+    margin: auto;
+    padding-top: 180px;
+    max-width: 800px;
+}
+.thankyou-top-message {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.thankyou-title {
+    font-family: 'visby-heavy';
+    color: white;
+    font-size: 54px;
+    text-align: center;
+    padding-left: 40px;
+    line-height: 56px;
+}
+
+.check-mark {
+ max-width: 200px;
+}
+
+.thankyou-line {
+    border-bottom: 4px solid #454545;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.thankyou-message {
+    color: white;
+    padding-top: 66px;
+    text-align: center;
+    font-family: 'visby-demi';
+    font-size: 28px;
+    padding-bottom: 200px;
+}

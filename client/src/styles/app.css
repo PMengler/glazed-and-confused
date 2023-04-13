@@ -90,6 +90,7 @@ div {
   padding-right: 44px;
   border: none;
   min-width: 310px;
+  text-transform: uppercase;
 }
 
 .btn-small {
