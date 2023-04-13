@@ -22,9 +22,6 @@ const resolvers = {
     donut: async (parent, { donutId }) => {
       return Donut.findOne({ donutId });
     },
-    boxes: async () => {
-      return Box.find({});
-    },
     orders: async () => {
       return Order.find({});
     },
@@ -96,30 +93,20 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addBox: async (parent, args) => {
-      const box = await Box.create(args);
-      return box;
-    },
-    addDonutToBox: async (parent, args) => {
+    addDonutToOrder: async (parent, args) => {
       const donut = await Donut.findById(args.donut);
-      const box = await Box.findByIdAndUpdate(
-        { _id: args.box },
+      const order = await Order.findByIdAndUpdate(
+        { _id: args.order },
         { $addToSet: { donuts: donut } },
         { new: true }
       );
-      return box;
+      return order;
     },
-    newOrder: async (parent, { boxes }, context) => {
+    newOrder: async (parent, args, context) => {
       if (context.user) {
-        const order = await Order.create({ boxes });
+        const order = await Order.create(args);
         return order;
       }
-    },
-    addBoxToOrder: async (parent, { orderId, boxId }) => {
-      const Order = await Order.findByIdAndUpdate(orderId, {
-        $push: { boxes: boxId },
-      });
-      return Order;
     },
   },
 };
