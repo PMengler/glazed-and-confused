@@ -5,6 +5,7 @@ import React from 'react';
 import logoPic from '../../assets/gc-logo.png';
 import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
+import CheckoutUseStripe from '../Stripe';
 
 const Header = () => {
     // Functions that will be used in the header
@@ -24,6 +25,7 @@ const Header = () => {
                 <div>
                     <a className="loginlink" href="#login">LOGIN</a>
                     <button className="nav-cart">cart</button>
+                    <CheckoutUseStripe />
                 </div>
                 <div className="mobile-logo"><img src={logoMobile} alt="logoPic"></img></div>
             </nav>
