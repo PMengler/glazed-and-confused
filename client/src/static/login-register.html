@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="stylesheet" href="../styles/header.css" media="screen" />
+    <link rel="stylesheet" href="../styles/app.css" media="screen" />
+    <link rel="stylesheet" href="../styles/normalize.css" media="screen" />
+    <link rel="stylesheet" href="../styles/footer.css" media="screen" />
+    <link rel="stylesheet" href="../styles/flavors.css" media="screen" />
+    <link rel="stylesheet" href="../styles/cart.css" media="screen" />
+    <link rel="stylesheet" href="../styles/thankyou.css" media="screen" />
+    <link rel="stylesheet" href="../styles/login-register.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <!-- <link rel="apple-touch-icon" href="" /> -->
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Glazed & Confused</title>
+</head>
+<div class="container">
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+
+
+        <!-------header -------->
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a class="navlink" href="flavors.html">THE FLAVORS</a></li>
+                    <li><a class="navlink" href="#contactus">CONTACT US</a></li>
+                    <li class="header-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+                    <li><a class="navlink" href="#ourstory">OUR STORY</a></li>
+                    <li><button class="nav-btn">ORDER NOW!</button></li>
+                </ul>
+                <div>
+                    <a class="loginlink" href="#login">ACCOUNT</a>
+                    <button class="nav-cart">icon</button>
+                </div>
+                <div class="mobile-logo"><img src="../assets/gc-logo-mobile.png" alt="logoPic"></div>
+            </nav>
+        </header>
+
+        <!-- Login - Register -->
+
+        <section class="login-register-main">
+            <div class="login-register-container">
+                <div class="login">
+                    <div class="login-title">LOGIN</div>
+                        <div class="login-input">
+                            <input placeholder="Username"><br>
+                            <input placeholder="Password"><br>
+                            <button class="login-btn btn-blue btn-small">LOGIN</button>
+                        </div>
+                </div>
+            
+                <div class="register">
+                    <div class="register-title">REGISTER</div>
+                        <div class="register-input">
+                            <input placeholder="Username"><br>
+                            <input placeholder="Email Address"><br>
+                            <input placeholder="Password"><br>
+                            <button class="register-btn btn-blue btn-small">REGISTER</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a class="footer-link" href="#theflavors">THE FLAVORS</a></li>
+                    <li><a class="footer-link" href="#contactus">CONTACT US</a></li>
+                    <li class="footer-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
+                    <li><a class="footer-link" href="#ourstory">OUR STORY</a></li>
+                    <li><button class="footer-btn">ORDER NOW!</button></li>
+                </ul>
+            </div>
+            <div class="copyright">© COPYRIGHT GLAZED & CONFUSED BAKERY INC. 2023 | DONUT WORRY BE HUNGRY</div>
+        </footer>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    </body>
+</div>
+
+</html>

@@ -187,6 +187,7 @@ span {
     width: 100%;
     border-bottom: 4px solid #454545;
     padding-bottom: 38px;
+    margin-bottom: 40px;
 }
 
 .contact-input input,textarea {
@@ -196,10 +197,10 @@ span {
     border: none;
     border-bottom: 4px solid var(--brand-blue);
     padding: 10px;
-    padding-top: 35px;
+    padding-top: 10px;
     font-size: 28px !important;
     font-family: 'visby-regular' !important;
-    margin-bottom: 32px !important;
+    margin-bottom: 30px !important;
  }
 
 .contact-btn {
