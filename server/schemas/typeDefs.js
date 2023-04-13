@@ -67,6 +67,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addDonutToOrder(donut: ID!, order: ID!): Order
     newOrder(donuts: [ID]!): Order
+    removeDonutFromOrder(donut: ID!, order: ID!): Order
   }
 `;
 module.exports = typeDefs;
