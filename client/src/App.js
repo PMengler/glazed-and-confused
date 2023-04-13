@@ -22,6 +22,7 @@ import Header from './components/Header';
 import Hero from './components/Hero/index';
 import WeeklyFlavor from './components/WeeklyFlavor';
 import DonutStory from './components/DonutStory';
+import ContactUs from './components/ContactUs';
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -54,6 +55,7 @@ function App() {
           <Hero />
           <WeeklyFlavor />
           <DonutStory />
+          <ContactUs />
         </ApolloProvider>
       </BrowserRouter>
     </Elements>
