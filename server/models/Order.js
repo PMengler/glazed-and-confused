@@ -2,26 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const orderSchema = new Schema(
     {
-        // boxes: {
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'Boxes'
-        // },
-
-        boxes: [
-            // List of all sm, md, lg boxes
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'SmallBox',
-            },
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'MediumBox',
-            },
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'LargeBox',
-            },
-        ],
+        boxes: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Box'
+        }],
     },
     {
         toJSON: {
@@ -34,9 +18,13 @@ const orderSchema = new Schema(
 
 orderSchema
     .virtual('orderTotal')
-    .get(function () {
-        // Still need to loop over all items in boxes array
-        return this.boxes.price;
+    .get(() => {
+        const orderTotal = null;
+
+        this.donuts.forEach(donut => {
+            orderTotal = orderTotal + donut.price;
+        });
+        return orderTotal;
     });
 
 const Order = model('Order', orderSchema);

@@ -2,10 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const boxSchema = new Schema(
   {
-    donuts: {
+    donuts: [{
       type: Schema.Types.ObjectId,
       ref: 'Donut',
-    },
+    }],
   },
   {
     toJSON: {
@@ -13,8 +13,20 @@ const boxSchema = new Schema(
     },
     id: false,
   }
-);
-
-const Box = model('Box', boxSchema);
-
-module.exports = Box;
+  );
+  
+  boxSchema
+    .virtual('boxPrice')
+    .get(() => {
+      const boxPrice = null;
+      
+      this.donuts.forEach(donut => {
+        boxPrice = boxPrice + donut.price;
+      });
+      return boxPrice;
+    });
+  
+  const Box = model('Box', boxSchema);
+  
+  module.exports = Box;
+  
