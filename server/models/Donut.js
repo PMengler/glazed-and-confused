@@ -1,7 +1,8 @@
 const { Schema, model } = require('mongoose');
 
-const donutSchema = new Schema({
-  name: {
+const donutSchema = new Schema(
+  {
+    name: {
     type: String,
     required: true,
     unique: true,
