@@ -107,10 +107,9 @@ const resolvers = {
       return order;
     },
     removeDonutFromOrder: async (parent, args) => {
-      const donut = await Donut.findById(args.donut);
       const order = await Order.findByIdAndUpdate(
-        { _id: args.order },
-        { $pull: { donuts: donut } },
+        args.order,
+        { $pull: { donuts: args.donut } },
         { new: true }
       );
       return order;
