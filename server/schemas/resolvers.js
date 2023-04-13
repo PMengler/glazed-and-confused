@@ -26,7 +26,7 @@ const resolvers = {
       return Order.find({});
     },
     order: async (parent, { orderId }) => {
-      return Order.findOne({ _id: orderId });
+      return Order.findOne({ orderId });
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -97,16 +97,14 @@ const resolvers = {
       const donut = await Donut.findById(args.donut);
       const order = await Order.findByIdAndUpdate(
         { _id: args.order },
-        { $addToSet: { donuts: donut } },
+        { $push: { donuts: donut } },
         { new: true }
       );
       return order;
     },
     newOrder: async (parent, args, context) => {
-      if (context.user) {
-        const order = await Order.create(args);
-        return order;
-      }
+      const order = await Order.create(args);
+      return order;
     },
   },
 };
