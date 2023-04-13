@@ -1,0 +1,142 @@
+.cart-main {
+    background-color: var(--bg-offblack);
+}
+
+.cart-page-container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 60px 20px 100px 20px;
+}
+
+.cart-order-title {
+    font-family: 'visby-heavy';
+    color: white;
+    font-size: 48px;
+    margin-bottom: 70px;
+}
+
+.cart-page-columns {
+    display: flex;
+    gap: 2rem;
+}
+
+.cart-items {
+    width: 70%;
+
+}
+.cart-product-list-item {
+    display: flex;
+    background-color: var(--bg-darkblack);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'visby-regular';
+    border-radius: var(--cornertwnty);
+    margin-bottom: 30px;
+}
+
+.cart-donutpic img {
+   max-width: 140px; 
+   border-radius: 20px 0px 0px 20px;
+}
+
+.cart-product-list-item-right {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.cart-selected-qty {
+    text-align: center;
+    padding:0px 30px 0px 30px;
+}
+
+.cart-item-qty-text {
+    font-size: 20px;
+}
+
+.cart-item-qty-amount {
+    color: var(--brand-blue);
+    font-size: 30px;
+    font-family: 'visby-demi';
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cart-product-name {
+    font-size: 28px;
+    padding-left: 30px;
+    border-left: 4px solid #454545;
+}
+.cart-final-delete-btn {
+    background-color: #EEEBEB;
+    color: black;
+    border-radius: var(--cornerten);
+    border: none;
+    font-family: 'visby-heavy';
+    padding: 10px;
+    margin-right: 30px;
+}
+
+.cart-final-delete-btn:hover {
+    background-color: var(--brand-blue);
+    color: white;
+    cursor: pointer;
+}
+
+/* ---- summary ---  */
+.cart-page-sidebar {
+    width: 30%;
+}
+
+.cart-summary-box {
+    text-align: center;
+    padding: 55px;
+    background-color: var(--bg-darkblack);
+    border-radius: var(--cornertwnty);
+}
+
+.cart-summary-name {
+    font-family: 'visby-demi';
+    color: white;
+    font-size: 38px;
+}
+
+.cart-summary-line {
+    width: 100%;
+    border-bottom: 4px solid #454545;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.cart-total {
+    display: flex;
+    color: white;
+    font-family: 'visby-regular';
+    font-size: 22px;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+.summary-total {
+    font-family: 'visby-demi';
+    
+}
+.cart-summary-btn {
+margin:auto;
+margin-top: 60px;
+
+}
+
+.cart-summary-btn:hover {
+    background-color: white;
+    color: var(--brand-blue);
+    cursor: pointer;
+    color: black;
+}
+
+.cart-summary-cc {
+ max-width: 160px;
+ margin: auto;
+ padding-top: 20px;
+}
