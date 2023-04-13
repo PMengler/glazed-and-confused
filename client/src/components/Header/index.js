@@ -14,7 +14,9 @@ const Header = () => {
             <nav>
                 <ul>
                     <li><a className="navlink" href="#theflavors">THE FLAVORS</a></li>
-                    <li><a className="navlink" href="#contactus">CONTACT US</a></li>
+                    <HashLink smooth to="/#contactus">
+                        CONTACT US
+                    </HashLink>
                     <li className="header-logo"><img src={logoPic} alt='logoPic'></img></li>
                     <HashLink smooth to="/#ourstory">
                         OUR STORY
