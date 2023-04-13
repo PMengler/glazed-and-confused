@@ -7,6 +7,9 @@ import '../src/styles/footer.css';
 import '../src/styles/header.css';
 import '../src/styles/home.css';
 import '../src/styles/normalize.css';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import CheckoutUseStripe from './components/Stripe';
 
 import { setContext } from '@apollo/client/link/context';
 import { 
@@ -40,17 +43,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+
 function App() {
   return (
-    <BrowserRouter>
-      <ApolloProvider client={client}>
-        <Header />
-        <Hero />
-        <WeeklyFlavor />
-        <DonutStory />
-
-      </ApolloProvider>
-    </BrowserRouter>
+    <Elements stripe={stripePromise}>
+      <BrowserRouter>
+        <ApolloProvider client={client}>
+          <Header />
+          <Hero />
+          <WeeklyFlavor />
+          <DonutStory />
+        </ApolloProvider>
+      </BrowserRouter>
+    </Elements>
   );
 }
 
