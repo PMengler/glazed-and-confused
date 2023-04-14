@@ -25,6 +25,7 @@ import { StoreProvider } from './utils/GlobalState';
 import LoginRegister from './pages/LoginRegister';
 import ThankYou from './pages/ThankYou';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql'
 });
