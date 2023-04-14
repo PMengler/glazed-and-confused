@@ -5,7 +5,7 @@
 .account-container {
     margin: auto;
     max-width: 1200px;
-    padding: 60px 20px 100px 20px;
+    padding: 100px 0px 100px 0px;
 }
 
 .account-title {
@@ -14,11 +14,62 @@
     font-size: 48px;
     margin-bottom: 70px;
 }
-.account-list-item {
+
+
+.account-order-block {
+    display: flex;
     background-color: var(--bg-darkblack);
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     font-family: 'visby-regular';
     border-radius: var(--cornertwnty);
     margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+}
+
+.order, .account-total-text, .account-order-total {
+ font-family: 'visby-demi';
+ font-size: 28px;
+ text-align: center;
+ 
+}
+
+.account-order-total {
+    color: var(--brand-blue);
+}
+
+.account-divider {
+    width: 4px;
+    height: 80px;
+    background-color: #323232;
+}
+
+.account-qty {
+    font-family: 'visby-heavy';
+    color: var(--brand-blue);
+    padding: 10px;
+    font-size: 22px;
+}
+
+.account-list {
+    font-family: 'visby-demi';
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.account-order { 
+    color: var(--brand-blue);
+}
+
+.account-reorder  {
+    color: var(--brand-blue);
+    font-family: 'visby-heavy';
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.account-reorder:hover {
+    color: white;
 }

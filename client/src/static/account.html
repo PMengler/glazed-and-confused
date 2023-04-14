@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles/cart.css" media="screen" />
     <link rel="stylesheet" href="../styles/thankyou.css" media="screen" />
     <link rel="stylesheet" href="../styles/login-register.css" media="screen" />
-    <link rel="stylesheet" href="../styles/.css" media="screen" />
+    <link rel="stylesheet" href="../styles/account.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
@@ -60,21 +60,50 @@
 
         <!-- past orders  -->
 
-        <section class="account-main"></section>
-        <div class="account-container">
-            <div class="account-title">Past Orders</div>
-            <div class="account-items">
-                <div class="account-list-item">
-                    <h2 class="order">Order<span class="account-order">1</span> </h2>
-                    <div class="account-divider"></div>
-                    <div class="account-list">Lucky You<span class="account-qty"> 6 </span></div>
-                    <div class="account-divider"></div>
-                    <div class="account-total-price">TOTAL PRICE <span class="account-order">$71.76</span></div>
-                    <div class="account-divider"></div>
-                    <div class="account-reorder">REORDER</div>
+        <section class="account-main">
+            <div class="account-container">
+                <div class="account-title">Past Orders</div>
+                <div class="account-orders-container">
+                    <!-- first order -->
+                    <div class="account-order-block">
+                        <div class="order">Order<span class="account-order-number"> 1 </span> </div>
+                        <div class="account-divider"></div>
+                        <ul class="account-order-items-list">
+                            <li class="account-qty"> 4 <span class="account-list">Lucky You</span></li>
+                            <li class="account-qty"> 3 <span class="account-list">Black and White </span></li>
+                            <li class="account-qty"> 3 <span class="account-list">Crunch Berries </span></li>
+                            <li class="account-qty"> 2 <span class="account-list">Sun-kissed Chocolate </span></li>
+                        </ul>
+                        <div class="account-divider"></div>
+                        <div class="account-box">
+                            <div class="account-total-text">TOTAL PRICE </div>
+                            <div class="account-order-total">$71.76</div>
+                        </div>
+                        <div class="account-divider"></div>
+                        <a class="account-reorder">REORDER</a>
+                    </div>
+
+                    <!-- second order -->
+                    <div class="account-order-block">
+                        <div class="order">Order<span class="account-order-number"> 1 </span> </div>
+                        <div class="account-divider"></div>
+                        <ul class="account-order-items-list">
+                            <li class="account-qty"> 2 <span class="account-list">Sweetheart Donut</span></li>
+                            <li class="account-qty"> 2 <span class="account-list">Black and White </span></li>
+                            <li class="account-qty"> 4 <span class="account-list">Lemon Snowflake </span></li>
+                            <li class="account-qty"> 3 <span class="account-list">Coconut Macaroon Delight </span></li>
+                        </ul>
+                        <div class="account-divider"></div>
+                        <div class="account-box">
+                            <div class="account-total-text">TOTAL PRICE </div>
+                            <div class="account-order-total">$71.76</div>
+                        </div>
+                        <div class="account-divider"></div>
+                        <a class="account-reorder">REORDER</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         <!-- footer -->
