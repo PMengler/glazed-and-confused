@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_DONUT_TO_ORDER, UPDATE_ORDER_QUANTITY } from '../../utils/actions';
-import { idbPromies } from '../../utils/helpers';
+import { idbPromise } from '../../utils/helpers';
 import '../../styles/popup.css'
 
 function Popup(donut) {
@@ -27,8 +27,16 @@ function Popup(donut) {
                 _id: _id,
                 purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
             });
+            idbPromise('order', 'put', {
+                ...donutInOrder,
+                purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
+            });
         } else {
-
+            dispatch({
+                type: ADD_DONUT_TO_ORDER,
+                donut: { ...donut, purchaseQuantity: 1 }
+            });
+            idbPromise('order', 'put', { ...donut, purchaseQuantity: 1 });
         }
     }
 
