@@ -106,6 +106,14 @@ const resolvers = {
       const order = await Order.create(args);
       return order;
     },
+    removeDonutFromOrder: async (parent, args) => {
+      const order = await Order.findByIdAndUpdate(
+        args.order,
+        { $pull: { donuts: args.donut } },
+        { new: true }
+      );
+      return order;
+    },
   },
 };
 

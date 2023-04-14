@@ -48,3 +48,14 @@ export const ADD_DONUT_TO_ORDER = gql`
     }
   }
 `;
+
+export const REMOVE_DONUT_FROM_ORDER = gql`
+  mutation RemoveDonutFromOrder($donut: ID!, $order: ID!) {
+    removeDonutFromOrder(donut: $donut, order: $order) {
+      _id
+      donuts {
+        _id
+      }
+    }
+  }
+`;
