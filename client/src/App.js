@@ -23,6 +23,7 @@ import Flavors from './pages/Flavors';
 import Home from './pages/Home';
 import { StoreProvider } from './utils/GlobalState';
 import LoginRegister from './pages/LoginRegister';
+import ThankYou from './pages/ThankYou';
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -69,6 +70,10 @@ function App() {
           <Route
             path='/popup'
             element={<Popup />}
+          />
+          <Route
+            path='/thankyou'
+            element={<ThankYou />}
           />
         </Routes>
       </Router>
