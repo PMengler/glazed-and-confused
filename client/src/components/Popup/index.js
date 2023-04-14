@@ -22,7 +22,11 @@ function Popup(donut) {
     const addDonutToOrder = () => {
         const donutInOrder = order.find((orderItem) => orderItem._id === _id)
         if (donutInOrder) {
-
+            dispatch({
+                type: UPDATE_ORDER_QUANTITY,
+                _id: _id,
+                purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
+            });
         } else {
 
         }
