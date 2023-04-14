@@ -1,5 +1,4 @@
 export const ADD_USER = 'ADD_USER';
-export const UPDATE_USER = 'UPDATE_USER';
 export const LOGIN = 'LOGIN';
 export const NEW_ORDER = 'NEW_ORDER';
 export const ADD_DONUT_TO_ORDER = 'ADD_DONUT_TO_ORDER';
