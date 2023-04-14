@@ -37,8 +37,14 @@ function CheckoutButton() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: [{ price: 'price_1Mw96NBFISeLbxNY0T43FU7Z', quantity: 20 }],
       mode: 'payment',
-      successUrl: 'https://github.com/pMengler/glazed-and-confused/ThankYou',
-      cancelUrl: 'https://github.com/pMengler/glazed-and-confused/ThankYou',
+
+      //For deployment
+      successUrl: 'https://glazed-and-confused.herokuapp.com/ThankYou',
+      cancelUrl: 'https://glazed-and-confused.herokuapp.com/ThankYou',
+      
+      //For local development
+      // successUrl: 'http://localhost:3000/ThankYou',
+      // cancelUrl: 'http://localhost:3000/ThankYou',
     });
 
     if (error) {
