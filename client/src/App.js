@@ -18,12 +18,17 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
 
-
+import { setContext } from '@apollo/client/link/context';
+import { 
+  ApolloProvider,
+  ApolloClient, 
+  InMemoryCache, 
+  createHttpLink } from '@apollo/client';
+  
+import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
 import Home from './pages/Home';
 import { StoreProvider } from './utils/GlobalState';
-
-//TODO: Create Home Page
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -62,6 +67,7 @@ function App() {
             path='/flavors'
             element={<Flavors />}
           />
+          {/* <Popup /> Still needs a route path */}
         </Routes>
       </Router>
       </StoreProvider>
