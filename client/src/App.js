@@ -1,5 +1,12 @@
 import React from 'react';
-import { Router as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { 
+  ApolloProvider,
+  ApolloClient, 
+  InMemoryCache, 
+  createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
 import '../src/styles/app.css';
 import '../src/styles/cart.css';
 import '../src/styles/flavors.css';
@@ -11,18 +18,12 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
 
-import { setContext } from '@apollo/client/link/context';
-import { 
-  ApolloProvider,
-  ApolloClient, 
-  InMemoryCache, 
-  createHttpLink } from '@apollo/client';
-  
-import Header from './components/Header';
-import Hero from './components/Hero/index';
-import WeeklyFlavor from './components/WeeklyFlavor';
-import DonutStory from './components/DonutStory';
-import ContactUs from './components/ContactUs';
+
+import Flavors from './pages/Flavors';
+import Home from './pages/Home';
+import { StoreProvider } from './utils/GlobalState';
+
+//TODO: Create Home Page
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -49,15 +50,22 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 function App() {
   return (
     <Elements stripe={stripePromise}>
-      <BrowserRouter>
-        <ApolloProvider client={client}>
-          <Header />
-          <Hero />
-          <WeeklyFlavor />
-          <DonutStory />
-          <ContactUs />
-        </ApolloProvider>
-      </BrowserRouter>
+      <ApolloProvider client={client}>
+      <StoreProvider>
+        <Router>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/flavors'
+            element={<Flavors />}
+          />
+        </Routes>
+      </Router>
+      </StoreProvider>
+    </ApolloProvider>
     </Elements>
   );
 }
