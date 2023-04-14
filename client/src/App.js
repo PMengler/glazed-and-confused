@@ -66,11 +66,15 @@ function App() {
             path='/loginRegister'
             element={<LoginRegister />}
           />
+          {/* Just placed here for testing but need to place this in a more accurate spot */}
+          <Route
+            path='/popup'
+            element={<Popup />}
+          />
           <Route
             path='/thankyou'
             element={<ThankYou />}
           />
-          {/* <Popup /> Still needs a route path */}
         </Routes>
       </Router>
       </StoreProvider>

@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { Link } from "react-router-dom";
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+// import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import image from '../../assets/gc-black-white.jpg'
 
