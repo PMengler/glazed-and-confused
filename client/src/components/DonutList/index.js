@@ -6,3 +6,14 @@ import { useQuery } from '@apollo/client';
 import { QUERY_GET_ALL_DONUTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
+function DonutList() {
+
+
+    return (
+        <>
+        
+        </>
+    )
+}
+
+export default DonutList;
