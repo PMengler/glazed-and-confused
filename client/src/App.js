@@ -23,6 +23,7 @@ import Hero from './components/Hero/index';
 import WeeklyFlavor from './components/WeeklyFlavor';
 import DonutStory from './components/DonutStory';
 import ContactUs from './components/ContactUs';
+import Popup from './components/Popup';
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -51,11 +52,12 @@ function App() {
     <Elements stripe={stripePromise}>
       <BrowserRouter>
         <ApolloProvider client={client}>
-          <Header />
+          <Popup />
+          {/* <Header />
           <Hero />
           <WeeklyFlavor />
           <DonutStory />
-          <ContactUs />
+          <ContactUs /> */}
         </ApolloProvider>
       </BrowserRouter>
     </Elements>
