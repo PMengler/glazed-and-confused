@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding: 40px;
+  padding: 70px;
 }
 
 .flavors-card img {
@@ -78,10 +78,8 @@
   border-radius: var(--cornertwnty);
   border-radius: 20px 0px 0px 0px;
   margin-top: 20px;
-}
-
-.cart-title {
   padding: 30px;
+  text-align: center;
 }
 
 .cart-yourcart {
@@ -96,7 +94,34 @@
   border-bottom: 3px solid var(--brand-blue);
   margin-bottom: 20px;
   margin-top: 20px;
+  
 }
+
+.flavors-pricing {
+ font-family: 'visby-demi';
+ font-size: 24px;
+ color: white;
+}
+
+.flavor-total {
+font-family: 'visby-demi';
+ font-size: 20px;
+ color: white;
+ margin-top: 20px;
+}
+
+.flavor-span {
+color: var(--brand-blue);
+}
+
+.flavor-total-price {
+  font-family: 'visby-heavy';
+  color: var(--brand-blue);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
 /*  -----empty cart----- */
 .cart-product-empty {
   background-color: #2a2a2a;
