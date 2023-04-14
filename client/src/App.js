@@ -52,12 +52,12 @@ function App() {
     <Elements stripe={stripePromise}>
       <BrowserRouter>
         <ApolloProvider client={client}>
-          <Popup />
-          {/* <Header />
+          {/* <Popup /> */}
+          <Header />
           <Hero />
           <WeeklyFlavor />
           <DonutStory />
-          <ContactUs /> */}
+          <ContactUs />
         </ApolloProvider>
       </BrowserRouter>
     </Elements>
