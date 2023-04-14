@@ -4,10 +4,12 @@ import {
   // LOGIN,
   NEW_ORDER,
   ADD_DONUT_TO_ORDER,
-  REMOVE_DONUT_FROM_ORDER,
   // ADD_TO_CART || Add donut to order
-  // UPDATE_CART_QUANTITY || update order quantity
-  // REMOVE_FROM_CART || remove 
+  REMOVE_DONUT_FROM_ORDER,
+  // REMOVE_FROM_CART || Remove donut from order
+  UPDATE_ORDER_QUANTITY
+  // UPDATE_CART_QUANTITY || Update order quantity
+  ADD_MULTIPLE_TO_ORDER
   // ADD_MULTIPLE_TO_CART,
   // CLEAR_CART,
   // TOGGLE_CART,
@@ -32,48 +34,24 @@ export const reducer = (state, action) => {
         orderOpen: newState.length > 0,
         order: newState,
       };
-    };
-      //     case REMOVE_FROM_CART:
-      //       let newState = state.cart.filter((product) => {
-      //         return product._id !== action._id;
-      //       });
-      
-      //       return {
-      //         ...state,
-      //         cartOpen: newState.length > 0,
-      //         cart: newState,
-      //       };
-//     case UPDATE_PRODUCTS:
-//       return {
-//         ...state,
-//         products: [...action.products],
-//       };
 
-//     case ADD_TO_CART:
-//       return {
-//         ...state,
-//         cartOpen: true,
-//         cart: [...state.cart, action.product],
-//       };
+    case UPDATE_ORDER_QUANTITY:
+      return {
+        ...state,
+        orderOpen: true,
+        order: state.order.map((donut) => {
+          if (action._id === donut._id) {
+            donut.purchaseQuantity = action.purchaseQuantity;
+          }
+          return donut;
+        }),
+      };
 
-//     case ADD_MULTIPLE_TO_CART:
-//       return {
-//         ...state,
-//         cart: [...state.cart, ...action.products],
-//       };
-
-//     case UPDATE_CART_QUANTITY:
-//       return {
-//         ...state,
-//         cartOpen: true,
-//         cart: state.cart.map((product) => {
-//           if (action._id === product._id) {
-//             product.purchaseQuantity = action.purchaseQuantity;
-//           }
-//           return product;
-//         }),
-//       };
-
+    case ADD_MULTIPLE_TO_ORDER:
+      return {
+        ...state,
+        order: [...state.order, ...action.donuts]
+      };
 
 //     case CLEAR_CART:
 //       return {
