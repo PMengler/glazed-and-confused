@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_DONUT_TO_ORDER, UPDATE_ORDER_QUANTITY } from '../../utils/actions';
 import { idbPromies } from '../../utils/helpers';
+import '../../styles/popup.css'
 
 function Popup(donut) {
     const [state, dispatch] = useStoreContext();
