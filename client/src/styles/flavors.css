@@ -99,7 +99,7 @@
 
 .flavors-pricing {
  font-family: 'visby-demi';
- font-size: 24px;
+ font-size: 20px;
  color: white;
 }
 
@@ -117,7 +117,7 @@ color: var(--brand-blue);
 .flavor-total-price {
   font-family: 'visby-heavy';
   color: var(--brand-blue);
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
