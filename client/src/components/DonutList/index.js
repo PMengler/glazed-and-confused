@@ -15,7 +15,17 @@ function DonutList() {
     const { loading, data } = useQuery(QUERY_GET_ALL_DONUTS);
 
     useEffect(() => {
-
+        if (data) {
+            dispatch({
+                type: UPDATE_DONUTS,
+                donuts: data.donuts,
+            });
+            data.donuts.forEach((donut) => {
+                idbPromise('donuts', 'put', donut);
+            });
+        } else {
+            
+        }
     }, [data, loading, dispatch]);
 
     return (
