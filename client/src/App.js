@@ -17,13 +17,6 @@ import '../src/styles/normalize.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
-
-import { setContext } from '@apollo/client/link/context';
-import { 
-  ApolloProvider,
-  ApolloClient, 
-  InMemoryCache, 
-  createHttpLink } from '@apollo/client';
   
 import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
