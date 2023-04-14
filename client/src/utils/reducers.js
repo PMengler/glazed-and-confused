@@ -1,5 +1,7 @@
 import { useReducer } from 'react';
 import {
+  UPDATE_DONUTS,
+  // UPDATE_PRODUCTS || Update the donuts to the new indexed database store
   ADD_DONUT_TO_ORDER,
   // ADD_TO_CART || Add donut to order
   REMOVE_DONUT_FROM_ORDER,
@@ -17,6 +19,12 @@ import {
 export const reducer = (state, action) => {
 
   switch (action.type) {
+    case UPDATE_DONUTS:
+      return {
+        ...state,
+        donuts: [...action.donuts],
+      };
+      
     case ADD_DONUT_TO_ORDER:
       return {
         ...state,
