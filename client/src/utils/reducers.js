@@ -1,24 +1,48 @@
 import { useReducer } from 'react';
 import {
-  ADD_USER,
-  UPDATE_USER,
-  LOGIN,
+  // UPDATE_USER,
+  // LOGIN,
   NEW_ORDER,
   ADD_DONUT_TO_ORDER,
   REMOVE_DONUT_FROM_ORDER,
-  // UPDATE_PRODUCTS,
-  // ADD_TO_CART,
-  // UPDATE_CART_QUANTITY,
-  // REMOVE_FROM_CART,
+  // ADD_TO_CART || Add donut to order
+  // UPDATE_CART_QUANTITY || update order quantity
+  // REMOVE_FROM_CART || remove 
   // ADD_MULTIPLE_TO_CART,
-  // UPDATE_CATEGORIES,
-  // UPDATE_CURRENT_CATEGORY,
   // CLEAR_CART,
   // TOGGLE_CART,
 } from './actions';
 
-// export const reducer = (state, action) => {
-//   switch (action.type) {
+export const reducer = (state, action) => {
+
+  switch (action.type) {
+    case ADD_DONUT_TO_ORDER:
+      return {
+        ...state,
+        donuts: [...action.donuts]
+      };
+
+    case REMOVE_DONUT_FROM_ORDER:
+      let newState = state.order.filter((donut) => {
+        return donut._id !== action._id;
+      });
+
+      return {
+        ...state,
+        orderOpen: newState.length > 0,
+        order: newState,
+      };
+    };
+      //     case REMOVE_FROM_CART:
+      //       let newState = state.cart.filter((product) => {
+      //         return product._id !== action._id;
+      //       });
+      
+      //       return {
+      //         ...state,
+      //         cartOpen: newState.length > 0,
+      //         cart: newState,
+      //       };
 //     case UPDATE_PRODUCTS:
 //       return {
 //         ...state,
@@ -50,16 +74,6 @@ import {
 //         }),
 //       };
 
-//     case REMOVE_FROM_CART:
-//       let newState = state.cart.filter((product) => {
-//         return product._id !== action._id;
-//       });
-
-//       return {
-//         ...state,
-//         cartOpen: newState.length > 0,
-//         cart: newState,
-//       };
 
 //     case CLEAR_CART:
 //       return {
@@ -88,8 +102,8 @@ import {
 
 //     default:
 //       return state;
-//   }
-// };
+  }
+};
 
 export function useProductReducer(initialState) {
   return useReducer(reducer, initialState);
