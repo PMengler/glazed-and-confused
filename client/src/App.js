@@ -54,13 +54,13 @@ function App() {
       <BrowserRouter>
         <ApolloProvider client={client}>
           <StoreProvider>
-            <Popup />
+            {/* <Popup /> */}
+            <Header />
+            <Hero />
+            <WeeklyFlavor />
+            <DonutStory />
+            <ContactUs />
           </StoreProvider>
-          {/* <Header />
-          <Hero />
-          <WeeklyFlavor />
-          <DonutStory />
-          <ContactUs /> */}
         </ApolloProvider>
       </BrowserRouter>
     </Elements>
