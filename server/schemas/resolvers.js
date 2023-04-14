@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-const { User, Donut, Box, Order } = require('../models');
+const { User, Donut, Order } = require('../models');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
@@ -22,14 +22,11 @@ const resolvers = {
     donut: async (parent, { donutId }) => {
       return Donut.findOne({ donutId });
     },
-    boxes: async () => {
-      return Box.find({});
-    },
     orders: async () => {
       return Order.find({});
     },
     order: async (parent, { orderId }) => {
-      return Order.findOne({ _id: orderId });
+      return Order.findOne({ orderId });
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -74,52 +71,38 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    updateUser: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $set: args },
-          { new: true }
-        );
-        return user;
-      }
-    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError('Incorrect username');
       }
       const correctPw = await user.isCorrectPassword(password);
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError('Incorrect password');
       }
       const token = signToken(user);
       return { token, user };
     },
-    addBox: async (parent, args) => {
-      const box = await Box.create(args);
-      return box;
-    },
-    addDonutToBox: async (parent, args) => {
+    addDonutToOrder: async (parent, args) => {
       const donut = await Donut.findById(args.donut);
-      const box = await Box.findByIdAndUpdate(
-        { _id: args.box },
-        { $addToSet: { donuts: donut } },
+      const order = await Order.findByIdAndUpdate(
+        { _id: args.order },
+        { $push: { donuts: donut } },
         { new: true }
       );
-      return box;
+      return order;
     },
-    newOrder: async (parent, { boxes }, context) => {
-      if (context.user) {
-        const order = await Order.create({ boxes });
-        return order;
-      }
+    newOrder: async (parent, args, context) => {
+      const order = await Order.create(args);
+      return order;
     },
-    addBoxToOrder: async (parent, { orderId, boxId }) => {
-      const Order = await Order.findByIdAndUpdate(orderId, {
-        $push: { boxes: boxId },
-      });
-      return Order;
+    removeDonutFromOrder: async (parent, args) => {
+      const order = await Order.findByIdAndUpdate(
+        args.order,
+        { $pull: { donuts: args.donut } },
+        { new: true }
+      );
+      return order;
     },
   },
 };

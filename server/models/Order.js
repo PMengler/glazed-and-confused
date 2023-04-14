@@ -2,9 +2,9 @@ const { Schema, model } = require('mongoose');
 
 const orderSchema = new Schema(
     {
-        boxes: [{
+        donuts: [{
             type: Schema.Types.ObjectId,
-            ref: 'Box'
+            ref: 'Donut'
         }],
     },
     {

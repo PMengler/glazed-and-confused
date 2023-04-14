@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../styles/app.css" media="screen" />
     <link rel="stylesheet" href="../styles/normalize.css" media="screen" />
     <link rel="stylesheet" href="../styles/footer.css" media="screen" />
-    <link rel="stylesheet" href="../styles/home.css" media="screen" />
     <link rel="stylesheet" href="../styles/flavors.css" media="screen" />
     <link rel="stylesheet" href="../styles/cart.css" media="screen" />
+    <link rel="stylesheet" href="../styles/thankyou.css" media="screen" />
+    <link rel="stylesheet" href="../styles/login-register.css" media="screen" />
+    <link rel="stylesheet" href="../styles/.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
@@ -37,6 +39,8 @@
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
 
+
+        <!-------header -------->
         <header class="header">
             <nav>
                 <ul>
@@ -53,78 +57,31 @@
                 <div class="mobile-logo"><img src="../assets/gc-logo-mobile.png" alt="logoPic"></div>
             </nav>
         </header>
-        <main>
-            <section class="heropic">
-                <div class="hero-left">
-                    <div class="hero-label">
-                        <h1>Donut Panic!<br>
-                            There’s plenty for everyone.</h1>
-                        <p>Let's find that perfect flavor.
-                        <p>
-                            <button class="btn-lrg btn-black">START YOUR ORDER</button>
-                    </div>
+
+        <!-- past orders  -->
+
+        <section class="account-main"></section>
+        <div class="account-container">
+            <div class="account-title">Past Orders</div>
+            <div class="account-items">
+                <div class="account-list-item">
+                    <h2 class="order">Order<span class="account-order">1</span> </h2>
+                    <div class="account-divider"></div>
+                    <div class="account-list">Lucky You<span class="account-qty"> 6 </span></div>
+                    <div class="account-divider"></div>
+                    <div class="account-total-price">TOTAL PRICE <span class="account-order">$71.76</span></div>
+                    <div class="account-divider"></div>
+                    <div class="account-reorder">REORDER</div>
                 </div>
-                <div class="hero-right">
-                    <div class="hero-shape"></div>
-                </div>
-            </section>
-            <section class="new-flavor">
-                <h1><span>New!</span> Flavor of the Week!</h1>
-                <div class="new-flavor-box">
-                    <img class="new-flavor-pic" src="../assets/new-ras.jpg">
-                    <div class="new-flavor-info">
-                        <h2>Rasberry
-                            Rush</h2>
-                        <p class="new-flavor-p">Get your taste buds in a frenzy with our new <br>
-                            Raspberry Rush donut -
-                            it's like a party in your <br>
-                            mouth, and everyone's invited!</p>
-                        <button class="btn-lrg btn-white">SEE MORE</button>
-                    </div>
-                </div>
-            </section>
-            <section class="our-story">
-                <div class="story-block">
-                    <h1><span>Our</span> Donut Story</h1>
-                    <p class="story-p">Once upon a time, there were five developer students who were tired of
-                        writing code all day long and decided to take on a new challenge: starting
-                        their own donut company. They thought, "Why not mix technology with sugar and create the
-                        ultimate
-                        donut experience?" <br>
-                        <br>
-                        After countless hours of research, trial, and error (and, of course, consuming lots of
-                        donuts), the
-                        team finally
-                        came up with their perfect recipe. They created a delicious line up of amazingly unique
-                        donuts, and
-                        even developed
-                        a donut-shaped drone for deliveries. The team even joked that their office was now filled
-                        with more
-                        sugar than lines of code!
-                    </p>
-                    <div class="story-swirl"><img src="../assets/swirl-blue.svg" alt="icon"></div>
-                </div>
-            </section>
-            <section class="contact-us">
-                <div class="map">
-                    <div class="contact-box">
-                        <h2>Contact Us</h2>
-                        <div class="contact-line"></div>
-                        <div class="contact-input">
-                            <input placeholder="Your Name"><br>
-                            <input placeholder="Email Address"><br>
-                            <textarea placeholder="Message"></textarea><br>
-                            <button class="contact-btn btn-blue btn-lrg">SUBMIT</button>
-                            <p>Icon Call us at 1-800-555-GLAZED</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </div>
+
+
+        <!-- footer -->
         <footer>
             <div class="footer-nav">
                 <ul>
-                    <li><a class="footer-link" href="flavors.html">THE FLAVORS</a></li>
+                    <li><a class="footer-link" href="#theflavors">THE FLAVORS</a></li>
                     <li><a class="footer-link" href="#contactus">CONTACT US</a></li>
                     <li class="footer-logo"><img src="../assets/gc-logo.png" alt="logoPic"></li>
                     <li><a class="footer-link" href="#ourstory">OUR STORY</a></li>

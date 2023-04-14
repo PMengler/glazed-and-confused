@@ -1,0 +1,24 @@
+.account-main {
+    background-color: var(--bg-offblack);
+}
+
+.account-container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 60px 20px 100px 20px;
+}
+
+.account-title {
+    font-family: 'visby-heavy';
+    color: white;
+    font-size: 48px;
+    margin-bottom: 70px;
+}
+.account-list-item {
+    background-color: var(--bg-darkblack);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'visby-regular';
+    border-radius: var(--cornertwnty);
+    margin-bottom: 30px;
+}

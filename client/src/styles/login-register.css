@@ -1,0 +1,67 @@
+.login-register-main {
+    background-color: var(--bg-offblack);
+}
+
+.login-register-container {
+    margin: auto;
+    padding-top: 180px;
+    max-width: 1000px;
+    display: flex;
+    padding-bottom: 200px;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.login, .register {
+    font-family: 'visby-heavy';
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 64px;
+    margin-bottom: 20px;
+    background-color: var(--bg-darkblack);
+    border-radius: var( --cornertwnty);
+}
+
+.login-title, .register-title {
+    margin: 0px;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.login-input input {
+    width: 100%;
+    color: white;
+    background-color: #231f2000;
+    border: none;
+    border-bottom: 4px solid var(--brand-blue);
+    padding-top: 20px;
+    font-size: 28px !important;
+    font-family: 'visby-demi' !important;
+    margin-bottom: 32px !important;
+}
+
+.login-btn, .register-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer; margin-left: 0px;
+    margin-top: 60px;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.register-input input {
+    width: 100%;
+    color: white;
+    background-color: #231f2000;
+    border: none;
+    border-bottom: 4px solid var(--brand-blue);
+    padding-top: 20px;
+    font-size: 28px !important;
+    font-family: 'visby-demi' !important;
+    margin-bottom: 32px !important;
+}

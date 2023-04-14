@@ -28,11 +28,6 @@ const typeDefs = gql`
     name: String!
   }
 
-  type Box {
-    _id: ID
-    donuts: [Donut]
-  }
-
   input DonutInput {
     _id: ID
     name: String!
@@ -43,7 +38,7 @@ const typeDefs = gql`
 
   type Order {
     _id: ID
-    boxes: [Box]
+    donuts: [Donut]
   }
 
   type Checkout {
@@ -61,20 +56,17 @@ const typeDefs = gql`
     me: User
     donuts: [Donut]
     donut(_id: ID!): Donut
-    boxes: [Box]
     orders: [Order]
     order(_id: ID!): Order
-    checkout(boxes: [ID]!): Checkout
+    checkout(donuts: [ID]!): Checkout
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addBox(donuts: [ID]): Box
-    addDonutToBox(donut: ID!, box: ID!): Box
-    newOrder(boxes: [ID]!): Order
-    addBoxToOrder(boxes: [ID]!): Order
+    addDonutToOrder(donut: ID!, order: ID!): Order
+    newOrder(donuts: [ID]!): Order
+    removeDonutFromOrder(donut: ID!, order: ID!): Order
   }
 `;
 module.exports = typeDefs;

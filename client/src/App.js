@@ -14,6 +14,9 @@ import '../src/styles/footer.css';
 import '../src/styles/header.css';
 import '../src/styles/home.css';
 import '../src/styles/normalize.css';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import CheckoutUseStripe from './components/Stripe';
 
 
 import Flavors from './pages/Flavors';
@@ -42,9 +45,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+
 function App() {
   return (
-    <ApolloProvider client={client}>
+    <Elements stripe={stripePromise}>
+      <ApolloProvider client={client}>
       <StoreProvider>
         <Router>
         <Routes>
@@ -60,6 +66,7 @@ function App() {
       </Router>
       </StoreProvider>
     </ApolloProvider>
+    </Elements>
   );
 }
 
