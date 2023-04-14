@@ -1,17 +1,16 @@
 import { useReducer } from 'react';
 import {
-  // UPDATE_USER,
-  // LOGIN,
-  NEW_ORDER,
   ADD_DONUT_TO_ORDER,
   // ADD_TO_CART || Add donut to order
   REMOVE_DONUT_FROM_ORDER,
   // REMOVE_FROM_CART || Remove donut from order
-  UPDATE_ORDER_QUANTITY
+  UPDATE_ORDER_QUANTITY,
   // UPDATE_CART_QUANTITY || Update order quantity
-  ADD_MULTIPLE_TO_ORDER
+  ADD_MULTIPLE_TO_ORDER,
   // ADD_MULTIPLE_TO_CART,
+  CLEAR_ORDER,
   // CLEAR_CART,
+  TOGGLE_ORDER
   // TOGGLE_CART,
 } from './actions';
 
@@ -53,33 +52,21 @@ export const reducer = (state, action) => {
         order: [...state.order, ...action.donuts]
       };
 
-//     case CLEAR_CART:
-//       return {
-//         ...state,
-//         cartOpen: false,
-//         cart: [],
-//       };
+    case CLEAR_ORDER:
+      return {
+        ...state,
+        orderOpen: false,
+        order: [],
+      }
 
-//     case TOGGLE_CART:
-//       return {
-//         ...state,
-//         cartOpen: !state.cartOpen,
-//       };
+    case TOGGLE_ORDER:
+      return {
+        ...state,
+        orderOpen: !state.orderOpen,
+      };
 
-//     case UPDATE_CATEGORIES:
-//       return {
-//         ...state,
-//         categories: [...action.categories],
-//       };
-
-//     case UPDATE_CURRENT_CATEGORY:
-//       return {
-//         ...state,
-//         currentCategory: action.currentCategory,
-//       };
-
-//     default:
-//       return state;
+    default:
+      return state;
   }
 };
 
