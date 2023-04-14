@@ -19,6 +19,14 @@ function Popup(donut) {
     const { order } = state
 
     // Functions for handling donut being added to order
+    const addDonutToOrder = () => {
+        const donutInOrder = order.find((orderItem) => orderItem._id === _id)
+        if (donutInOrder) {
+
+        } else {
+
+        }
+    }
 
     return (
         <>
@@ -39,7 +47,7 @@ function Popup(donut) {
                             <div className="ingredients"> icon Contains:<span className='allergies'>Milk, Wheat, Egg</span></div>
                             <div className="popup-addtocart-box">
                                 <span className="popup-addtocart">ADD TO CART</span>
-                                <button className="popup-btn">icon</button>
+                                <button className="popup-btn" onClick={addDonutToOrder}>icon</button>
                             </div>
                         </div>
                 </section>
