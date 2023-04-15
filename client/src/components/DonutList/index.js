@@ -13,6 +13,7 @@ function DonutList() {
 
     useEffect(() => {
         if (data) {
+            console.log(data)
             dispatch({
                 type: UPDATE_DONUTS,
                 donuts: data.donuts,
@@ -20,6 +21,7 @@ function DonutList() {
             data.donuts.forEach((donut) => {
                 idbPromise('donuts', 'put', donut);
             });
+            console.log(data.donuts)
         } else if (!loading) {
             idbPromise('donuts', 'get').then((donuts) => {
                 dispatch({
@@ -39,7 +41,14 @@ function DonutList() {
                         <span className="flavors-span">Donut worry, we've got your flavor cravings covered!</span>
                     </div>
                     <section className="donut-flavor-grid">
-                        <DonutItem />
+                        <DonutItem 
+                        key={donut._id}
+                        _id={donut._id}
+                        name={donut.name}
+                        description={donut.description}
+                        price={donut.price}
+                        image={donut.image}
+                        />
                     </section>
                 </div>
                 <div className="cart-sidebar">
