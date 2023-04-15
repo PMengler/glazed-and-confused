@@ -45,6 +45,6 @@ You can see the deployed site here: [Heroku](https://)
 ## Credits
 - <a href="https://github.com/bryanjeremysmith"> BJ Smith </a>
 - <a href="https://github.com/Morralytics"> Nick Morris </a>    
-- <a href="https://github.com/savannahvelt"> Savannah Vel</a>
+- <a href="https://github.com/savannahvel"> Savannah Vel</a>
 - <a href="https://github.com/PMengler"> Patrick Mengler </a>
 - <a href="https://github.com/pherpat"> Jennifer Scherschligt </a>

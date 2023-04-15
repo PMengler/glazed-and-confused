@@ -72,6 +72,7 @@
 .cart-sidebar {
   max-width: 260px;
   transition: all 0.3s ease-in-out;
+  display: block;
 }
 
 .cart-container {
@@ -284,5 +285,6 @@ select:focus {
     top: -20px;
     width: auto;
     right: -300px;
+    display: none;
   }
 }
