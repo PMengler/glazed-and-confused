@@ -9,9 +9,6 @@ import { idbPromise } from '../../utils/helpers';
 function DonutList() {
     const [state, dispatch] = useStoreContext();
 
-    // Not exactly sure which state should be recognized
-    const {  } = state;
-
     const { loading, data } = useQuery(QUERY_GET_ALL_DONUTS);
 
     useEffect(() => {
@@ -23,8 +20,13 @@ function DonutList() {
             data.donuts.forEach((donut) => {
                 idbPromise('donuts', 'put', donut);
             });
-        } else {
-            
+        } else if (!loading) {
+            idbPromise('donuts', 'get').then((donuts) => {
+                dispatch({
+                    type: UPDATE_DONUTS,
+                    donuts: donuts,
+                });
+            });
         }
     }, [data, loading, dispatch]);
 
