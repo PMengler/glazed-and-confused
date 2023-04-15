@@ -48,6 +48,7 @@ function OrderSidebar() {
                             <OrderItem />
                         ))}
                         
+                        {Auth.log}
                         <div className="cart-checkout">
                             <button className="cart-btn btn-blue btn-small">VIEW CART</button>
                         </div>

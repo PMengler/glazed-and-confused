@@ -13,6 +13,15 @@ class AuthService {
         localStorage.setItem('id_token', idToken);
         window.location.assign('/');
     }
+
+    loggedIn() {
+        const token = this.getToken();
+        return !!token && !this.isTokenExpired(token);
+    }
+
+    isTokenExpired(token) {
+        
+    }
 }
 
 export default new AuthService();
