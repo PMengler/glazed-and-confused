@@ -188,6 +188,13 @@ span {
     margin: 0px;
 }
 
+.contact-box p svg {
+    fill: var(--brand-blue);
+    padding-right: 10px;
+    transform: scale(1.5);
+    margin-bottom: -4px;
+}
+
 .contact-line {
     width: 100%;
     border-bottom: 4px solid #454545;
