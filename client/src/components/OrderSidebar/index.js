@@ -46,7 +46,7 @@ function OrderSidebar() {
                             <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
 
                             {state.order.map((donut) => (
-                                <OrderItem key={donut._id} />
+                                <OrderItem key={donut._id} orderItem={donut}/>
                             ))}
 
                             <div className="cart-checkout">
