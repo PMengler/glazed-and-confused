@@ -95,11 +95,11 @@ div {
 
 .btn-small {
   font-family: 'visby-heavy';
-    font-size: 22px;
-    border-radius: var(--cornertwnty);
-    line-height: 60px;
-    width: 100%;
-    border: none;
+  font-size: 22px;
+  border-radius: var(--cornertwnty);
+  line-height: 60px;
+  width: 100%;
+  border: none;
 }
 
 .btn-white {

@@ -13,7 +13,8 @@
     align-items: flex-start;
 }
 
-.login, .register {
+.login,
+.register {
     font-family: 'visby-heavy';
     color: white;
     text-align: center;
@@ -21,10 +22,11 @@
     padding: 64px;
     margin-bottom: 20px;
     background-color: var(--bg-darkblack);
-    border-radius: var( --cornertwnty);
+    border-radius: var(--cornertwnty);
 }
 
-.login-title, .register-title {
+.login-title,
+.register-title {
     margin: 0px;
     font-size: 34px;
     margin-bottom: 20px;
@@ -42,14 +44,17 @@
     margin-bottom: 32px !important;
 }
 
-.login-btn, .register-btn {
+.login-btn,
+.register-btn {
     padding-left: 20px;
     padding-right: 20px;
-    cursor: pointer; margin-left: 0px;
+    cursor: pointer;
+    margin-left: 0px;
     margin-top: 60px;
 }
 
-.login-btn:hover, .register-btn:hover {
+.login-btn:hover,
+.register-btn:hover {
     background-color: white;
     color: black;
 }
@@ -64,4 +69,14 @@
     font-size: 28px !important;
     font-family: 'visby-demi' !important;
     margin-bottom: 32px !important;
+}
+
+@media screen and (max-width: 720px) {
+
+    .login-register-container {
+        display: block;
+        padding: 20px;
+    }
+
+
 }

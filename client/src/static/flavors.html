@@ -29,6 +29,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Glazed & Confused</title>
+
+
 </head>
 <div class="container">
 
@@ -53,6 +55,31 @@
                 </div>
                 <div class="mobile-logo"><img src="../assets/gc-logo-mobile.png" alt="logoPic"></div>
             </nav>
+
+            <!----- mobile -nav ----->
+            <div class="mobile-nav-box">
+                <input id="toggle" type="checkbox">
+                <label for="toggle" class="hamburger">
+                    <div class="top-bun"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bun"></div>
+                </label>
+                <div class="nav-mobile">
+                    <div class="nav-wrapper">
+                        <div class="mobile-links">
+                            <ul>
+                                <li> </li>
+                                <li> <a href="index.html">HOME</a></li>
+                                <li> <a href="flavors.html">THE FLAVORS</a></li>
+                                <li> <a href="index.html#contactus">CONTACT US</a></li>
+                                <li> <a href="index.html#aboutus">OUR STORY</a></li>
+                                <li> <a href="login-register.html">LOGIN</a></li>
+                            </ul>
+                            <button class="btn-blue btn-small">VIEW CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <section class="flavors-main">
             <div class="flavors-container">
@@ -198,54 +225,54 @@
             <!-- --------- cart section --------  -->
             <div class="cart-sidebar">
                 <div class="cart-container">
-                        <div class="cart-yourcart">Your Cart</h2>
-                            <div class="cart-line"></div>
-                        </div>
-                        <div class="flavors-pricing">$3.00 per donut</div>
-                        <div class="flavor-total">TOTAL ( <span class="flavor-span">18</span> )</div> 
-                        <div class="flavor-total-price">$54.00</div>
-
-        
+                    <div class="cart-yourcart">Your Cart</h2>
+                        <div class="cart-line"></div>
+                    </div>
+                    <div class="flavors-pricing">$3.00 per donut</div>
+                    <div class="flavor-total">TOTAL ( <span class="flavor-span">18</span> )</div>
+                    <div class="flavor-total-price">$54.00</div>
 
 
-                        <!-- product card  -->
-                        <section class="card-container">
-                            <div class="product-name">Sweetheart Donut</div>
-                            <div class="cart-img"><img src="../assets/gc-sweetheart.jpg" width="100%"></div>
-                            <div class="quantity-delete-box">
-                                <select class="quantity">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                  </select>
-                                <button class="cart-delete-btn"> icon </button>
-                        
-                            </div>
-                        </section>
 
-                        <!-- Cart product card  -->
-                        <div class="cart-product-card">
+
+                    <!-- product card  -->
+                    <section class="card-container">
+                        <div class="product-name">Sweetheart Donut</div>
+                        <div class="cart-img"><img src="../assets/gc-sweetheart.jpg" width="100%"></div>
+                        <div class="quantity-delete-box">
+                            <select class="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <button class="cart-delete-btn"> icon </button>
+
                         </div>
-                        <div class="cart-product-empty">
-                            <img src="../assets/cart-plus.svg" width="100%">
-                        </div>
-                        <div class="cart-product-empty">
-                            <img src="../assets/cart-plus.svg" width="100%">
-                        </div>
-                        <div class="cart-product-empty">
-                            <img src="../assets/cart-plus.svg" width="100%">
-                        </div>
-                        
-                    
+                    </section>
+
+                    <!-- Cart product card  -->
+                    <div class="cart-product-card">
+                    </div>
+                    <div class="cart-product-empty">
+                        <img src="../assets/cart-plus.svg" width="100%">
+                    </div>
+                    <div class="cart-product-empty">
+                        <img src="../assets/cart-plus.svg" width="100%">
+                    </div>
+                    <div class="cart-product-empty">
+                        <img src="../assets/cart-plus.svg" width="100%">
+                    </div>
+
+
                 </div>
 
                 <div class="cart-checkout">
@@ -279,5 +306,21 @@
     -->
     </body>
 </div>
+
+
+
+<script type="text/JavaScript">
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.cart-sidebar');
+      if (sidebar.style.right === '0px') {
+        sidebar.style.right = '-100%';
+      } else {
+        sidebar.style.right = '0px';
+      }
+    }
+    
+    document.querySelector('.nav-cart').addEventListener('click', toggleSidebar);
+    
+        </script>
 
 </html>

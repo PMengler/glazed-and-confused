@@ -125,3 +125,70 @@
     color: black;
     padding-left: 10px;
 }
+
+@media screen and (max-width: 720px) {
+    .popup-window {
+        display: block;
+    }
+
+    .popup-container {
+        padding: 20px;
+    }
+
+    .popup-section {
+        display: block;
+        width: 100%;
+    }
+
+    .donut-pic {
+        width: auto;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .popup-info {
+        width: 100%;
+        margin: auto;
+        padding: 0px 0px 20px 0px;
+
+    }
+
+    .popup-info h2 {
+        font-size: 38px;
+        margin: 0px;
+        line-height: 36px;
+    }
+
+    .popup-p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    .popup-footer {
+        display: block;
+        height: auto;
+    }
+
+    .ingredients {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .popup-addtocart-box {
+
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .popup-addtocart {
+
+        font-size: 18px;
+        color: black;
+        padding-right: 0px;
+        line-height: 22px;
+    }
+}
