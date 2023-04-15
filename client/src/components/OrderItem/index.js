@@ -15,11 +15,11 @@ const OrderItem = ({ donut }) => {
                         alt={donut.name} width="100%"></img></div>
                     <div class="cart-selected-qty">
                         <div class="cart-item-qty-text">QTY</div>
-                        <input size="2" class="cart-item-qty-amount"></input>
+                        <input size="2" class="cart-item-qty-amount" value={donut.purchaseQuantity} onChange={onChange}></input>
                     </div>
-                    <div class="cart-product-name">{donut.name}</div>
+                    <div class="cart-product-name">{donut.name}, ${donut.price}</div>
                 </div>
-                <button class="cart-final-delete-btn"> icon </button>
+                <button class="cart-final-delete-btn" onClick={() => removeFromOrder(donut)}> icon </button>
             </div>
         </>
     )

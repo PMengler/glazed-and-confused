@@ -56,8 +56,6 @@ function OrderSidebar() {
                                             <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
                                         )}
                                     </div>
-                                    {/* <div className="cart-product-card">
-                            </div> */}
                                 </>
                             ) : (
                                 <h3>
@@ -67,12 +65,12 @@ function OrderSidebar() {
                             <div className="cart-product-empty">
                                 <img src="/images/cart-plus.svg" width="100%"></img>
                             </div>
-                            <div className="cart-product-empty">
+                            {/* <div className="cart-product-empty">
                                 <img src="/images/cart-plus.svg" width="100%"></img>
                             </div>
                             <div className="cart-product-empty">
                                 <img src="/images/cart-plus.svg" width="100%"></img>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
