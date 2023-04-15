@@ -247,8 +247,22 @@ select:focus {
   .flavors-main {
     display: block;
     position: relative;
+    padding-top: 40px;
   }
 
+  .flavors-span {
+    font-size: 22px;
+    padding: 0px;
+    text-align: center;
+   display: block;
+   width: 80%;
+   margin: auto;
+
+  }
+
+  .flavors-title {
+    padding-bottom: 20px;
+  }
   .flavors-container {
     width: 100%;
   }
@@ -258,7 +272,7 @@ select:focus {
   }
 
   .flavors-span {
-    margin: 0px;
+    margin: auto;
   }
 
   .donut-flavor-grid {
