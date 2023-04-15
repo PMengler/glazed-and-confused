@@ -7,7 +7,10 @@
 
 ![License Badge](https://img.shields.io/badge/-GraphQL-E50695?logo=graphql&syle=flat&logoColor=white)
 ![License Badge](https://img.shields.io/badge/-Stripe-008CDD?logo=stripe&style=flat&logoColor=white)
-![License Badge](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&style=flat&logoColor=white)
+![License Badge](https://img.shields.io/badge/-Heroku-430098?logo=heroku&style=flat&logoColor=white)
+![License Badge](https://img.shields.io/badge/-After%20Effects-9999FF?logo=adobeaftereffects&style=flat&logoColor=white)
+![License Badge](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&style=flat&logoColor=white)
+![License Badge](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=AdobePhotoshop&style=flat&logoColor=white)
 
 ## Description
 
