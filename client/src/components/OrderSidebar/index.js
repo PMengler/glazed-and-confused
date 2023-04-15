@@ -36,45 +36,47 @@ function OrderSidebar() {
 
     return (
         <>
-            <div className="cart-sidebar">
-                <div className="cart-container">
-                    <div className="cart-yourcart">Your Cart
-                        <div className="cart-line"></div>
-                    </div>
-                    {state.order.length ? (
-                        <>
-                            <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
+            <section class="cart-main">
+                <div class="cart-page-container">
+                    <div class="cart-order-title">Your Order</div>
+                    <div class="cart-page-columns">
+                        <div class="cart-items">
+                            {state.order.length ? (
+                                <>
+                                    <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
 
-                            {state.order.map((donut) => (
-                                <OrderItem key={donut._id} orderItem={donut}/>
-                            ))}
+                                    {state.order.map((donut) => (
+                                        <OrderItem key={donut._id} orderItem={donut} />
+                                    ))}
 
-                            <div className="cart-checkout">
-                                {Auth.loggedIn() ? (
-                                    <button className="cart-btn btn-blue btn-small">VIEW CART</button>
-                                ) : (
-                                    <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
-                                )}
-                            </div>
-                            {/* <div className="cart-product-card">
+                                    <div className="cart-checkout">
+                                        {Auth.loggedIn() ? (
+                                            <button className="cart-btn btn-blue btn-small">VIEW CART</button>
+                                        ) : (
+                                            <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                                        )}
+                                    </div>
+                                    {/* <div className="cart-product-card">
                             </div> */}
-                        </>
-                    ) : (
-                        <h3>
-                            Need to add items to your cart
-                        </h3>
-                    )}
-                    <div className="cart-product-empty">
-                        <img src="/images/cart-plus.svg" width="100%"></img>
-                    </div>
-                    <div className="cart-product-empty">
-                        <img src="/images/cart-plus.svg" width="100%"></img>
-                    </div>
-                    <div className="cart-product-empty">
-                        <img src="/images/cart-plus.svg" width="100%"></img>
+                                </>
+                            ) : (
+                                <h3>
+                                    Need to add items to your cart
+                                </h3>
+                            )}
+                            <div className="cart-product-empty">
+                                <img src="/images/cart-plus.svg" width="100%"></img>
+                            </div>
+                            <div className="cart-product-empty">
+                                <img src="/images/cart-plus.svg" width="100%"></img>
+                            </div>
+                            <div className="cart-product-empty">
+                                <img src="/images/cart-plus.svg" width="100%"></img>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 };
