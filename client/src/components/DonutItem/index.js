@@ -9,12 +9,6 @@ import { useStoreContext } from '../../utils/GlobalState';
 function DonutItem(donut) {
     const [state, dispatch] = useStoreContext();
 
-    // const {
-    //     _id,
-    //     image,
-    //     name,
-    // } = donut;
-
     const { cart } = state;
 
     const addToCart = () => {
@@ -51,7 +45,7 @@ function DonutItem(donut) {
             <div className="flavors-info">
                 <div>{donut.name}</div>
                 <button className="flavors-cart">
-                    {/* <AiOutlineShoppingCart /> */}
+                    <AiOutlineShoppingCart />
                 </button>
             </div>
         </figure>
