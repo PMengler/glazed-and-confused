@@ -36,11 +36,11 @@ function OrderSidebar() {
 
     return (
         <>
-            <section class="cart-main">
-                <div class="cart-page-container">
-                    <div class="cart-order-title">Your Order</div>
-                    <div class="cart-page-columns">
-                        <div class="cart-items">
+            <section className="cart-main">
+                <div className="cart-page-container">
+                    <div className="cart-order-title">Your Order</div>
+                    <div className="cart-page-columns">
+                        <div className="cart-items">
                             {state.order.length ? (
                                 <>
                                     <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>

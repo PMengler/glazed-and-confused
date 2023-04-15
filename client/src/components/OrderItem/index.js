@@ -34,17 +34,17 @@ const OrderItem = ({ donut }) => {
     }
     return (
         <>
-            <div class="cart-product-list-item">
-                <div class="cart-product-list-item-right">
-                    <div class="cart-donutpic"><img src={donut.image}
+            <div className="cart-product-list-item">
+                <div className="cart-product-list-item-right">
+                    <div className="cart-donutpic"><img src={donut.image}
                         alt={donut.name} width="100%"></img></div>
-                    <div class="cart-selected-qty">
-                        <div class="cart-item-qty-text">QTY</div>
-                        <input size="2" class="cart-item-qty-amount" value={donut.purchaseQuantity} onChange={onChange}></input>
+                    <div className="cart-selected-qty">
+                        <div className="cart-item-qty-text">QTY</div>
+                        <input size="2" className="cart-item-qty-amount" value={donut.purchaseQuantity} onChange={onChange}></input>
                     </div>
-                    <div class="cart-product-name">{donut.name}, ${donut.price}</div>
+                    <div className="cart-product-name">{donut.name}, ${donut.price}</div>
                 </div>
-                <button class="cart-final-delete-btn" onClick={() => removeFromOrder(donut)}> icon </button>
+                <button className="cart-final-delete-btn" onClick={() => removeFromOrder(donut)}> icon </button>
             </div>
         </>
     )

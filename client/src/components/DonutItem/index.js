@@ -1,35 +1,35 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-
+import { ADD_DONUT_TO_ORDER, UPDATE_ORDER_QUANTITY  } from '../../utils/actions';
 import { useStoreContext } from '../../utils/GlobalState';
-
+import { idbPromise } from '../../utils/helpers';
 
 
 function DonutItem(donut) {
     const [state, dispatch] = useStoreContext();
 
-    const { cart } = state;
+    const { order } = state;
 
-    const addToCart = () => {
-        const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    const addToOrder = () => {
+        const donutInOrder = order.find((orderDonut) => orderDonut._id === _id)
 
-        if (itemInCart) {
+        if (donutInOrder) {
         dispatch({
-            type: UPDATE_CART_QUANTITY,
+            type: UPDATE_ORDER_QUANTITY,
             _id: _id,
-            purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+            purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
         });
-        idbPromise('cart', 'put', {
-            ...itemInCart,
-            purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        idbPromise('order', 'put', {
+            ...donutInOrder,
+            purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
         });
         } else {
         dispatch({
-            type: ADD_TO_CART,
-            product: { ...item, purchaseQuantity: 1 }
+            type: ADD_DONUT_TO_ORDER,
+            donut: { ...donut, purchaseQuantity: 1 }
         });
-        idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+        idbPromise('order', 'put', { ...donut, purchaseQuantity: 1 });
         }
     }
     
@@ -44,7 +44,7 @@ function DonutItem(donut) {
             </Link>
             <div className="flavors-info">
                 <div>{donut.name}</div>
-                <button className="flavors-cart">
+                <button className="flavors-cart" onClick={addToOrder}> 
                     <AiOutlineShoppingCart />
                 </button>
             </div>
