@@ -20,6 +20,10 @@ function OrderSidebar() {
             getOrder();
         }
     }, [state.order.length, dispatch]);
+
+    function toggleOrder() {
+        dispatch({ type: TOGGLE_ORDER });
+    }
     
     return (
         <>
