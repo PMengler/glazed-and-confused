@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import DonutItem from '../DonutItem';
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_DONUTS } from "../../utils/actions";
-import { useQuery } from '@apollo/client';
-import { QUERY_GET_ALL_DONUTS } from '../../utils/queries';
+import { useQuery, useLazyQuery } from '@apollo/client';
+import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
 function CartSidebar() {
+    const [state, dispatch] = useStoreContext();
+    const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
+    
     return (
         <>
             <div className="cart-sidebar">
