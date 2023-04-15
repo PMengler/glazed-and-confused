@@ -192,7 +192,7 @@ li {
     border-radius: 3px;
     background-color: var(--brand-blue);
     margin-top: 8px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /**
@@ -208,7 +208,7 @@ Nav Styles
     right: 0;
     bottom: 0;
     overflow: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-out;
     transform: scale(0);
 
 }
@@ -232,7 +232,7 @@ Nav Styles
     font-size: 2em;
     display: inline-block;
     margin-top: 30px;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
     letter-spacing: 1px;
     font-family: 'visby-heavy';
 }
@@ -244,7 +244,7 @@ Nav Styles
     width: 0.25em;
     background-color: var(--brand-blue);
     left: -0.5em;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: var(--cornerten);
 }
 
