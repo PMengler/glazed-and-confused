@@ -7,6 +7,14 @@ const OrderItem = ({ donut }) => {
 
     const [, dispatch] = useStoreContext();
 
+    const removeFromOrder = (donut) => {
+        dispatch({
+            type: REMOVE_DONUT_FROM_ORDER,
+            _id: donut._id
+        });
+        idbPromise('order', 'delete', {...donut});
+    };
+
     return (
         <>
             <div class="cart-product-list-item">
