@@ -1,15 +1,25 @@
 import React, { useEffect } from "react";
 import DonutItem from '../DonutItem';
 import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_DONUTS } from "../../utils/actions";
+import { TOGGLE_ORDER, ADD_MULTIPLE_TO_ORDER } from "../../utils/actions";
 import { useQuery, useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
-function CartSidebar() {
+function OrderSidebar() {
     const [state, dispatch] = useStoreContext();
     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
+    useEffect(() => {
+        async function getOrder() {
+            const order = await idbPromise('order', 'get');
+            dispatch({ type: ADD_MULTIPLE_TO_ORDER, donuts: [...order] });
+        }
+
+        if (!state.order.length) {
+            getOrder();
+        }
+    }, [state.order.length, dispatch]);
     
     return (
         <>
@@ -43,4 +53,4 @@ function CartSidebar() {
     )
 };
 
-export default CartSidebar;
+export default OrderSidebar;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import DonutItem from '../DonutItem';
-import CartSidebar from "../CartSidebar";
+import OrderSidebar from "../OrderSidebar";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_DONUTS } from "../../utils/actions";
 import { useQuery } from '@apollo/client';
@@ -58,7 +58,7 @@ function DonutList() {
                         )}
                     </section>
                 </div>
-                <CartSidebar />
+                <OrderSidebar />
             </section>
         </>
     )
