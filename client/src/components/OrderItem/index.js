@@ -12,9 +12,26 @@ const OrderItem = ({ donut }) => {
             type: REMOVE_DONUT_FROM_ORDER,
             _id: donut._id
         });
-        idbPromise('order', 'delete', {...donut});
+        idbPromise('order', 'delete', { ...donut });
     };
 
+    const onChange = (event) => {
+        const value = event.target.value;
+        if (value === '0') {
+            dispatch({
+                type: REMOVE_DONUT_FROM_ORDER,
+                _id: donut._id
+            });
+            idbPromise('order', 'delete', { ...donut });
+        } else {
+            dispatch({
+                type: UPDATE_ORDER_QUANTITY,
+                _id: donut._id,
+                purchaseQuantity: parseInt(value)
+            });
+            idbPromise('order', 'put', { ...donut, purchaseQuantity: parseInt(value) });
+        }
+    }
     return (
         <>
             <div class="cart-product-list-item">
