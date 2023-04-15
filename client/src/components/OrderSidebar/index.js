@@ -42,26 +42,28 @@ function OrderSidebar() {
                         <div className="cart-line"></div>
                     </div>
                     {state.order.length ? (
-                        <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
-                        
-                        {state.order.map((donut) => (
-                            <OrderItem />
-                        ))}
-                        
-                        <div className="cart-checkout">
-                            {Auth.loggedIn() ? (
-                                <button className="cart-btn btn-blue btn-small">VIEW CART</button>
-                            ) : (
-                                <span>(Log in to get your donuts!)</span>
-                            )}
-                        </div>
-                        // <div className="cart-product-card">
-                        // </div>
+                        <>
+                            <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
+
+                            {state.order.map((donut) => (
+                                <OrderItem key={donut._id} />
+                            ))}
+
+                            <div className="cart-checkout">
+                                {Auth.loggedIn() ? (
+                                    <button className="cart-btn btn-blue btn-small">VIEW CART</button>
+                                ) : (
+                                    <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                                )}
+                            </div>
+                            {/* <div className="cart-product-card">
+                            </div> */}
+                        </>
+                    ) : (
+                        <h3>
+                            Need to add items to your cart
+                        </h3>
                     )}
-                    {/* <div className="flavors-pricing">$3.00 per donut</div> */}
-                    {/* <div className="flavor-total-price">$54.00</div> */}
-
-
                     <div className="cart-product-empty">
                         <img src="/images/cart-plus.svg" width="100%"></img>
                     </div>
