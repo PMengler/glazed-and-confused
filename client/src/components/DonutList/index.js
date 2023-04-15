@@ -41,14 +41,20 @@ function DonutList() {
                         <span className="flavors-span">Donut worry, we've got your flavor cravings covered!</span>
                     </div>
                     <section className="donut-flavor-grid">
-                        <DonutItem 
-                        key={donut._id}
-                        _id={donut._id}
-                        name={donut.name}
-                        description={donut.description}
-                        price={donut.price}
-                        image={donut.image}
-                        />
+                        {state.donuts.length ? (
+                            state.donuts.map((donut => (
+                                <DonutItem
+                                    key={donut._id}
+                                    _id={donut._id}
+                                    name={donut.name}
+                                    description={donut.description}
+                                    price={donut.price}
+                                    image={donut.image}
+                                />
+                            )))
+                        ) : (
+                            <h3>You don't have any donuts yet!</h3>
+                        )}
                     </section>
                 </div>
                 <div className="cart-sidebar">
