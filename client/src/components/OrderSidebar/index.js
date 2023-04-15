@@ -24,6 +24,14 @@ function OrderSidebar() {
     function toggleOrder() {
         dispatch({ type: TOGGLE_ORDER });
     }
+
+    function calculateOrderTotal() {
+        let sum = 0;
+        state.order.forEach(donut => {
+            sum += donut.price * donut.purchaseQuantity;
+        });
+        return sum.toFixed(2);
+    }
     
     return (
         <>
