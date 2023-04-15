@@ -46,14 +46,14 @@ function DonutItem(donut) {
             <Link to={`/flavors/${donut._id}`}>
                 <img
                     alt={donut.name}
-                    src={image} // figure out how to get images into build folder
+                    src={donut.image} // figure out how to get images into build folder
                     width="100%"
                 />
             </Link>
             <div className="flavors-info">
                 <div>{donut.name}</div>
                 <button className="flavors-cart">
-                    <AiOutlineShoppingCart />
+                    {/* <AiOutlineShoppingCart /> */}
                 </button>
             </div>
         </figure>
