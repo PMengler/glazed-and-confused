@@ -7,6 +7,7 @@ import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
 import CheckoutUseStripe from '../Stripe';
 
+
 const Header = () => {
     // Functions that will be used in the header
 
@@ -14,15 +15,21 @@ const Header = () => {
         <header className="header">
             <nav>
                 <ul>
-                    <li><a className="navlink" href="#theflavors">THE FLAVORS</a></li>
+                    <HashLink className="navlink" smooth to="/flavors">
+                        THE FLAVORS
+                    </HashLink>
                     <HashLink className="navlink" smooth to="/#contactus">
                         CONTACT US
                     </HashLink>
-                    <li className="header-logo"><img src={logoPic} alt='logoPic'></img></li>
+                    <HashLink className="header-logo" smooth to='/#home'>
+                        <img src={logoPic} alt='logoPic' />
+                    </HashLink>
                     <HashLink className="navlink" smooth to="/#ourstory">
                         OUR STORY
                     </HashLink>
-                    <li><button className="nav-btn">ORDER NOW!</button></li>
+                    <HashLink className="nav-btn" smooth to="/flavors">
+                        ORDER NOW!
+                    </HashLink>
                 </ul>
                 <div>
                     <a className="loginlink" href="/loginRegister">ACCOUNT</a>

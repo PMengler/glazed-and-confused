@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BsFillPhoneVibrateFill} from 'react-icons/bs'
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
@@ -35,7 +36,7 @@ const ContactForm = () => {
                                     <input type="email" id="email" placeholder="Email Address" required />
                                     <textarea id="message" placeholder="Message" required />
                             <button type="submit" className="contact-btn btn-blue btn-lrg">{status}</button>
-                            <p>Icon Call us at 1-800-555-GLAZED</p>
+                            <p><BsFillPhoneVibrateFill /> Call us at 1-800-555-GLAZED</p>
                             </form>
                         </div>
                 </div>
