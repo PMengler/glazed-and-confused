@@ -26,6 +26,7 @@
     background-position: left center;
     height: 100%;
     background-repeat: no-repeat;
+    margin-left: -2px;
 }
 
 .hero-label {
@@ -183,6 +184,7 @@ span {
     color: white;
     margin: 0px;
 }
+
 .contact-line {
     width: 100%;
     border-bottom: 4px solid #454545;
@@ -190,7 +192,8 @@ span {
     margin-bottom: 40px;
 }
 
-.contact-input input,textarea {
+.contact-input input,
+textarea {
     width: 100%;
     color: white;
     background-color: #231f2000;
@@ -201,12 +204,13 @@ span {
     font-size: 28px !important;
     font-family: 'visby-regular' !important;
     margin-bottom: 30px !important;
- }
+}
 
 .contact-btn {
     padding-left: 20px;
     padding-right: 20px;
-    cursor: pointer; margin-left: 0px;
+    cursor: pointer;
+    margin-left: 0px;
     margin-bottom: 76px;
 }
 
@@ -219,4 +223,144 @@ span {
     font-family: 'visby-demi';
     color: white;
     font-size: 26px;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .hero-label h1 {
+        margin-top: 40px;
+        font-size: clamp(3rem, 2rem + 4vw, 5rem);
+        line-height: clamp(3rem, 2rem + 4vw, 5rem);
+    }
+
+
+    .new-flavor-box {
+        display: block;
+    }
+
+    .new-flavor-pic {
+        margin: auto;
+    }
+
+    .new-flavor-info {
+        padding: 40px;
+    }
+
+    .new-flavor-box h2,
+    .new-flavor-p {
+        text-align: center;
+    }
+
+    .new-flavor-box h2 {
+        font-size: clamp(2.5rem, 1.7308rem + 4.1026vw, 4.5rem);
+        line-height: clamp(2.5rem, 1.7308rem + 4.1026vw, 4.5rem);
+    }
+
+    .contact-box {
+        margin: 0px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+
+    .hero-right {
+        display: none;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-label {
+        margin: 0px;
+        padding-bottom: 60px;
+    }
+
+    .hero-label p {
+        font-size: 26px;
+        margin-top: 26px;
+        text-align: center;
+    }
+
+    .hero-label h1 {
+        text-align: center;
+        font-size: 62px;
+        line-height: 54px;
+    }
+
+    .new-flavor h1 {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        margin-bottom: 10px;
+
+    }
+
+    .new-flavor-info {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .new-flavor-box {
+        padding-bottom: 80px;
+    }
+
+    .new-flavor-p {
+        margin-bottom: 40px;
+    }
+
+    .our-story {
+        padding-top: 60px;
+        padding-bottom: 80px;
+
+    }
+
+    .story-block {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .story-p {
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        line-height: 26px;
+    }
+
+    .contact-us {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .contact-box {
+        background-color: var(--bg-offblack);
+        margin-left: 0%;
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .contact-input input,
+    textarea {
+        width: auto;
+    }
+
+    .contact-btn {
+
+        margin-bottom: 20px;
+    }
+
+    .contact-box p {
+        font-size: 18px;
+    }
+
+
+
 }

@@ -59,7 +59,7 @@
   background-color: var(--brand-blue);
   color: white;
   border-radius: var(--cornertwnty);
-  
+
 }
 
 .flavors-cart:hover {
@@ -71,6 +71,7 @@
 
 .cart-sidebar {
   max-width: 260px;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart-container {
@@ -94,24 +95,24 @@
   border-bottom: 3px solid var(--brand-blue);
   margin-bottom: 20px;
   margin-top: 20px;
-  
+
 }
 
 .flavors-pricing {
- font-family: 'visby-demi';
- font-size: 20px;
- color: white;
+  font-family: 'visby-demi';
+  font-size: 20px;
+  color: white;
 }
 
 .flavor-total {
-font-family: 'visby-demi';
- font-size: 20px;
- color: white;
- margin-top: 20px;
+  font-family: 'visby-demi';
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
 }
 
 .flavor-span {
-color: var(--brand-blue);
+  color: var(--brand-blue);
 }
 
 .flavor-total-price {
@@ -155,7 +156,7 @@ color: var(--brand-blue);
   border-radius: var(--cornertwnty);
   padding: 20px;
   margin-bottom: 20px;
- 
+
 }
 
 .cart-img {
@@ -172,8 +173,8 @@ color: var(--brand-blue);
 
 .quantity-delete-box {
   display: flex;
- justify-content: space-between;
- 
+  justify-content: space-between;
+
 }
 
 .quantity {
@@ -209,6 +210,7 @@ select:focus {
   max-width: 20px;
   display: inline-block;
 }
+
 .qty-drop-box {
   position: absolute;
   background-color: white;
@@ -222,20 +224,51 @@ select:focus {
   display: none;
   z-index: 10;
 
-}  
+}
 
 .cart-delete-btn {
   background-color: #EEEBEB;
   color: black;
-  border-radius:var(--cornerten);
+  border-radius: var(--cornerten);
   border: none;
   font-family: 'visby-heavy';
   padding: 10px;
- 
+
 
 }
+
 .cart-delete-btn:hover {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .flavors-main {
+    display: block;
+    position: relative;
+  }
+
+  .flavors-container {
+    width: 100%;
+  }
+
+  .flavors-title h1 {
+    margin: 0px;
+  }
+
+  .flavors-span {
+    margin: 0px;
+  }
+
+  .donut-flavor-grid {
+    padding: 20px;
+  }
+
+  .cart-sidebar {
+    position: absolute;
+    top: -20px;
+    width: auto;
+    right: -300px;
+  }
 }

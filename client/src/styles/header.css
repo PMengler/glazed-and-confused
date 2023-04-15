@@ -53,7 +53,7 @@ nav div {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 880px;
+    width: 800px;
     justify-content: space-between;
 }
 
@@ -120,7 +120,7 @@ li {
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1180px) {
     nav {
         height: 60px;
     }
@@ -129,8 +129,16 @@ li {
         display: none;
     }
 
-    nav div {
+    .loginlink {
         display: none;
+    }
+
+    .nav-cart {
+        height: 60px;
+    }
+
+    nav div {
+        height: 60px;
     }
 
     .mobile-logo {
@@ -144,3 +152,145 @@ li {
 }
 
 /* --- mobile nav --- */
+.mobile-nav-box {
+    background-color: #ffffff;
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    right: 80px;
+    top: 0px;
+    z-index: 20;
+}
+
+#toggle {
+    display: none;
+}
+
+
+.mobile-links ul {
+    display: block;
+    margin: auto;
+    padding: 0px;
+
+}
+
+/**
+  Hamburger
+**/
+.hamburger {
+    position: absolute;
+    right: 13px;
+    height: 45px;
+    z-index: 5;
+    top: 6px;
+}
+
+.hamburger div {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--brand-blue);
+    margin-top: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+/**
+Nav Styles
+**/
+.nav-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-offblack);
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0);
+
+}
+
+.nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.mobile-links {
+    text-align: left;
+    padding: 20px 60px 0px 60px;
+}
+
+.mobile-links a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 30px;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+    font-family: 'visby-heavy';
+}
+
+.mobile-links a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: var(--brand-blue);
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+    border-radius: var(--cornerten);
+}
+
+.mobile-links a:hover {
+    color: white;
+}
+
+.mobile-links a:hover:before {
+    height: 100%;
+}
+
+
+.mobile-links .btn-blue {
+    margin-top: 40px;
+}
+
+/**
+Animations
+**/
+#toggle:checked+.hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 20px;
+}
+
+#toggle:checked+.hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+#toggle:checked+.hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -4px;
+}
+
+#toggle:checked+.hamburger+.nav-mobile {
+    top: 0;
+    transform: scale(1);
+}
+
+#toggle:checked+.hamburger {
+    position: fixed;
+}
+
+
+@media screen and (min-width: 1181px) {
+    .mobile-nav-box {
+        display: none;
+    }
+}
