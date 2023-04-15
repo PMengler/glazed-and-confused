@@ -9,7 +9,7 @@ const Footer = () => {
         <footer>
             <div className="footer-nav">
                 <ul>
-                    <HashLink className="navlink" smooth to="/flavors">
+                    <HashLink className="footer-link" smooth to="/flavors">
                         THE FLAVORS
                     </HashLink>
                     <HashLink className="footer-link" smooth to="/#contactus">
@@ -21,7 +21,7 @@ const Footer = () => {
                     <HashLink className="footer-link" smooth to="/#ourstory">
                         OUR STORY
                     </HashLink>
-                    <HashLink className="nav-btn" smooth to="/flavors">
+                    <HashLink className="footer-btn" smooth to="/flavors">
                         ORDER NOW!
                     </HashLink>
                 </ul>
