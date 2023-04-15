@@ -19,6 +19,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
   
 import Popup from './components/Popup';
+import DonutList from './components/DonutList';
 import Flavors from './pages/Flavors';
 import Home from './pages/Home';
 import { StoreProvider } from './utils/GlobalState';
@@ -61,7 +62,7 @@ function App() {
           />
           <Route
             path='/flavors'
-            element={<Flavors />}
+            element={<DonutList />}
           />
           <Route
             path='/loginRegister'

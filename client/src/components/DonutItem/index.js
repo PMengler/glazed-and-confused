@@ -9,11 +9,11 @@ import { useStoreContext } from '../../utils/GlobalState';
 function DonutItem(donut) {
     const [state, dispatch] = useStoreContext();
 
-    const {
-        _id,
-        image,
-        name,
-    } = donut;
+    // const {
+    //     _id,
+    //     image,
+    //     name,
+    // } = donut;
 
     const { cart } = state;
 
@@ -41,17 +41,17 @@ function DonutItem(donut) {
     
     return (
         <figure className="flavors-card">
-            <Link to={`/flavors/${_id}`}>
+            <Link to={`/flavors/${donut._id}`}>
                 <img
-                    alt={name}
-                    src={`/images/${image}`}
+                    alt={donut.name}
+                    src={`/images/${donut.image}`}
                     width="100%"
                 />
             </Link>
             <div className="flavors-info">
-                <div>{name}</div>
+                <div>{donut.name}</div>
                 <button className="flavors-cart">
-                    <AiOutlineShoppingCart />
+                    {/* <AiOutlineShoppingCart /> */}
                 </button>
             </div>
         </figure>
