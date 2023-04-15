@@ -18,8 +18,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
   
+import Header from './components/Header'
 import Popup from './components/Popup';
-import DonutList from './components/DonutList';
 import Flavors from './pages/Flavors';
 import Home from './pages/Home';
 import { StoreProvider } from './utils/GlobalState';
@@ -55,6 +55,7 @@ function App() {
       <ApolloProvider client={client}>
       <StoreProvider>
         <Router>
+          <Header />
         <Routes>
           <Route
             path='/'
@@ -62,7 +63,7 @@ function App() {
           />
           <Route
             path='/flavors'
-            element={<DonutList />}
+            element={<Flavors />}
           />
           <Route
             path='/loginRegister'

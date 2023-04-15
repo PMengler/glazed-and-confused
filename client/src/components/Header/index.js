@@ -1,5 +1,5 @@
 import React, { version } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import Auth from '../../utils/auth';
 import logoPic from '../../assets/gc-logo.png';
@@ -14,11 +14,15 @@ const Header = () => {
         <header className="header">
             <nav>
                 <ul>
-                    <li><a className="navlink" href="#theflavors">THE FLAVORS</a></li>
+                    <Link to={'/flavors'}>
+                        <li className="navlink">THE FLAVORS</li>
+                    </Link>
                     <HashLink className="navlink" smooth to="/#contactus">
                         CONTACT US
                     </HashLink>
-                    <li className="header-logo"><img src={logoPic} alt='logoPic'></img></li>
+                    <Link to={'/'}>
+                        <li className="header-logo"><img src={logoPic} alt='logoPic'></img></li>
+                    </Link>
                     <HashLink className="navlink" smooth to="/#ourstory">
                         OUR STORY
                     </HashLink>
