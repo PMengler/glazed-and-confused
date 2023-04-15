@@ -36,7 +36,7 @@ function DonutList() {
         <>
             <section className="flavors-main">
                 <div className="flavors-container">
-                    <div className="flavors-title">
+                    <div id="flavors" className="flavors-title">
                         <h1>The Flavors</h1>
                         <span className="flavors-span">Donut worry, we've got your flavor cravings covered!</span>
                     </div>
