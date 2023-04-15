@@ -48,9 +48,12 @@ function OrderSidebar() {
                             <OrderItem />
                         ))}
                         
-                        {Auth.log}
                         <div className="cart-checkout">
-                            <button className="cart-btn btn-blue btn-small">VIEW CART</button>
+                            {Auth.loggedIn() ? (
+                                <button className="cart-btn btn-blue btn-small">VIEW CART</button>
+                            ) : (
+                                <span>(Log in to get your donuts!)</span>
+                            )}
                         </div>
                         // <div className="cart-product-card">
                         // </div>
