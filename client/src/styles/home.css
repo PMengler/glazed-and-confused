@@ -7,7 +7,7 @@
 
 .hero-left {
     width: 50%;
-    background-image: url(../assets/sprinkles.png);
+    background-image: url('%PUBLIC_URL%/sprinkles.png');
     background-size: contain;
     background-position: left 0px top -10px;
     background-repeat: no-repeat;
