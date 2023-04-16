@@ -1,15 +1,20 @@
 import React, { version } from 'react';
 import { Link } from 'react-router-dom';
 
-// import Auth from '../../utils/auth';
+import Auth from '../../utils/auth';
 import logoPic from '../../assets/gc-logo.png';
 import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
 import CheckoutUseStripe from '../Stripe';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Header = () => {
   // Functions that will be used in the header
+  function getUser() {
+    return Auth.getProfile().data.username.toUpperCase();
+  }
 
+  console.log(getUser())
   return (
     <header className="header">
       <nav>
@@ -49,10 +54,18 @@ const Header = () => {
           </HashLink>
         </ul>
         <div>
-          <Link to={'/loginRegister'}>
-            <p className="loginlink">ACCOUNT</p>
-          </Link>
-          <button className="nav-cart">cart</button>
+          {Auth.loggedIn() ? (
+            <Link to={'/account'}>
+              <p className="loginlink">WELCOME <br></br>{getUser()}!</p>
+            </Link>
+          ) : (
+            <Link to={'/loginRegister'}>
+              <p className="loginlink">ACCOUNT</p>
+            </Link>
+          )}
+          <button className="nav-cart">
+            <AiOutlineShoppingCart />
+          </button>
         </div>
         <div className="mobile-logo">
           <img
