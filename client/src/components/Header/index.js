@@ -7,12 +7,13 @@ import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
 import CheckoutUseStripe from '../Stripe';
 
+
 const Header = () => {
     // Functions that will be used in the header
 
     return (
         <header className="header">
-            <nav>
+            <nav><CheckoutUseStripe />
                 <ul>
                     <Link to={'/flavors'}>
                         <li className="navlink">THE FLAVORS</li>
@@ -26,15 +27,40 @@ const Header = () => {
                     <HashLink className="navlink" smooth to="/#ourstory">
                         OUR STORY
                     </HashLink>
-                    <li><button className="nav-btn">ORDER NOW!</button></li>
+                    <HashLink className="nav-btn" smooth to="/flavors">
+                        ORDER NOW!
+                    </HashLink>
                 </ul>
                 <div>
                     <a className="loginlink" href="/loginRegister">ACCOUNT</a>
                     <button className="nav-cart">cart</button>
-                    {/* <CheckoutUseStripe /> */}
                 </div>
                 <div className="mobile-logo"><img src={logoMobile} alt="logoPic"></img></div>
             </nav>
+            <div className="mobile-nav-box">
+    <input id="toggle" type="checkbox" />
+    <label htmlFor="toggle" className="hamburger">
+        <div className="top-bun"></div>
+        <div className="meat"></div>
+        <div className="bottom-bun"></div>
+    </label>
+    <div className="nav-mobile">
+        <div className="nav-wrapper">
+            <div className="mobile-links">
+                <ul>
+                    <li> </li>
+                    <li> <a href="index.html">HOME</a></li>
+                    <li> <a href="flavors.html">THE FLAVORS</a></li>
+                    <li> <a href="index.html#contactus">CONTACT US</a></li>
+                    <li> <a href="index.html#aboutus">OUR STORY</a></li>
+                    <li> <a href="login-register.html">LOGIN</a></li>
+                </ul>
+                <button className="btn-blue btn-small">VIEW CART</button>
+            </div>
+        </div>
+    </div>
+</div>
+
         </header>
     )
 }

@@ -1,42 +1,63 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_USER, LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 import '../styles/login-register.css';
 import '../styles/app.css';
 import Header from '../components/Header';
 
-const LoginRegister = () => {
-    // const [formState, setFormState] = useState({
-    //     username: '',
-    //     email: '',
-    //     password: '',
-    // });
+function LoginRegister(props) {
+    // For Registering
+    const [signupFormState, setSignupFormState] = useState({ email: '', password: '' });
+    const [addUser] = useMutation(ADD_USER);
 
-    // const [addUser, { error, data }] = useMutation(
-    //     // Need to create mutation for adding a user
-    // );
+    const handleSignupFormSubmit = async (event) => {
+        event.preventDefault();
+        const mutationResponse = await addUser({
+            variables: {
+                email: signupFormState.email,
+                password: signupFormState.password,
+                username: signupFormState.username,
+            },
+        });
+        const token = mutationResponse.data.addUser.token;
+        Auth.login(token);
+    };
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
+    const handleSignupChange = (event) => {
+        const { name, value } = event.target;
+        setSignupFormState({
+            ...signupFormState,
+            [name]: value,
+        });
+    };
 
-    //     setFormState({
-    //         ...formState,
-    //         [name]: value,
-    //     });
-    // };
+    // For Sign In
+    const [loginFormState, setLoginFormState] = useState({ username: '', password: '' });
+    const [login, { error }] = useMutation(LOGIN);
 
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault();
+    const handleLoginFormSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const mutationResponse = await login({
+                variables: { username: loginFormState.username, password: loginFormState.password },
+            });
+            const token = mutationResponse.data.login.token;
+            Auth.login(token);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+    
 
-    //     try {
-    //         const { data } = await addUser({
-    //             variables: { ...formState },
-    //         });
-
-    //         Auth.login(data.addUser.token);
-    //     } catch (err) {
-    //         console.error(err)
-    //     }
-    // };
+    const handleLoginChange = (event) => {
+        const { name, value } = event.target;
+        setLoginFormState({
+            ...loginFormState,
+            [name]: value,
+        });
+    };
     return (
         <div>
             <Header />
@@ -45,19 +66,58 @@ const LoginRegister = () => {
                     <div className="login">
                         <div className="login-title">LOGIN</div>
                         <div className="login-input">
-                            <input placeholder="Username"/><br/>
-                            <input placeholder="Password"/><br/>
-                            <button className="login-btn btn-blue btn-small">LOGIN</button>
+                            <form onSubmit={handleLoginFormSubmit}>
+                                <input
+                                    placeholder="Username"
+                                    name="username"
+                                    type="username"
+                                    id="username"
+                                    onChange={handleLoginChange}
+                                /><br />
+                                <input
+                                    placeholder="Password"
+                                    name="password"
+                                    type="password"
+                                    id="pwd"
+                                    onChange={handleLoginChange}
+                                /><br />
+                                {error ? (
+                                    <div>
+                                        <p className="error-text">The provided credentials are incorrect</p>
+                                    </div>
+                                ) : null}
+                                <button className="login-btn btn-blue btn-small">LOGIN</button>
+                            </form>
                         </div>
                     </div>
                 
                     <div className="register">
                         <div className="register-title">REGISTER</div>
                         <div className="register-input">
-                            <input placeholder="Username"/><br/>
-                            <input placeholder="Email Address"/><br/>
-                            <input placeholder="Password"/><br/>
-                            <button className="register-btn btn-blue btn-small">REGISTER</button>
+                            <form onSubmit={handleSignupFormSubmit}>
+                                <input
+                                    placeholder="Username"
+                                    name="username"
+                                    type="username"
+                                    id="username"
+                                    onChange={handleSignupChange}
+                                /><br />
+                                <input
+                                    placeholder="Email Address"
+                                    name="email"
+                                    type="email"
+                                    id="email"
+                                    onChange={handleSignupChange}
+                                /><br />
+                                <input
+                                    placeholder="Password"
+                                    name="password"
+                                    type="password"
+                                    id="password"
+                                    onChange={handleSignupChange}
+                                /><br />
+                                <button className="register-btn btn-blue btn-small">REGISTER</button>
+                            </form>
                         </div>
                     </div>
                 </div>
