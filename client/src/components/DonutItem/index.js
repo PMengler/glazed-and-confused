@@ -36,7 +36,7 @@ function DonutItem(donut) {
       <Link to={`/flavors/${donut._id}`}>
         <img
           alt={donut.name}
-          src={`/public/images/${donut.image}`}
+          src={`/images/${donut.image}`}
           width="100%"
         />
       </Link>
