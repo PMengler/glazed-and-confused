@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { 
+import {
   ApolloProvider,
-  ApolloClient, 
-  InMemoryCache, 
-  createHttpLink } from '@apollo/client';
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink
+} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import '../src/styles/app.css';
@@ -17,7 +18,7 @@ import '../src/styles/normalize.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
-  
+
 import Header from './components/Header'
 import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
@@ -53,35 +54,35 @@ function App() {
   return (
     <Elements stripe={stripePromise}>
       <ApolloProvider client={client}>
-      <StoreProvider>
-        <Router>
-          <Header />
-        <Routes>
-          <Route
-            path='/'
-            element={<Home />}
-          />
-          <Route
-            path='/flavors'
-            element={<Flavors />}
-          />
-          <Route
-            path='/loginRegister'
-            element={<LoginRegister />}
-          />
-          {/* Just placed here for testing but need to place this in a more accurate spot */}
-          <Route
-            path='/popup'
-            element={<Popup />}
-          />
-          <Route
-            path='/thankyou'
-            element={<ThankYou />}
-          />
-        </Routes>
-      </Router>
-      </StoreProvider>
-    </ApolloProvider>
+        <StoreProvider>
+          <Router>
+            <Header />
+            <Routes>
+              <Route
+                path='/'
+                element={<Home />}
+              />
+              <Route
+                path='/flavors'
+                element={<Flavors />}
+              />
+              <Route
+                path='/loginRegister'
+                element={<LoginRegister />}
+              />
+              {/* Just placed here for testing but need to place this in a more accurate spot */}
+              <Route
+                path='/popup'
+                element={<Popup />}
+              />
+              <Route
+                path='/thankyou'
+                element={<ThankYou />}
+              />
+            </Routes>
+          </Router>
+        </StoreProvider>
+      </ApolloProvider>
     </Elements>
   );
 }

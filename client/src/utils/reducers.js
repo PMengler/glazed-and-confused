@@ -28,7 +28,7 @@ export const reducer = (state, action) => {
     case ADD_DONUT_TO_ORDER:
       return {
         ...state,
-        donuts: [...action.donuts]
+        order: [...state.order, action.donut]
       };
 
     case REMOVE_DONUT_FROM_ORDER:
@@ -55,10 +55,11 @@ export const reducer = (state, action) => {
       };
 
     case ADD_MULTIPLE_TO_ORDER:
-      return {
-        ...state,
-        order: [...state.order, ...action.donuts]
-      };
+        return {
+          ...state,
+          order: [...action.donuts]
+        };
+      
 
     case CLEAR_ORDER:
       return {

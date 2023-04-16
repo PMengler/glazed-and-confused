@@ -31,7 +31,7 @@ const Header = () => {
                 <div>
                     <a className="loginlink" href="/loginRegister">ACCOUNT</a>
                     <button className="nav-cart">cart</button>
-                    <CheckoutUseStripe />
+                    {/* <CheckoutUseStripe /> */}
                 </div>
                 <div className="mobile-logo"><img src={logoMobile} alt="logoPic"></img></div>
             </nav>

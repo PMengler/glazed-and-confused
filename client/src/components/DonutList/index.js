@@ -14,7 +14,6 @@ function DonutList() {
 
     useEffect(() => {
         if (data) {
-            console.log(data)
             dispatch({
                 type: UPDATE_DONUTS,
                 donuts: data.donuts,
@@ -22,7 +21,6 @@ function DonutList() {
             data.donuts.forEach((donut) => {
                 idbPromise('donuts', 'put', donut);
             });
-            console.log(data.donuts)
         } else if (!loading) {
             idbPromise('donuts', 'get').then((donuts) => {
                 dispatch({
