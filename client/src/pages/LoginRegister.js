@@ -7,48 +7,56 @@ import '../styles/login-register.css';
 import '../styles/app.css';
 
 function LoginRegister(props) {
-    // For Registering
-    const [signupFormState, setSignupFormState] = useState({ email: '', password: '' });
-    const [addUser] = useMutation(ADD_USER);
+  // For Registering
+  const [signupFormState, setSignupFormState] = useState({
+    email: '',
+    password: '',
+  });
+  const [addUser] = useMutation(ADD_USER);
 
-    const handleSignupFormSubmit = async (event) => {
-        event.preventDefault();
-        const mutationResponse = await addUser({
-            variables: {
-                email: signupFormState.email,
-                password: signupFormState.password,
-                username: signupFormState.username,
-            },
-        });
-        const token = mutationResponse.data.addUser.token;
-        Auth.login(token);
-    };
+  const handleSignupFormSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: signupFormState.email,
+        password: signupFormState.password,
+        username: signupFormState.username,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
 
-    const handleSignupChange = (event) => {
-        const { name, value } = event.target;
-        setSignupFormState({
-            ...signupFormState,
-            [name]: value,
-        });
-    };
+  const handleSignupChange = (event) => {
+    const { name, value } = event.target;
+    setSignupFormState({
+      ...signupFormState,
+      [name]: value,
+    });
+  };
 
-    // For Sign In
-    const [loginFormState, setLoginFormState] = useState({ username: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN);
+  // For Sign In
+  const [loginFormState, setLoginFormState] = useState({
+    username: '',
+    password: '',
+  });
+  const [login, { error }] = useMutation(LOGIN);
 
-    const handleLoginFormSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            const mutationResponse = await login({
-                variables: { username: loginFormState.username, password: loginFormState.password },
-            });
-            const token = mutationResponse.data.login.token;
-            Auth.login(token);
-        } catch (e) {
-            console.log(e);
-        }
-    };
-    
+  const handleLoginFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: {
+          username: loginFormState.username,
+          password: loginFormState.password,
+        },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
     const handleLoginChange = (event) => {
         const { name, value } = event.target;
@@ -121,7 +129,9 @@ function LoginRegister(props) {
                 </div>
             </section>
         </div>
-    );
+      </section>
+    </div>
+  );
 }
 
 export default LoginRegister;
