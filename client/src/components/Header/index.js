@@ -7,63 +7,107 @@ import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
 import CheckoutUseStripe from '../Stripe';
 
-
 const Header = () => {
-    // Functions that will be used in the header
+  // Functions that will be used in the header
 
-    return (
-        <header className="header">
-            <nav><CheckoutUseStripe />
-                <ul>
-                    <Link to={'/flavors'}>
-                        <li className="navlink">THE FLAVORS</li>
-                    </Link>
-                    <HashLink className="navlink" smooth to="/#contactus">
-                        CONTACT US
-                    </HashLink>
-                    <Link to={'/'}>
-                        <li className="header-logo"><img src={logoPic} alt='logoPic'></img></li>
-                    </Link>
-                    <HashLink className="navlink" smooth to="/#ourstory">
-                        OUR STORY
-                    </HashLink>
-                    <HashLink className="nav-btn" smooth to="/flavors">
-                        ORDER NOW!
-                    </HashLink>
-                </ul>
-                <div>
-                    <a className="loginlink" href="/loginRegister">ACCOUNT</a>
-                    <button className="nav-cart">cart</button>
-                </div>
-                <div className="mobile-logo"><img src={logoMobile} alt="logoPic"></img></div>
-            </nav>
-            <div className="mobile-nav-box">
-    <input id="toggle" type="checkbox" />
-    <label htmlFor="toggle" className="hamburger">
-        <div className="top-bun"></div>
-        <div className="meat"></div>
-        <div className="bottom-bun"></div>
-    </label>
-    <div className="nav-mobile">
-        <div className="nav-wrapper">
-            <div className="mobile-links">
-                <ul>
-                    <li> </li>
-                    <li> <a href="index.html">HOME</a></li>
-                    <li> <a href="flavors.html">THE FLAVORS</a></li>
-                    <li> <a href="index.html#contactus">CONTACT US</a></li>
-                    <li> <a href="index.html#aboutus">OUR STORY</a></li>
-                    <li> <a href="login-register.html">LOGIN</a></li>
-                </ul>
-                <button className="btn-blue btn-small">VIEW CART</button>
-            </div>
+  return (
+    <header className="header">
+      <nav>
+        <CheckoutUseStripe />
+        <ul>
+          <Link to={'/flavors'}>
+            <li className="navlink">THE FLAVORS</li>
+          </Link>
+          <HashLink
+            className="navlink"
+            smooth
+            to="/#contactus"
+          >
+            CONTACT US
+          </HashLink>
+          <Link to={'/'}>
+            <li className="header-logo">
+              <img
+                src={logoPic}
+                alt="logoPic"
+              ></img>
+            </li>
+          </Link>
+          <HashLink
+            className="navlink"
+            smooth
+            to="/#ourstory"
+          >
+            OUR STORY
+          </HashLink>
+          <HashLink
+            className="nav-btn"
+            smooth
+            to="/flavors"
+          >
+            ORDER NOW!
+          </HashLink>
+        </ul>
+        <div>
+          <Link to={'/loginRegister'}>
+            <p className="loginlink">ACCOUNT</p>
+          </Link>
+          <button className="nav-cart">cart</button>
         </div>
-    </div>
-</div>
-
-        </header>
-    )
-}
+        <div className="mobile-logo">
+          <img
+            src={logoMobile}
+            alt="logoPic"
+          ></img>
+        </div>
+      </nav>
+      <div className="mobile-nav-box">
+        <input
+          id="toggle"
+          type="checkbox"
+        />
+        <label
+          htmlFor="toggle"
+          className="hamburger"
+        >
+          <div className="top-bun"></div>
+          <div className="meat"></div>
+          <div className="bottom-bun"></div>
+        </label>
+        <div className="nav-mobile">
+          <div className="nav-wrapper">
+            <div className="mobile-links">
+              <ul>
+                <li> </li>
+                <li>
+                  {' '}
+                  <a href="index.html">HOME</a>
+                </li>
+                <li>
+                  {' '}
+                  <a href="flavors.html">THE FLAVORS</a>
+                </li>
+                <li>
+                  {' '}
+                  <a href="index.html#contactus">CONTACT US</a>
+                </li>
+                <li>
+                  {' '}
+                  <a href="index.html#aboutus">OUR STORY</a>
+                </li>
+                <li>
+                  {' '}
+                  <a href="login-register.html">LOGIN</a>
+                </li>
+              </ul>
+              <button className="btn-blue btn-small">VIEW CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
 
@@ -82,9 +126,9 @@ export default Header;
 //         sidebar.style.right = '0px';
 //       }
 //     }
-    
+
 //     document.querySelector('.nav-cart').addEventListener('click', toggleSidebar);
-    
+
 //         </script>
 
 // REACT version:
