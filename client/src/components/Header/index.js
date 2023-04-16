@@ -5,7 +5,6 @@ import Auth from '../../utils/auth';
 import logoPic from '../../assets/gc-logo.png';
 import logoMobile from '../../assets/gc-logo-mobile.png';
 import { HashLink } from 'react-router-hash-link';
-import CheckoutUseStripe from '../Stripe';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Header = () => {
@@ -18,7 +17,6 @@ const Header = () => {
   return (
     <header className="header">
       <nav>
-        <CheckoutUseStripe />
         <ul>
           <Link to={'/flavors'}>
             <li className="navlink">THE FLAVORS</li>
