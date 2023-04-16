@@ -6,6 +6,7 @@ import { TOGGLE_ORDER, ADD_MULTIPLE_TO_ORDER } from "../../utils/actions";
 import { useQuery, useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import { Link } from "react-router-dom";
 
 function OrderSidebar() {
     const [state, dispatch] = useStoreContext();
@@ -43,7 +44,7 @@ function OrderSidebar() {
                 {state.order.length > 0 ? (
                     <>
                         <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
-                        
+                        <br></br>
                             {state.order.map((donut) => (
                                 <OrderItem donut={donut} key={donut._id} />
                             ))}
@@ -51,7 +52,7 @@ function OrderSidebar() {
                 ) : (
                     <>
                         <div className="flavor-total">
-                            Need to add items to your cart
+                            Go ahead and grab a donut already!
                         </div>
                         <br></br>
                         <div className="cart-product-empty">
@@ -63,14 +64,13 @@ function OrderSidebar() {
             <div className="cart-checkout">
             {Auth.loggedIn() ? (
                 <>
-                    <div className="cart-product-empty">
-                        <img src="/images/cart-plus.svg" width="100%"></img>
-                    </div>
                     <button className="cart-btn btn-blue btn-small">VIEW CART</button>
                 </>
             
             ) : (
-                <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                <Link to={'/loginRegister'}>
+                    <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                </Link>
             )}
         </div>
         </div>

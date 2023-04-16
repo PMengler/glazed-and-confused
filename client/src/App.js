@@ -23,6 +23,7 @@ import Header from './components/Header'
 import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
 import Home from './pages/Home';
+import Account from './pages/Account';
 import { StoreProvider } from './utils/GlobalState';
 import LoginRegister from './pages/LoginRegister';
 import ThankYou from './pages/ThankYou';
@@ -78,6 +79,10 @@ function App() {
               <Route
                 path='/thankyou'
                 element={<ThankYou />}
+              />
+              <Route 
+                path='/account'
+                element={<Account />}
               />
             </Routes>
           </Router>
