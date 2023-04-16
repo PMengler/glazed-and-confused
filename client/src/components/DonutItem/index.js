@@ -15,24 +15,13 @@ function DonutItem(donut) {
 
     const { order } = state;
 
-    console.log(order)
-    console.log(state.order.length);
     const addToOrder = () => {
         const donutInOrder = order.find((orderItem) => orderItem._id === donut._id)
         // This working now
         console.log(donutInOrder)
         if (donutInOrder) {
-        dispatch({
-            type: UPDATE_ORDER_QUANTITY,
-            _id: _id,
-            purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
-        });
-        idbPromise('order', 'put', {
-            ...donutInOrder,
-            purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
-        });
+            alert('Already added to the cart!')
         } else {
-            console.log('else')
         dispatch({
             type: ADD_DONUT_TO_ORDER,
             donut: { ...donut, purchaseQuantity: 1, order: data.orders }

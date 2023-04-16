@@ -17,11 +17,8 @@ function OrderSidebar() {
         }
 
         if (!state.order.length) {
-            console.log('inside here')
             getOrder();
         }
-
-        console.log(state.order)
 
     }, [dispatch]);
 
