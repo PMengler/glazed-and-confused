@@ -55,17 +55,28 @@ const Header = () => {
         </ul>
         <div>
           {Auth.loggedIn() ? (
-            <Link to={'/account'}>
-              <p className="loginlink">WELCOME <br></br>{getUser()}!</p>
-            </Link>
+            <>
+              <Link to={'/account'}>
+                <p className="loginlink">WELCOME <br></br>{getUser()}!</p>
+              </Link>
+              <Link to={'/cart'}>
+                <button className="nav-cart">
+                  <AiOutlineShoppingCart />
+                </button>
+              </Link>
+            </>
           ) : (
-            <Link to={'/loginRegister'}>
-              <p className="loginlink">ACCOUNT</p>
-            </Link>
+            <>
+              <Link to={'/loginRegister'}>
+                <p className="loginlink">ACCOUNT</p>
+              </Link>
+              <Link>
+                <button className="nav-cart">
+                  <AiOutlineShoppingCart />
+                </button>
+              </Link>
+            </>
           )}
-          <button className="nav-cart">
-            <AiOutlineShoppingCart />
-          </button>
         </div>
         <div className="mobile-logo">
           <img
