@@ -72,7 +72,7 @@ function App() {
               />
               {/* Just placed here for testing but need to place this in a more accurate spot */}
               <Route
-                path='/popup'
+                path='/flavors/:id'
                 element={<Popup />}
               />
               <Route
