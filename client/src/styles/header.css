@@ -183,6 +183,7 @@ li {
     height: 45px;
     z-index: 5;
     top: 6px;
+    cursor: pointer;
 }
 
 .hamburger div {
