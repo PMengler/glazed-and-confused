@@ -5,7 +5,6 @@ import Auth from '../utils/auth';
 
 import '../styles/login-register.css';
 import '../styles/app.css';
-import Header from '../components/Header';
 
 function LoginRegister(props) {
     // For Registering
@@ -60,7 +59,6 @@ function LoginRegister(props) {
     };
     return (
         <div>
-            <Header />
             <section className="login-register-main">
                 <div className="login-register-container">
                     <div className="login">

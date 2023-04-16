@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 import DonutList from '../components/DonutList';
 import '../styles/flavors.css';
 import '../styles/app.css';
-import DonutList from '../components/DonutList';
 
 const Flavors = () => {
     return (

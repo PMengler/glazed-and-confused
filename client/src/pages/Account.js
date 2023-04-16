@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
-
 import '../styles/login-register.css';
 import '../styles/app.css';
-import Header from '../components/Header';
 import '../styles/account.css'
 
 const Account = () => {
 
     return (
         <section className="account-main">
-            <Header />
             <div className="account-container">
                 <div className="account-title">Past Orders</div>
                 <div className="account-orders-container">
