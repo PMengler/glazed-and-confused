@@ -54,4 +54,4 @@ Created by:
 - <a href="https://github.com/pherpat"> Jennifer Scherschligt </a>
 
 ## Questions
-If you have any questions about the application, feel free to reach hus by email.
+If you have any questions about the application, feel free to reach us by email.
