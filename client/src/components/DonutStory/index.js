@@ -1,5 +1,4 @@
 import React from 'react';
-import swirlBlue from '../../assets/swirl-blue.svg';
 
 const DonutStory = () => {
     return (
@@ -16,7 +15,7 @@ const DonutStory = () => {
                     with more sugar than lines of code!
                 </p>
                 <div className="story-swirl">
-                    <img src={swirlBlue} alt="icon" />
+                    <img src={'/images/swirlBlue.svg'} alt="icon" />
                 </div>
             </div>
         </section>
