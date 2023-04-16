@@ -25,7 +25,8 @@ const Header = () => {
                     <li><button className="nav-btn">ORDER NOW!</button></li>
                 </ul>
                 <div>
-                    <a className="loginlink" href="/loginRegister">ACCOUNT</a>
+                    <a className="loginlink" href="/account">ACCOUNT</a>
+                    <a className="loginlink" href="/loginRegister">LOGIN/REGISTER</a>
                     <button className="nav-cart">cart</button>
                     <CheckoutUseStripe />
                 </div>
