@@ -36,6 +36,12 @@ nav div {
     margin-bottom: -20px;
     margin-top: 60px;
     cursor: pointer;
+    transition: all .7s ease-out;
+}
+
+.header-logo:hover {
+    transform: rotate(360deg) scale(1.15);
+    /* transform: scale(1.5); */
 }
 
 .mobile-logo {
