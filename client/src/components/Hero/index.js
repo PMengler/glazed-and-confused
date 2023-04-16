@@ -8,7 +8,7 @@ const Hero = () => {
                     <h1>Donut Panic!<br/>
                         There’s plenty for everyone.</h1>
                     <p>Let's find that perfect flavor.</p>
-                    <button className="btn-lrg btn-black">START YOUR ORDER</button>
+                    <p><button className="btn-lrg btn-black">START YOUR ORDER</button></p>
                 </div>
             </div>
             <div className="hero-right">

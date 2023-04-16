@@ -9,21 +9,21 @@ const Footer = () => {
         <footer>
             <div className="footer-nav">
                 <ul>
-                    <HashLink className="navlink" smooth to="/flavors">
+                    <li><HashLink className="footer-link" smooth to="/flavors">
                         THE FLAVORS
-                    </HashLink>
-                    <HashLink className="footer-link" smooth to="/#contactus">
+                    </HashLink></li>
+                    <li><HashLink className="footer-link" smooth to="/#contactus">
                         CONTACT US
-                    </HashLink>
-                    <HashLink className="footer-logo" smooth to='/#home'>
+                    </HashLink></li>
+                    <li className="footer-logo"><HashLink smooth to='/#home'>
                         <img src={logoPic} alt='logoPic' />
-                    </HashLink>
-                    <HashLink className="footer-link" smooth to="/#ourstory">
+                    </HashLink></li>
+                    <li><HashLink className="footer-link" smooth to="/#ourstory">
                         OUR STORY
-                    </HashLink>
-                    <HashLink className="nav-btn" smooth to="/flavors">
+                    </HashLink></li>
+                    <li><HashLink className="footer-btn" smooth to="/flavors">
                         ORDER NOW!
-                    </HashLink>
+                    </HashLink></li>
                 </ul>
             </div>
             <div className="copyright">© COPYRIGHT GLAZED & CONFUSED BAKERY INC. 2023 | DONUT WORRY BE HUNGRY</div>
