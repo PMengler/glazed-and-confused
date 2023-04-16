@@ -139,7 +139,6 @@
 }
 
 .cart-checkout {
-  display: flex;
   background-color: white;
   border-radius: 0px 0px 0px 20px;
   padding: 20px;
@@ -166,6 +165,7 @@
 }
 
 .product-name {
+  min-width: 160px;
   font-family: 'visby-demi';
   font-size: 18px;
   color: black;

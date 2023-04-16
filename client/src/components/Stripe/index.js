@@ -53,7 +53,7 @@ function CheckoutButton() {
   };
 
   return (
-    <button class="cart-summary-btn btn-blue btn-small" onClick={handleClick}>Checkout</button>
+    <button className="cart-summary-btn btn-blue btn-small" onClick={handleClick}>Checkout</button>
   );
 }
 

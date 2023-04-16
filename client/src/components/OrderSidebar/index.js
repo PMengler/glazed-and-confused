@@ -45,9 +45,9 @@ function OrderSidebar() {
                     <>
                         <div className="flavor-total">TOTAL ( <span className="flavor-span">${calculateOrderTotal()}</span> )</div>
                         <br></br>
-                            {state.order.map((donut) => (
-                                <OrderItem donut={donut} key={donut._id} />
-                            ))}
+                        {state.order.map((donut) => (
+                            <OrderItem donut={donut} key={donut._id} />
+                        ))}
                     </>
                 ) : (
                     <>
@@ -62,17 +62,18 @@ function OrderSidebar() {
                 )}
             </div>
             <div className="cart-checkout">
-            {Auth.loggedIn() ? (
-                <>
-                    <button className="cart-btn btn-blue btn-small">VIEW CART</button>
-                </>
-            
-            ) : (
-                <Link to={'/loginRegister'}>
-                    <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
-                </Link>
-            )}
-        </div>
+                {Auth.loggedIn() ? (
+                    <>
+                        <Link to={'/cart'}>
+                            <button className="cart-btn btn-blue btn-small">VIEW CART</button>
+                        </Link>
+                    </>
+                ) : (
+                    <Link to={'/loginRegister'}>
+                        <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                    </Link>
+                )}
+            </div>
         </div>
     )
 };

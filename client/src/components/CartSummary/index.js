@@ -1,24 +1,39 @@
 import React from "react";
+import { useStoreContext } from "../../utils/GlobalState";
 import CheckoutUseStripe from '../Stripe';
 
 function CartSummary() {
+    const [state, dispatch] = useStoreContext();
+
+    function calculateOrderTotal() {
+        let sum = 0;
+        state.order.forEach(donut => {
+            sum += donut.price * donut.purchaseQuantity;
+        });
+        return sum.toFixed(2);
+    }
+
+    function calculateOrderQuantity() {
+        let sum = 0;
+        state.order.forEach(donut => {
+            sum += donut.purchaseQuantity;
+        });
+        return sum;
+    }
 
     return (
         <>
-            <section class="cart-page-sidebar">
-                <div class="cart-summary-box">
-                    <div class="cart-summary-name">Summary</div>
-                    <div class="cart-summary-line"></div>
-                    <div class="cart-total">
-                        <div>Price a Piece</div> <span class="summary-total">$2.99</span>
-                    </div>
-                    <div class="cart-total">
-                        <div>Total ( <span id="cart-total-qty">18</span> )</div>
-                        <span class="summary-total">$53.82</span>
+            <section className="cart-page-sidebar">
+                <div className="cart-summary-box">
+                    <div className="cart-summary-name">Summary</div>
+                    <div className="cart-summary-line"></div>
+                    <div className="cart-total">
+                        <div>Total ( <span id="cart-total-qty">{calculateOrderQuantity()}</span> )</div>
+                        <span className="summary-total">${calculateOrderTotal()}</span>
                     </div>
                     <CheckoutUseStripe />
                 </div>
-                <div class="cart-summary-cc"><img src="/images/ccards.png" alt="payment-cards"
+                <div className="cart-summary-cc"><img src="/images/ccards.png" alt="payment-cards"
                     width="100%"></img></div>
             </section>
         </>
