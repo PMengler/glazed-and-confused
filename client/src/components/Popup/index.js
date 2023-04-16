@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_DONUT_TO_ORDER, UPDATE_ORDER_QUANTITY } from '../../utils/actions';
@@ -7,7 +7,7 @@ import { idbPromise } from '../../utils/helpers';
 import '../../styles/popup.css'
 import { useQuery } from "@apollo/client";
 
-function Popup(donut) {
+function Popup() {
     const [state, dispatch] = useStoreContext();
     const { id } = useParams();
 
@@ -16,6 +16,12 @@ function Popup(donut) {
     const { loading, data } = useQuery(QUERY_GET_DONUT);
 
     const { donuts, order } = state
+
+    useEffect(() => {
+        if (donuts.length) {
+            setCurrentDonut(donuts.find((donut) => donut._id === id));
+        }
+    })
 
 
     // Functions for handling donut being added to order
