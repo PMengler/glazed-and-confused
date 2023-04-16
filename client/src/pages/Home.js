@@ -17,7 +17,6 @@ import '../styles/normalize.css';
 const Home = () => {
     return (
         <div>
-            <Header />
             <Hero />
             <WeeklyFlavor />
             <DonutStory />
