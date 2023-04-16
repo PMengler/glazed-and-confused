@@ -17,6 +17,7 @@ import '../src/styles/normalize.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
+import Account from './pages/Account';
   
 import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
@@ -69,6 +70,10 @@ function App() {
           <Route
             path='/thankyou'
             element={<ThankYou />}
+          />
+          <Route
+            path='/account'
+            element={<Account />}
           />
           {/* <Popup /> Still needs a route path */}
         </Routes>
