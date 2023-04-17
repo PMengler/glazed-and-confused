@@ -36,7 +36,8 @@
 }
 
 .cart-donutpic img {
-    max-width: 140px;
+    max-width: 120px;
+    min-width: 120px;
     border-radius: 20px 0px 0px 20px;
 }
 
@@ -66,8 +67,9 @@
 }
 
 .cart-product-name {
-    font-size: 28px;
+    font-size: 20px;
     padding-left: 30px;
+    padding-right: 30px;
     border-left: 4px solid #454545;
 }
 
