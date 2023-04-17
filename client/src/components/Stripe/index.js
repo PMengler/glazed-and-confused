@@ -3,8 +3,6 @@ import { loadStripe } from '@stripe/stripe-js';
 // import {stripeProducts} from '@stripe/react-stripe-js';
 import { Elements, useStripe } from '@stripe/react-stripe-js';
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_ORDER_TO_USERORDER } from '../../utils/actions';
-import { idbPromise } from '../../utils/helpers';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -17,7 +15,6 @@ function CheckoutButton() {
 
 
   const handleClick = async () => {
-    console.log(order)
     orderNum = order;
     setCurrentOrder({ orderNum })
 
@@ -26,8 +23,6 @@ function CheckoutButton() {
       numberOfDonuts = numberOfDonuts + state.order[i].purchaseQuantity;
     }
 
-    userOrders.push(orderNum);
-    console.log(userOrders)
     for (let i = 0; i < userOrders.length; i++) {
       if (userOrders[i] === orderNum) {
         console.log('dup')

@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PastOrderItem from '../PastOrderItem';
 import PastOrderEmpty from '../PastOrderEmpty';
 import { ADD_MULTIPLE_TO_ORDER, ADD_ORDER_TO_USERORDER } from "../../utils/actions";
-import { useQuery } from '@apollo/client';
 import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState';
 
 function PastOrderCard() {
-
     const [state, dispatch] = useStoreContext();
     const [currentOrder, setCurrentOrder] = useState({});
-    const { userOrders } = state;
-    // const { loading, data } = useQuery(ADD_ORDER_TO_USERORDER);
+    const { userOrders, order } = state;
 
-    const orderNumber = 0;
+    let orderNumber = 0;
     console.log(state)
+
+    if (order.length > 0) {
+    orderNumber = order[0].order_id.length
+    }
 
     useEffect(() => {
         async function getOrder() {
@@ -25,15 +27,20 @@ function PastOrderCard() {
         if (!state.order.length) {
             getOrder();
         }
-
     }, [dispatch]);
 
-    console.log(state.userOrders)
+    function calculateOrderTotal() {
+        let sum = 0;
+        state.order.forEach(donut => {
+            sum += donut.price * donut.purchaseQuantity;
+        });
+        return sum.toFixed(2);
+    }
 
     return (
         <>
             <div className="account-order-block">
-                <div className="order">Order<span className="account-order-number"> {orderNumber} Items</span> </div>
+                <div className="order">Order<span className="account-order-number"> {orderNumber}</span> </div>
                 <div className="account-divider"></div>
                 <ul className="account-order-items-list">
                     {state.order.map((donut) => (
@@ -43,11 +50,14 @@ function PastOrderCard() {
                 <div className="account-divider"></div>
                 <div className="account-box">
                     <div className="account-total-text">TOTAL PRICE </div>
-                    <div className="account-order-total">$71.76</div>
+                    <div className="account-order-total">${calculateOrderTotal()}</div>
                 </div>
                 <div className="account-divider"></div>
-                <a className="account-reorder">REORDER</a>
+                <Link to={'/cart'}>
+                    <p className='account-reorder'>REORDER</p> 
+                </Link>
             </div>
+            <br></br>
         </>
     )
 };
