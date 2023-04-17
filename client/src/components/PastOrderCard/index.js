@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PastOrderItem from '../PastOrderItem';
 import PastOrderEmpty from '../PastOrderEmpty';
+import { ADD_MULTIPLE_TO_ORDER } from "../../utils/actions";
+import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState';
 
 function PastOrderCard() {
@@ -8,6 +10,18 @@ function PastOrderCard() {
     const [state, dispatch] = useStoreContext();
 
     const orderNumber = state.order.length;
+
+    useEffect(() => {
+        async function getOrder() {
+            const donutsAddedToOrder = await idbPromise('order', 'get');
+            dispatch({ type: ADD_MULTIPLE_TO_ORDER, donuts: [...donutsAddedToOrder] });
+        }
+
+        if (!state.order.length) {
+            getOrder();
+        }
+
+    }, [dispatch]);
 
     return (
         // Will handle if order is empty
