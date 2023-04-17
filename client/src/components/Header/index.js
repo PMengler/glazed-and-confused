@@ -10,10 +10,10 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 const Header = () => {
   // Functions that will be used in the header
   function getUser() {
-    return Auth.getProfile().data.username.toUpperCase();
+    const user = Auth.getProfile();
+    let displayName = user.data.username.toUpperCase();
+    return displayName
   }
-
-  console.log(getUser())
   return (
     <header className="header">
       <nav>

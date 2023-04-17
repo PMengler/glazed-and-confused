@@ -1,11 +1,9 @@
 import React from 'react';
 
-import Header from '../components/Header';
 import Hero from '../components/Hero/index';
 import WeeklyFlavor from '../components/WeeklyFlavor';
 import DonutStory from '../components/DonutStory';
 import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
 
 import '../styles/app.css';
 import '../styles/flavors.css';
@@ -21,7 +19,6 @@ const Home = () => {
             <WeeklyFlavor />
             <DonutStory />
             <ContactUs />
-            <Footer />
         </div>
     )
 }
