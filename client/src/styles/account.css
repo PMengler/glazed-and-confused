@@ -1,5 +1,6 @@
 .account-main {
     background-color: var(--bg-offblack);
+    height: 100%;
 }
 
 .account-container {

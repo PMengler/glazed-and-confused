@@ -31,10 +31,9 @@ const resolvers = {
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ donuts: args.donuts });
-      const line_items = [];
+      const lineItems = [];
 
       const { donuts } = await order.populate('donuts');
-
       for (let i = 0; i < donuts.length; i++) {
         const product = await stripe.donuts.create({
           name: donuts[i].name,
@@ -42,23 +41,21 @@ const resolvers = {
           images: [`${url}/images/${donuts[i].image}`],
         });
 
-        console.log(product)
-
         const price = await stripe.prices.create({
           product: product.id,
           unit_amount: donuts[i].price * 100,
           currency: 'usd',
         });
 
-        line_items.push({
+        lineItems.push({
           price: price.id,
-          quantity: 1,
+          quantity: donuts.quantity,
         });
       }
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
-        line_items,
+        line_items: lineItems,
         mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
