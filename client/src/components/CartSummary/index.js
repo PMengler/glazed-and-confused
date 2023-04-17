@@ -1,6 +1,6 @@
 import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import CheckoutUseStripe from '../Stripe';
+import CheckoutButton from '../Stripe';
 
 function CartSummary() {
     const [state, dispatch] = useStoreContext();
@@ -31,7 +31,7 @@ function CartSummary() {
                         <div>Total ( <span id="cart-total-qty">{calculateOrderQuantity()}</span> )</div>
                         <span className="summary-total">${calculateOrderTotal()}</span>
                     </div>
-                    <CheckoutUseStripe />
+                    <CheckoutButton />
                 </div>
                 <div className="cart-summary-cc"><img src="/images/ccards.png" alt="payment-cards"
                     width="100%"></img></div>
