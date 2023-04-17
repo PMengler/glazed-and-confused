@@ -9,7 +9,8 @@ function PastOrderCard() {
 
     const [state, dispatch] = useStoreContext();
 
-    const orderNumber = state.order.length;
+    const orderNumber = 0;
+    console.log(state)
 
     useEffect(() => {
         async function getOrder() {
@@ -27,11 +28,11 @@ function PastOrderCard() {
         // Will handle if order is empty
         <>
             <div className="account-order-block">
-                <div className="order">Order<span className="account-order-number">{orderNumber}</span> </div>
+                <div className="order">Order<span className="account-order-number"> {orderNumber} Items</span> </div>
                 <div className="account-divider"></div>
                 <ul className="account-order-items-list">
                     {state.order.map((donut) => (
-                        <PastOrderItem key={donut._id} donut={donut}/>
+                        <PastOrderItem key={donut._id} name={donut.name} quantity={donut.purchaseQuantity}/>
                     ))}
                 </ul>
                 <div className="account-divider"></div>
