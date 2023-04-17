@@ -30,6 +30,10 @@
     margin-right: 20px;
 }
 
+.account-logout:hover {
+    color: #ffffff;
+}
+
 
 .account-order-block {
     display: flex;
@@ -108,8 +112,21 @@
         padding: 40px 0px 40px 0px;
     }
 
+    .account-reorder {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
     .account-title {
         margin-bottom: 20px;
         padding-left: 20px;
+        font-size: 38px;
+    }
+    .account-logout {
+        font-size: 20px;
+        color: var(--brand-blue);
+        font-family: 'visby-heavy';
+        padding-left: 20px;
+        text-align: right;
     }
 }
