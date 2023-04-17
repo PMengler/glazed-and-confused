@@ -73,7 +73,6 @@ function App() {
                 path='/loginRegister'
                 element={<LoginRegister />}
               />
-              {/* Just placed here for testing but need to place this in a more accurate spot */}
               <Route
                 path='/flavors/:id'
                 element={<Popup />}
