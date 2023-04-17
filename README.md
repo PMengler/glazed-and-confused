@@ -40,9 +40,9 @@ npm run develop
 
 
 ## Usage
-[![Screenshot](https://github.com/-sreenshot.png)](https://github.com/main/src/components/assets/sreenshot.png)
+[![Screenshot](https://github.com/https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)](https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)
 
-You can see the deployed site here: [Heroku](https://)
+You can see the deployed site here: [Heroku](https://glazed-and-confused.herokuapp.com/)
 
 
 ## Contributors
