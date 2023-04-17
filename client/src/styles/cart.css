@@ -1,5 +1,6 @@
 .cart-main {
     background-color: var(--bg-offblack);
+    height: 100%;
 }
 
 .cart-page-container {
