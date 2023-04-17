@@ -57,7 +57,7 @@ export const reducer = (state, action) => {
     case ADD_ORDER_TO_USERORDER:
       return {
         ...state,
-        userOrders: [...state, action.order]
+        userOrders: [action.order]
       };
 
     case CLEAR_ORDER:

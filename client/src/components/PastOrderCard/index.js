@@ -11,7 +11,7 @@ function PastOrderCard() {
     const [state, dispatch] = useStoreContext();
     const [currentOrder, setCurrentOrder] = useState({});
     const { userOrders } = state;
-    const { loading, data } = useQuery(ADD_ORDER_TO_USERORDER);
+    // const { loading, data } = useQuery(ADD_ORDER_TO_USERORDER);
 
     const orderNumber = 0;
     console.log(state)
@@ -28,44 +28,9 @@ function PastOrderCard() {
 
     }, [dispatch]);
 
-    // useEffect(() => {
-    //     if (data) {
-
-    //     }
-    // })
-
-
-
-
-    const addOrderToUserOrder = () => {
-        const orderInUserOrder = userOrders.find((order) => order._id === )
-        if (donutInOrder) {
-            dispatch({
-                type: UPDATE_ORDER_QUANTITY,
-                _id: _id,
-                purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
-            });
-            idbPromise('order', 'put', {
-                ...donutInOrder,
-                purchaseQuantity: parseInt(donutInOrder.purchaseQuantity) + 1
-            });
-        } else {
-            dispatch({
-                type: ADD_DONUT_TO_ORDER,
-                donut: { ...currentDonut, purchaseQuantity: 1 }
-            });
-            idbPromise('order', 'put', { ...currentDonut, purchaseQuantity: 1 });
-        }
-    }
-
-
-
-
-
-    
+    console.log(state.userOrders)
 
     return (
-        // Will handle if order is empty
         <>
             <div className="account-order-block">
                 <div className="order">Order<span className="account-order-number"> {orderNumber} Items</span> </div>
