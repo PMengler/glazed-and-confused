@@ -7,6 +7,7 @@ const nodemailer = require('nodemailer');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+const stripe = require('stripe');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -69,6 +70,34 @@ router.post('/contact', (req, res) => {
     }
   });
 });
+
+// router.post('/checkout', async (req, res) => {
+//   const items = req.body.items;
+//   let lineItems = []
+//   console.log('here')
+
+//   items.forEach((item) => {
+//     lineItems.push(
+//       {
+//         price: item.id,
+//         quantity: item.quantity,
+//       }
+//     )
+//   });
+
+//   console.log(lineItems)
+
+//   const session = await stripe.checkout.session.create({
+//     line_items : lineItems,
+//     mode: 'payment',
+//     success_url: "http://localhost:3000/success",
+//     cancel_url: "http://localhost:3000/cancel"
+//   });
+
+//   res.send(JSON.stringify({
+//     url: session.url
+//   }));
+// });
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
