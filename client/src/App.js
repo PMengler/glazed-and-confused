@@ -19,11 +19,13 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutUseStripe from './components/Stripe';
 
-import Header from './components/Header'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Popup from './components/Popup';
 import Flavors from './pages/Flavors';
 import Home from './pages/Home';
 import Account from './pages/Account';
+import Cart from './pages/Cart';
 import { StoreProvider } from './utils/GlobalState';
 import LoginRegister from './pages/LoginRegister';
 import ThankYou from './pages/ThankYou';
@@ -84,7 +86,12 @@ function App() {
                 path='/account'
                 element={<Account />}
               />
+              <Route
+                path='/cart'
+                element={<Cart />}
+              />
             </Routes>
+            <Footer />
           </Router>
         </StoreProvider>
       </ApolloProvider>
