@@ -12,6 +12,7 @@
 ![License Badge](https://img.shields.io/badge/-Heroku-430098?logo=heroku&style=flat&logoColor=white)
 ![License Badge](https://img.shields.io/badge/-After%20Effects-9999FF?logo=adobeaftereffects&style=flat&logoColor=white)
 ![License Badge](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&style=flat&logoColor=white)
+![License Badge](https://img.shields.io/badge/-Trello-0052CC?logo=trello&style=flat&logoColor=white)
 ![License Badge](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=AdobePhotoshop&style=flat&logoColor=white)
 
 ## Description
@@ -40,7 +41,7 @@ npm run develop
 
 
 ## Usage
-[![Screenshot](https://github.com/https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)](https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)
+[![Screenshot](https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)](https://github.com/PMengler/glazed-and-confused/blob/main/client/src/assets/gc-screenshot.jpg)
 
 You can see the deployed site here: [Heroku](https://glazed-and-confused.herokuapp.com/)
 
