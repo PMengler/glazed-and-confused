@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { idbPromise } from "../../utils/helpers";
 import { REMOVE_DONUT_FROM_ORDER } from "../../utils/actions";
+import { BiTrash } from 'react-icons/bi';
 
 function CartItem(item) {
     const [state, dispatch] = useStoreContext();
@@ -20,16 +21,16 @@ function CartItem(item) {
                 <div className="cart-product-list-item-right">
                     <div className="cart-donutpic">
                         <img src={`/images/${item.donut.image}`}
-                            alt="butterscotch pic" width="100%">
+                            alt="Donut Pic" width="100%">
                         </img>
                     </div>
                     <div className="cart-selected-qty">
                         <div className="cart-item-qty-text">{item.donut.purchaseQuantity}</div>
-                        <input size="2" className="cart-item-qty-amount"></input>
+                        
                     </div>
                     <div className="cart-product-name">{item.donut.name}</div>
                 </div>
-                <button className="cart-delete-btn" onClick={() => removeFromOrder(item.donut)}> icon </button>
+                <button className="cart-final-delete-btn" onClick={() => removeFromOrder(item.donut)}> <BiTrash /> </button>
             </div>
         </>
     )

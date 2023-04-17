@@ -103,23 +103,25 @@ const Header = () => {
                 <li> </li>
                 <li>
                   {' '}
-                  <a href="index.html">HOME</a>
+                  <Link to={'/'}>HOME
+                  </Link>
                 </li>
                 <li>
                   {' '}
-                  <a href="flavors.html">THE FLAVORS</a>
+                  <Link to={'/flavors'}>THE FLAVORS
+                  </Link>
                 </li>
                 <li>
                   {' '}
-                  <a href="index.html#contactus">CONTACT US</a>
+                  <HashLink smooth to="/#contactus">CONTACT US</HashLink>
                 </li>
                 <li>
                   {' '}
-                  <a href="index.html#aboutus">OUR STORY</a>
+                  <HashLink smooth to="/#ourstory">OUR STORY</HashLink>
                 </li>
                 <li>
                   {' '}
-                  <a href="login-register.html">LOGIN</a>
+                  <Link to={'/loginRegister'}>LOGIN </Link>
                 </li>
               </ul>
               <button className="btn-blue btn-small">VIEW CART</button>

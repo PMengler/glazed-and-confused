@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--bg-offblack);
+    background-color: var(--bg-darkblack);
 }
 
 .popup-container {
@@ -74,6 +74,12 @@
 .ingredients {
     font-family: 'visby-heavy';
     font-size: 22px;
+    padding-top: 5px;
+}
+
+.ingredients svg {
+    scale: 1.4;
+    fill: var(--brand-blue);
 }
 
 .popup-addtocart-box {
@@ -99,6 +105,10 @@
     width: 64px;
     height: 64px;
     border-radius: var(--cornertwnty);
+}
+
+.popup-btn svg {
+    scale: 1.8;
 }
 
 .popup-btn:hover {

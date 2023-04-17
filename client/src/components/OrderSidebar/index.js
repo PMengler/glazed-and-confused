@@ -70,7 +70,7 @@ function OrderSidebar() {
                     </>
                 ) : (
                     <Link to={'/loginRegister'}>
-                        <button className="cart-btn btn-blue btn-small">Log in to get your donuts!</button>
+                        <button className="cart-btn btn-blue btn-small"><p>Log in to get your donuts!</p></button>
                     </Link>
                 )}
             </div>
