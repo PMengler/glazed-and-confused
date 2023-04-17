@@ -65,11 +65,18 @@ h2 {
 /*  links decoration - get rid of the undereline for links ---*/
 a {
   text-decoration: none;
+  transition: .1s all ease-in-out;
 }
 
 div {
   box-sizing: border-box;
+  transition: .1s all ease-in-out;
 }
+
+button {
+  transition: .1s all ease-in-out;
+}
+
 
 /* ---variables---*/
 :root {

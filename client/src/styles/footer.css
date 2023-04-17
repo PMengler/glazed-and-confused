@@ -41,6 +41,7 @@
     padding-right: 20px;
     cursor: pointer;
     color: white;
+    display: block;
 }
 
 .footer-btn:hover {

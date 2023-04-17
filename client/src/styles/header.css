@@ -75,6 +75,7 @@ nav div {
 .loginlink {
     color: var(--brand-blue);
     margin-right: 20px;
+    font-size: 16px;
 }
 
 .loginlink:hover {
@@ -111,6 +112,10 @@ li {
     color: white;
     width: 80px;
     height: 75px;
+}
+
+.nav-cart svg {
+    scale: 1.6;
 }
 
 .nav-cart:hover {

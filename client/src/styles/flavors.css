@@ -54,12 +54,21 @@
   flex-wrap: nowrap;
 }
 
+.flavors-info div {
+  padding-right: 10px;
+}
+
 .flavors-cart {
   padding: 16px;
   background-color: var(--brand-blue);
   color: white;
   border-radius: var(--cornertwnty);
+  border: none;
 
+}
+
+.flavors-cart svg {
+  scale: 1.2;
 }
 
 .flavors-cart:hover {
@@ -143,6 +152,11 @@
   border-radius: 0px 0px 0px 20px;
   padding: 20px;
 
+}
+
+.cart-checkout p {
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .cart-btn:hover {
@@ -255,15 +269,16 @@ select:focus {
     font-size: 22px;
     padding: 0px;
     text-align: center;
-   display: block;
-   width: 80%;
-   margin: auto;
+    display: block;
+    width: 80%;
+    margin: auto;
 
   }
 
   .flavors-title {
     padding-bottom: 20px;
   }
+
   .flavors-container {
     width: 100%;
   }

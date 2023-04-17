@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_DONUT_FROM_ORDER, UPDATE_ORDER_QUANTITY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
+import { BiTrash } from 'react-icons/bi';
 
 const OrderItem = ({ donut }) => {
     const [, dispatch] = useStoreContext();
@@ -51,7 +52,7 @@ const OrderItem = ({ donut }) => {
                         <option value="11">11</option>
                         <option value="12">12</option>
                     </select>
-                    <button className="cart-delete-btn" onClick={() => removeFromOrder(donut)}> icon </button>
+                    <button className="cart-delete-btn" onClick={() => removeFromOrder(donut)}><BiTrash /></button>
                 </div>
             </section>
         </>

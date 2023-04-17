@@ -6,6 +6,8 @@ import { QUERY_GET_DONUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import '../../styles/popup.css'
 import { useQuery } from "@apollo/client";
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { MdHealthAndSafety } from 'react-icons/md';
 
 function Popup() {
     const [state, dispatch] = useStoreContext();
@@ -65,11 +67,11 @@ function Popup() {
                         </div>
                     </div>
                     <div className="popup-footer">
-                        <div className="ingredients"> icon Contains:<span className='allergies'>Milk, Wheat, Egg</span></div>
+                        <div className="ingredients"><MdHealthAndSafety /> Contains:<span className='allergies'>Milk, Wheat, Egg</span></div>
                         <div className="popup-addtocart-box">
                             <span className="popup-addtocart">ADD TO CART</span>
                             <Link to={'/flavors'}>
-                                <button className="popup-btn" onClick={addDonutToOrder}>icon</button>
+                                <button className="popup-btn" onClick={addDonutToOrder}><AiOutlineShoppingCart /></button>
                             </Link>
                         </div>
                     </div>
