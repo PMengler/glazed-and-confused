@@ -27,7 +27,7 @@ function Cart() {
                 <div className="cart-page-container">
                     <div className="cart-order-title">Your Order</div>
                     <div className="cart-page-columns">
-                        <div className="cart-items"></div>
+                        
                         <div className="cart-items">
                             {state.order.map((donut) => (
                                 <CartItem donut={donut} key={donut._id}/>

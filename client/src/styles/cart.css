@@ -5,7 +5,7 @@
 .cart-page-container {
     margin: auto;
     max-width: 1200px;
-    padding: 60px 20px 100px 20px;
+    padding: 60px 20px 160px 20px;
 }
 
 .cart-order-title {
@@ -36,7 +36,8 @@
 }
 
 .cart-donutpic img {
-    max-width: 140px;
+    max-width: 120px;
+    min-width: 120px;
     border-radius: 20px 0px 0px 20px;
 }
 
@@ -66,8 +67,9 @@
 }
 
 .cart-product-name {
-    font-size: 28px;
+    font-size: 20px;
     padding-left: 30px;
+    padding-right: 30px;
     border-left: 4px solid #454545;
 }
 
@@ -77,8 +79,12 @@
     border-radius: var(--cornerten);
     border: none;
     font-family: 'visby-heavy';
-    padding: 10px;
+    padding: 14px;
     margin-right: 30px;
+}
+
+.cart-final-delete-btn svg {
+scale: 1.4;
 }
 
 .cart-final-delete-btn:hover {

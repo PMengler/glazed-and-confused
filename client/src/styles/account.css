@@ -18,6 +18,20 @@
     font-size: 48px;
     margin-bottom: 70px;
     padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-logout {
+    font-size: 20px;
+    color: var(--brand-blue);
+    font-family: 'visby-heavy';
+    margin-right: 20px;
+}
+
+.account-logout:hover {
+    color: #ffffff;
 }
 
 
@@ -98,8 +112,21 @@
         padding: 40px 0px 40px 0px;
     }
 
+    .account-reorder {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
     .account-title {
         margin-bottom: 20px;
         padding-left: 20px;
+        font-size: 38px;
+    }
+    .account-logout {
+        font-size: 20px;
+        color: var(--brand-blue);
+        font-family: 'visby-heavy';
+        padding-left: 20px;
+        text-align: right;
     }
 }

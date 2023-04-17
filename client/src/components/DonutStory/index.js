@@ -15,7 +15,7 @@ const DonutStory = () => {
                     with more sugar than lines of code!
                 </p>
                 <div className="story-swirl">
-                    <img src={'/images/swirlBlue.svg'} alt="icon" />
+                    <img src={'/images/swirl-blue.svg'} alt="icon" />
                 </div>
             </div>
         </section>

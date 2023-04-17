@@ -36,6 +36,12 @@ nav div {
     margin-bottom: -20px;
     margin-top: 60px;
     cursor: pointer;
+    transition: all .7s ease-out;
+}
+
+.header-logo:hover {
+    transform: rotate(360deg) scale(1.15);
+    /* transform: scale(1.5); */
 }
 
 .mobile-logo {
@@ -69,6 +75,7 @@ nav div {
 .loginlink {
     color: var(--brand-blue);
     margin-right: 20px;
+    font-size: 16px;
 }
 
 .loginlink:hover {
@@ -105,6 +112,10 @@ li {
     color: white;
     width: 80px;
     height: 75px;
+}
+
+.nav-cart svg {
+    scale: 1.6;
 }
 
 .nav-cart:hover {
@@ -183,6 +194,7 @@ li {
     height: 45px;
     z-index: 5;
     top: 6px;
+    cursor: pointer;
 }
 
 .hamburger div {

@@ -1,45 +1,62 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+// import {stripeProducts} from '@stripe/react-stripe-js';
 import { Elements, useStripe } from '@stripe/react-stripe-js';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { useStoreContext } from '../../utils/GlobalState';
 import { useLazyQuery, useQuery } from '@apollo/client';
 require('dotenv').config();
-// const stripe = require('stripe')(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+import { useStoreContext } from "../../utils/GlobalState";
+
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 function CheckoutButton() {
   const stripe = useStripe();
+  
+  const [state, dispatch] = useStoreContext();
 
   const handleClick = async () => {
-    //TODOBJS
-    // const url = new URL(context.headers.referer).originF;
-    // const order = new Order({ products: args.products });
-    // const line_items = [];
 
-    // const { products } = await order.populate('products');
-
+    let numberOfDonuts = 0;
+    for(let i = 0; i < state.order.length; i++){
+      numberOfDonuts = numberOfDonuts + state.order[i].purchaseQuantity;
+    }
+    
+  //const handleClick = async () => {
     // for (let i = 0; i < products.length; i++) {
     //   const product = await stripe.products.create({
     //     name: products[i].name,
     //     description: products[i].description,
     //     images: [`${url}/images/${products[i].image}`]
     //   });
+    // const url = new URL(context.headers.referer).originF;
+    //const order = new Order({ products: args.products });
+    // const line_items = [];
 
-    //   const price = await stripe.prices.create({
-    //     product: product.id,
-    //     unit_amount: products[i].price * 100,
-    //     currency: 'usd',
-    //   });
+    // // const { products } = await order.populate('products');
 
-    //   line_items.push({
-    //     price: price.id,
-    //     quantity: 1
-    //   });
+    // for (let i = 0; i < state.order.length; i++) {
+    //    const product = await stripe.products.create({
+    //      name: state.order[i].id,
+    //    }); 
+    // //     description: products[i].description,
+    // //     images: [`${url}/images/${products[i].image}`]
+    //    //});
+
+    //    const price = await stripe.prices.create({
+    //      product: product.id,
+    //      unit_amount: products[i].price * 100,
+    //      currency: 'usd',
+    //    });
+
+    //    line_items.push({
+    //      price: price.id,
+    //      quantity: 1
+    //    });
     // }
 
     const { error } = await stripe.redirectToCheckout({
-      lineItems: [{ price: 'price_1Mw96NBFISeLbxNY0T43FU7Z', quantity: 20 }],
+      lineItems: [{ price: 'price_1Mxy4uBFISeLbxNY2XKAcfut', quantity: numberOfDonuts}],
       mode: 'payment',
 
       //For deployment

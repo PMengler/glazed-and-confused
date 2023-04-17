@@ -10,10 +10,10 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 const Header = () => {
   // Functions that will be used in the header
   function getUser() {
-    return Auth.getProfile().data.username.toUpperCase();
+    const user = Auth.getProfile();
+    let displayName = user.data.username.toUpperCase();
+    return displayName
   }
-
-  console.log(getUser())
   return (
     <header className="header">
       <nav>
@@ -76,12 +76,14 @@ const Header = () => {
             </>
           )}
         </div>
+        <Link to={'/'}>
         <div className="mobile-logo">
           <img
             src={logoMobile}
             alt="logoPic"
           ></img>
         </div>
+        </Link>
       </nav>
       <div className="mobile-nav-box">
         <input
@@ -103,23 +105,25 @@ const Header = () => {
                 <li> </li>
                 <li>
                   {' '}
-                  <a href="index.html">HOME</a>
+                  <Link to={'/'}>HOME
+                  </Link>
                 </li>
                 <li>
                   {' '}
-                  <a href="flavors.html">THE FLAVORS</a>
+                  <Link to={'/flavors'}>THE FLAVORS
+                  </Link>
                 </li>
                 <li>
                   {' '}
-                  <a href="index.html#contactus">CONTACT US</a>
+                  <HashLink smooth to="/#contactus">CONTACT US</HashLink>
                 </li>
                 <li>
                   {' '}
-                  <a href="index.html#aboutus">OUR STORY</a>
+                  <HashLink smooth to="/#ourstory">OUR STORY</HashLink>
                 </li>
                 <li>
                   {' '}
-                  <a href="login-register.html">LOGIN</a>
+                  <Link to={'/loginRegister'}>LOGIN </Link>
                 </li>
               </ul>
               <button className="btn-blue btn-small">VIEW CART</button>

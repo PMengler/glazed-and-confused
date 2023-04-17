@@ -2,13 +2,11 @@ import React, {useState} from 'react';
 
 import '../styles/login-register.css';
 import '../styles/app.css';
-import Header from '../components/Header';
 import '../styles/thankyou.css'
 
 const ThankYou = () => {
     return (
         <div>
-            <Header />
             <section className="thankyou-main">
                 <div className="thankyou-container">
                     <div className="thankyou-top-message">
