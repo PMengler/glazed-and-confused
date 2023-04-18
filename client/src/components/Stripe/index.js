@@ -6,7 +6,6 @@ import { QUERY_CHECKOUT } from '../../utils/queries';
 import { useStoreContext } from '../../utils/GlobalState';
 import { useLazyQuery, useQuery } from '@apollo/client';
 require('dotenv').config();
-import { useStoreContext } from "../../utils/GlobalState";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
