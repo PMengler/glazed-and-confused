@@ -8,6 +8,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     const [state, dispatch] = useProductReducer({
       donuts: [],
       order: [],
+      userOrders: [],
       orderOpen: false,
     });
   

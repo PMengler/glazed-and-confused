@@ -1,19 +1,13 @@
 import { useReducer } from 'react';
 import {
   UPDATE_DONUTS,
-  // UPDATE_PRODUCTS || Update the donuts to the new indexed database store
   ADD_DONUT_TO_ORDER,
-  // ADD_TO_CART || Add donut to order
   REMOVE_DONUT_FROM_ORDER,
-  // REMOVE_FROM_CART || Remove donut from order
   UPDATE_ORDER_QUANTITY,
-  // UPDATE_CART_QUANTITY || Update order quantity
   ADD_MULTIPLE_TO_ORDER,
-  // ADD_MULTIPLE_TO_CART,
+  ADD_ORDER_TO_USERORDER,
   CLEAR_ORDER,
-  // CLEAR_CART,
   TOGGLE_ORDER
-  // TOGGLE_CART,
 } from './actions';
 
 export const reducer = (state, action) => {
@@ -24,7 +18,7 @@ export const reducer = (state, action) => {
         ...state,
         donuts: [...action.donuts],
       };
-      
+
     case ADD_DONUT_TO_ORDER:
       return {
         ...state,
@@ -55,11 +49,16 @@ export const reducer = (state, action) => {
       };
 
     case ADD_MULTIPLE_TO_ORDER:
-        return {
-          ...state,
-          order: [...action.donuts]
-        };
-      
+      return {
+        ...state,
+        order: [...action.donuts]
+      };
+
+    case ADD_ORDER_TO_USERORDER:
+      return {
+        ...state,
+        userOrders: [action.order]
+      };
 
     case CLEAR_ORDER:
       return {

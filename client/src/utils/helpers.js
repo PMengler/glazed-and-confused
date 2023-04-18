@@ -6,6 +6,7 @@ export function idbPromise(storeName, method, object) {
         const db = request.result;
         db.createObjectStore('donuts', { keyPath: '_id' });
         db.createObjectStore('order', { keyPath: '_id' });
+        db.createObjectStore('userOrders', { keyPath: '_id', autoIncrement: true });
       };
   
       request.onerror = function(e) {

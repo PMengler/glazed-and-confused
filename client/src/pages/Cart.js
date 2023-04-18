@@ -20,7 +20,6 @@ function Cart() {
 
     }, [dispatch]);
 
-
     return (
         <>
             <section className="cart-main">
