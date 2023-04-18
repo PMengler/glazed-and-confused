@@ -52,7 +52,8 @@ function DonutList() {
                                 />
                             )))
                         ) : (
-                            <h3>You don't have any donuts yet!</h3>
+                            <>
+                            </>
                         )}
                     </section>
                 </div>
