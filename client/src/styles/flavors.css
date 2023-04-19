@@ -64,7 +64,7 @@
   color: white;
   border-radius: var(--cornertwnty);
   border: none;
-
+  cursor: pointer;
 }
 
 .flavors-cart svg {
@@ -211,6 +211,7 @@
   background-image: url(../assets/cart-drop-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 10px center;
+  cursor: pointer;
 }
 
 select:focus {
@@ -219,6 +220,7 @@ select:focus {
 
 .quantity:hover .qty-drop-box {
   display: block;
+  background-color: var(--bg-darkblack);
 }
 
 .cart-drop-arrow {
